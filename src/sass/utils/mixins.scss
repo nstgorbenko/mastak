@@ -1,0 +1,74 @@
+@mixin fluid-type($max-font-size, $min-font-size, $lower-range: 320px, $upper-range: 1920px) {
+  font-size: calc(
+    #{$min-font-size} + #{(($max-font-size / ($max-font-size * 0 + 1)) - ($min-font-size / ($min-font-size * 0 + 1)))} *
+      (
+        (100vw - #{$lower-range}) / #{(
+            ($upper-range / ($upper-range * 0 + 1)) - ($lower-range / ($lower-range * 0 + 1))
+          )}
+      )
+  );
+
+  @media screen and (max-width: $lower-range) {
+    font-size: $min-font-size;
+  }
+  @media screen and (min-width: $upper-range) {
+    font-size: $max-font-size;
+  }
+}
+
+@mixin font($height, $weight) {
+  line-height: $height;
+  font-weight: $weight;
+}
+
+@mixin main-font($bigFont, $smallFont, $height, $weight) {
+  @include fluid-type($bigFont, $smallFont);
+  @include font($height, $weight);
+  font-family: "Gilroy", sans-serif;
+}
+
+@mixin accent-font($bigFont, $smallFont, $height, $weight) {
+  @include fluid-type($bigFont, $smallFont);
+  @include font($height, $weight);
+  font-family: "Inter", sans-serif;
+}
+
+@mixin link-reset {
+  display: inline-block;
+  text-decoration: none;
+  outline: none;
+  color: inherit;
+  transition: $main-transition;
+}
+
+@mixin list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin button-reset {
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  transition: $main-transition;
+
+  &:not(:disabled) {
+    cursor: pointer;
+  }
+}
+
+@mixin pseudo($width, $height, $content: "") {
+  content: $content;
+  position: absolute;
+  width: $width;
+  height: $height;
+}
+
+@mixin reset {
+  margin: 0;
+  padding: 0;
+}
