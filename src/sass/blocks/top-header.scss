@@ -1,0 +1,54 @@
+.top-header {
+  position: relative;
+  padding: 18px 0;
+  border-bottom: 1px solid $color-line;
+  z-index: 2;
+}
+
+.top-header__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top-header__logo {
+  display: flex;
+  align-items: center;
+}
+
+.top-header__logo-link {
+  margin-right: 101px;
+  margin-top: 5px;
+}
+
+.top-header__logo-text {
+  @include reset();
+  @include main-font(14px, 14px, 1.17, 400);
+  color: $color-text;
+
+  span {
+    display: block;
+    margin-top: 8px;
+  }
+}
+
+.top-header__call {
+  display: flex;
+  align-items: center;
+}
+
+.top-header__call-link {
+  @include link-reset();
+  @include main-font(18px, 18px, 1.17, 400);
+  color: $white;
+
+  &:hover,
+  &:focus {
+    color: $color-accent;
+  }
+}
+
+.top-header__call-button {
+  margin-left: 21px;
+  padding: 15px 36px;
+}

@@ -1,0 +1,85 @@
+.footer__connect {
+  display: flex;
+  flex-direction: column;
+}
+
+.connect__title {
+  @include main-font(16px, 16px, 1.2, 400);
+  margin-bottom: 20px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #232323;
+}
+
+.connect__list {
+  @include list-reset();
+}
+
+.connect__link {
+  @include link-reset();
+
+  &--phone {
+    @include main-font(18px, 12px, 1.2, 400);
+    margin-bottom: 7px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: #333333;
+
+    &:hover,
+    &:focus {
+      color: #2255ce;
+    }
+  }
+
+  &--mail {
+    @include main-font(16px, 12px, 1.2, 400);
+    margin-bottom: 37px;
+    letter-spacing: 0.02em;
+    color: #333333;
+
+    &:hover,
+    &:focus {
+      color: #2255ce;
+    }
+  }
+
+  &--whatsapp {
+    @include main-font(14px, 12px, 1.6, 400);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 143px;
+    height: 40px;
+    margin-bottom: 12px;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    letter-spacing: 0.02em;
+    color: #333333;
+    transition: all 0.3s ease;
+
+    &:hover,
+    &:focus {
+      opacity: 0.8;
+      background: #c5c5c530;
+    }
+  }
+}
+
+.connect__item-text {
+  margin-bottom: 11px;
+}
+
+.connect__icon {
+  margin-right: 10px;
+  fill: #3c3c3c;
+  transition: all 0.3s ease;
+
+  .connect__link--whatsapp & {
+    fill: #25d366;
+  }
+
+  .connect__link:hover &,
+  .connect__link:focus & {
+    fill: #2255ce;
+  }
+}

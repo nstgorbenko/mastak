@@ -1,0 +1,32 @@
+.top-footer {
+  background: #2b2a2a;
+}
+
+.top-footer__content {
+  display: flex;
+  justify-content: space-between;
+  padding: 68px 0;
+}
+
+.top-footer__column-left {
+  width: 24%;
+}
+
+.top-footer__logo-link {
+  @include link-reset();
+  margin-bottom: 26px;
+}
+
+.top-footer__logo-text {
+  @include reset();
+  @include main-font(14px, 14px, 1.2, 400);
+  color: #979797;
+}
+
+.top-footer__column-center {
+  width: 54.3%;
+}
+
+.top-footer__column-right {
+  width: 21.7%;
+}

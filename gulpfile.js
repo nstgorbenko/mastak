@@ -65,6 +65,7 @@ export const copy = () => {
   return gulp.src([
     'src/font/**/*',
     'src/img/*{png,jpg,svg,gif}',
+    'src/img/icons/*{png,jpg,svg,gif}',
   ], {
     base: 'src'
   })

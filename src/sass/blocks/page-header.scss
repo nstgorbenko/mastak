@@ -1,0 +1,10 @@
+.page-header {
+  position: relative;
+
+  &::before {
+    @include pseudo(100%, 100%);
+    top: 0;
+    left: 0;
+    background: rgba($black, 0.28);
+  }
+}

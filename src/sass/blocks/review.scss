@@ -1,0 +1,71 @@
+.review {
+  padding: 38px 40px;
+  background: #ffffff;
+  border: 1px solid #f2f2f2;
+  border-radius: 2px;
+}
+
+.review__top {
+  display: flex;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.review__user-photo-wrap {
+  width: 78px;
+  height: 78px;
+  margin-right: 40px;
+  border-radius: 50%;
+}
+
+.review__user-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.review__date {
+  @include main-font(16px, 14px, 1.4, 400);
+  display: inline-block;
+  margin-bottom: 8px;
+  color: $color-text-dark;
+}
+
+.review__user-name {
+  @include reset();
+  @include accent-font(27px, 18px, 1, 500);
+  margin-bottom: 9px;
+  color: $color-title;
+}
+
+.review__rating {
+  display: flex;
+  align-items: center;
+}
+
+.review__rating-stars {
+  position: relative;
+  width: 96px;
+  height: 16px;
+  margin-right: 10px;
+  background: url("../../img/icons/icon-stars.svg") 0 0 / cover no-repeat;
+}
+
+.review__rating-stars-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: url("../../img/icons/icon-stars-fill.svg") 0 0 / cover no-repeat;
+}
+
+.review__rating-mark {
+  @include main-font(16px, 14px, 1.4, 400);
+  color: $color-title;
+}
+
+.review__text {
+  @include reset();
+  @include main-font(16px, 16px, 1.6, 400);
+  color: $color-text-dark;
+}

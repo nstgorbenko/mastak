@@ -1,4 +1,4 @@
-@mixin fluid-type($max-font-size, $min-font-size, $lower-range: 320px, $upper-range: 1920px) {
+@mixin fluid-type($max-font-size, $min-font-size, $lower-range: 375px, $upper-range: 1920px) {
   font-size: calc(
     #{$min-font-size} + #{(($max-font-size / ($max-font-size * 0 + 1)) - ($min-font-size / ($min-font-size * 0 + 1)))} *
       (
@@ -55,10 +55,19 @@
   outline: none;
   background-color: transparent;
   transition: $main-transition;
+  cursor: pointer;
+}
 
-  &:not(:disabled) {
-    cursor: pointer;
-  }
+@mixin input-reset {
+  margin: 0;
+  padding: 0;
+  background-image: none;
+  background-color: transparent;
+  box-shadow: none;
+  border: none;
+  outline: none;
+  resize: none;
+  transition: $main-transition;
 }
 
 @mixin pseudo($width, $height, $content: "") {

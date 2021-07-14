@@ -1,0 +1,13 @@
+.page__container {
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 0 120px;
+
+  @media (max-width: $large) {
+    padding: 0 40px;
+  }
+
+  @media (max-width: $x-small) {
+    padding: 0 10px;
+  }
+}

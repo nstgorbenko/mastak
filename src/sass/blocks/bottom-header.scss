@@ -1,0 +1,73 @@
+.bottom-header {
+  position: relative;
+  z-index: 2;
+}
+
+.bottom-header__content {
+  padding: 0 120px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.bottom-header__service-list {
+  @include list-reset();
+  display: flex;
+  justify-content: space-between;
+  width: 54.8%;
+  padding: 18px 0;
+}
+
+.bottom-header__service-link {
+  @include link-reset();
+  @include main-font(16px, 16px, 1.17, 400);
+  position: relative;
+  color: $white;
+
+  &--catalog {
+    padding-right: 14px;
+    background: url("../../img/icons/icon-arrow-menu.svg") no-repeat 100% 60%;
+  }
+
+  &::before {
+    @include pseudo(0, 2px);
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: $color-accent;
+    transition: $main-transition;
+  }
+
+  &:hover::before,
+  &:focus::before {
+    width: 100%;
+  }
+}
+
+.bottom-header__main-list {
+  @include list-reset();
+  display: flex;
+  justify-content: space-between;
+  width: 41%;
+  padding: 18px 0;
+}
+
+.bottom-header__main-link {
+  @include link-reset();
+  @include main-font(16px, 16px, 1.17, 400);
+  position: relative;
+  color: $white;
+
+  &::before {
+    @include pseudo(0, 2px);
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: $color-accent;
+    transition: $main-transition;
+  }
+
+  &:hover::before,
+  &:focus::before {
+    width: 100%;
+  }
+}

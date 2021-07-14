@@ -1,0 +1,18 @@
+.reviews-block {
+  margin: 160px 0;
+}
+
+.reviews-block__content {
+  margin-top: 50px;
+}
+
+.reviews-block__list {
+  @include list-reset();
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.reviews-block__item {
+  width: 32%;
+}

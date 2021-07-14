@@ -1,0 +1,13 @@
+.cert {
+  margin: 160px 0;
+}
+
+.cert__container {
+  margin-top: 60px;
+}
+
+.cert__list {
+  @include list-reset();
+  display: flex;
+  justify-content: space-between;
+}

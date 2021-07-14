@@ -1,0 +1,73 @@
+.features {
+  margin: 160px 0;
+}
+
+.features__list {
+  @include list-reset();
+  display: flex;
+  justify-content: space-between;
+}
+
+.features__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 33%;
+  height: 240px;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &--time {
+    background-image: url("../../img/feature-1.jpg");
+  }
+
+  &--guarantee {
+    background-image: url("../../img/feature-2.jpg");
+  }
+
+  &--delivery {
+    background-image: url("../../img/feature-3.jpg");
+  }
+}
+
+.features__name {
+  @include reset();
+  @include accent-font(30px, 16px, 1.1, 600);
+  position: relative;
+  width: 58%;
+  padding-left: 91px;
+  color: $white;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+
+  &::before {
+    @include pseudo(58px, 58px);
+    display: block;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+  }
+
+  .features__item--time &::before {
+    background: url("../../img/icons/icon-time.svg") 0 0 no-repeat;
+  }
+
+  .features__item--guarantee &::before {
+    background: url("../../img/icons/icon-guarantee.svg") 0 0 no-repeat;
+  }
+
+  .features__item--delivery &::before {
+    background: url("../../img/icons/icon-delivery.svg") 0 0 no-repeat;
+  }
+}
+
+.features__text {
+  @include reset();
+  @include accent-font(15px, 13px, 1.1, 500);
+  margin: 8px 0 0 10px;
+  margin-left: 10px;
+  color: $white;
+  text-transform: uppercase;
+}

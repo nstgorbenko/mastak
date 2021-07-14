@@ -1,0 +1,33 @@
+.button {
+  @include button-reset();
+  @include link-reset();
+  @include main-font(13px, 13px, 1.4, 600);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 23px 44px;
+  border: none;
+  border-radius: 0;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: $white;
+  background: $color-main;
+  transition: $main-transition;
+
+  &:hover,
+  &:focus {
+    background: $color-hover;
+  }
+
+  &--light {
+    color: $color-accent;
+    background: $white;
+    border: 1px solid $color-accent;
+
+    &:hover,
+    &:focus {
+      color: $white;
+      background: $color-accent;
+    }
+  }
+}
