@@ -4,6 +4,23 @@
   height: 898px;
   margin-top: -140px;
   background: url("../../img/bg-main.jpg") no-repeat 50% 50% / cover;
+
+  @media (max-width: $large) {
+    height: 760px;
+  }
+
+  @media (max-width: 679px) {
+    margin-top: -86px;
+  }
+
+  @media (max-width: $extra-small) {
+    height: 591px;
+    background: url("../../img/bg-main-mobile.jpg") no-repeat 50% 50% / cover;
+  }
+
+  @media (max-width: 450px) {
+    margin-top: -65px;
+  }
 }
 
 .promo__list {
@@ -24,21 +41,44 @@
 .promo__title {
   @include reset();
   @include accent-font(70px, 32px, 1.1, 600);
-  width: 65%;
+  max-width: 95%;
   margin: 94px 0 26px;
   color: $white;
+
+  @media (max-width: $extra-small) {
+    margin: 82px 0 22px;
+  }
+
+  br {
+    @media (max-width: $extra-small) {
+      display: none;
+    }
+  }
 }
 
 .promo__text {
   @include reset();
   @include main-font(20px, 16px, 1.4, 400);
-  width: 45%;
+  width: 60%;
+  max-width: 700px;
   margin-bottom: 40px;
   color: $color-text-light;
+
+  @media (max-width: $small) {
+    width: 80%;
+  }
+
+  @media (max-width: $extra-small) {
+    width: 90%;
+  }
 }
 
 .promo__button {
   margin-bottom: 50px;
+
+  @media (max-width: $extra-small) {
+    padding: 15px 33px;
+  }
 }
 
 .promo__bullets {
@@ -51,16 +91,8 @@
   align-items: center;
   width: 54px;
   z-index: 10;
-}
 
-.promo__bullet {
-  @include button-reset();
-  width: 10px;
-  height: 10px;
-  border: 1px solid $color-bullet;
-  border-radius: 50%;
-
-  &--active {
-    background-color: $color-bullet;
+  @media (max-width: $extra-small) {
+    display: none;
   }
 }

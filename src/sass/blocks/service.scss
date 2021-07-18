@@ -1,16 +1,60 @@
 .service {
   margin: 135px 0 160px;
+
+  @media (max-width: $extra-large) {
+    margin: 100px 0 120px;
+  }
+
+  @media (max-width: $large) {
+    margin: 80px 0 100px;
+  }
+
+  @media (max-width: $medium) {
+    margin: 60px 0 80px;
+  }
+
+  @media (max-width: $extra-small) {
+    margin: 40px 0 60px;
+  }
 }
 
 .service__list {
   @include list-reset();
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   margin: 60px 0 67px;
+
+  @media (max-width: $extra-large) {
+    margin: 40px 0 47px;
+  }
+
+  @media (max-width: $medium) {
+    margin: 40px 0 30px;
+  }
+
+  @media (max-width: $small) {
+    margin: 40px 0 14px;
+  }
 }
 
 .service__item {
   width: 19%;
+
+  @media (max-width: $extra-large) {
+    width: 24%;
+  }
+
+  @media (max-width: $small) {
+    width: 49%;
+    margin-bottom: 25px;
+  }
+
+  &:nth-child(n + 5) {
+    @media (max-width: $extra-large) {
+      display: none;
+    }
+  }
 }
 
 .service__link {
@@ -24,6 +68,10 @@
   margin-bottom: 20px;
   padding-bottom: 100%;
   overflow: hidden;
+
+  @media (max-width: $small) {
+    margin-bottom: 9px;
+  }
 }
 
 .service__image {
@@ -37,6 +85,7 @@
   @include reset();
   @include accent-font(27px, 18px, 1, 500);
   color: $color-title;
+  overflow-wrap: break-word;
   transition: $main-transition;
 
   .service__link:hover &,
@@ -48,4 +97,8 @@
 .service__button-more {
   margin: 0 auto;
   padding: 12px 28px;
+
+  @media (max-width: $small) {
+    padding: 10px 18px;
+  }
 }

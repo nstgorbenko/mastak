@@ -2,27 +2,66 @@
   margin: 160px 0;
   padding: 44px 0;
   background: $color-background;
+
+  @media (max-width: $extra-small) {
+    margin: 100px 0;
+    padding: 60px 0;
+    background: #f5f5f5;
+  }
+
+  @media (max-width: $large) {
+    margin: 80px 0;
+  }
+
+  @media (max-width: $medium) {
+    margin: 60px 0;
+  }
 }
 
 .motive__wrapper {
   display: flex;
   align-items: center;
+
+  @media (max-width: $large) {
+    flex-direction: column-reverse;
+  }
 }
 
 .motive__image-wrap {
   width: 47.5%;
   height: 766px;
   flex-shrink: 0;
+
+  @media (max-width: $large) {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding-bottom: 70%;
+  }
 }
 
 .motive__image {
   width: 100%;
   height: 100%;
   object-fit: cover;
+
+  @media (max-width: $large) {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
 }
 
 .motive__content {
   padding-left: 86px;
+
+  @media (max-width: $extra-large) {
+    padding-left: 40px;
+  }
+
+  @media (max-width: $large) {
+    padding-left: 0;
+  }
 }
 
 .motive__title {
@@ -30,6 +69,21 @@
   @include accent-font(55px, 28px, 1.17, 600);
   margin: 46px 0 70px;
   color: $color-title;
+
+  @media (max-width: $extra-large) {
+    margin: 46px auto;
+    text-align: center;
+  }
+
+  @media (max-width: $large) {
+    width: 80%;
+  }
+
+  @media (max-width: $extra-small) {
+    width: 100%;
+    margin: 0 0 46px;
+    text-align: left;
+  }
 
   span {
     color: $color-accent;
@@ -41,6 +95,10 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+
+  @media (max-width: $extra-small) {
+    flex-direction: column;
+  }
 }
 
 .motive__item {
@@ -49,22 +107,29 @@
   padding-top: 60px;
   background-position: 0px 5px;
   background-repeat: no-repeat;
-  background-size: 45px 30px;
+  background-size: 46px 30px;
+
+  @media (max-width: $extra-small) {
+    width: 92%;
+    margin-bottom: 36px;
+    padding-top: 52px;
+    background-size: 36px auto;
+  }
 
   &--1 {
-    background-image: url("../../img/icons/icon-01.svg");
+    background-image: url("../../img/icons/icon-01.png");
   }
 
   &--2 {
-    background-image: url("../../img/icons/icon-02.svg");
+    background-image: url("../../img/icons/icon-02.png");
   }
 
   &--3 {
-    background-image: url("../../img/icons/icon-03.svg");
+    background-image: url("../../img/icons/icon-03.png");
   }
 
   &--4 {
-    background-image: url("../../img/icons/icon-04.svg");
+    background-image: url("../../img/icons/icon-04.png");
   }
 }
 
@@ -73,6 +138,10 @@
   @include accent-font(27px, 18px, 1.13, 600);
   margin-bottom: 14px;
   color: $color-title;
+
+  @media (max-width: $extra-small) {
+    margin-bottom: 11px;
+  }
 }
 
 .motive__item-text {

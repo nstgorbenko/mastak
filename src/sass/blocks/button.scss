@@ -1,11 +1,11 @@
 .button {
   @include button-reset();
   @include link-reset();
-  @include main-font(13px, 13px, 1.4, 600);
+  @include main-font(14px, 13px, 1.4, 600);
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 23px 44px;
+  padding: 23px 39px;
   border: none;
   border-radius: 0;
   text-transform: uppercase;

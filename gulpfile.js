@@ -43,7 +43,10 @@ export const styles = () => {
 
 // Scripts
 export const scripts = () => {
-  return gulp.src('src/js/index.js')
+  return gulp.src([
+    'src/js/index.js',
+    'src/js/swiper-bundle.min.js'
+  ])
     .pipe(plumber())
     .pipe(rigger())
     .pipe(babel({

@@ -1,85 +1,208 @@
-.footer__connect {
+.connect {
   display: flex;
   flex-direction: column;
+  margin-top: 8px;
 }
 
 .connect__title {
-  @include main-font(16px, 16px, 1.2, 400);
-  margin-bottom: 20px;
-  letter-spacing: 0.08em;
+  @include reset();
+  @include main-font(15px, 15px, 1.4, 400);
+  margin-bottom: 22px;
+  letter-spacing: 0.01em;
   text-transform: uppercase;
-  color: #232323;
+  color: #828282;
+
+  @media (max-width: $small) {
+    display: none;
+  }
 }
 
 .connect__list {
   @include list-reset();
+
+  @media (max-width: $medium) {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: stretch;
+    height: 100px;
+  }
+
+  @media (max-width: $small) {
+    flex-direction: row;
+    height: auto;
+  }
+}
+
+.connect__item {
+  @media (max-width: $medium) {
+    width: 50%;
+  }
+
+  @media (max-width: $small) {
+    width: auto;
+  }
+
+  &:nth-child(3) {
+    @media (max-width: $medium) {
+      margin-top: -43px;
+    }
+
+    @media (max-width: $small) {
+      width: 100%;
+      margin-top: 0;
+    }
+  }
 }
 
 .connect__link {
   @include link-reset();
 
   &--phone {
-    @include main-font(18px, 12px, 1.2, 400);
-    margin-bottom: 7px;
-    letter-spacing: 0.02em;
-    text-transform: uppercase;
-    color: #333333;
+    @include main-font(16px, 16px, 1.2, 400);
+    margin-bottom: 15px;
+    color: $white;
+
+    @media (max-width: $small) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 126px;
+      height: 40px;
+      margin: 0 10px 10px 0;
+      border-radius: 4px;
+      font-size: 12px;
+      line-height: 1;
+      letter-spacing: 0.02em;
+      background-color: #4f4f4f;
+      transition: all 0.3s ease;
+    }
 
     &:hover,
     &:focus {
-      color: #2255ce;
+      color: $color-accent;
     }
   }
 
   &--mail {
-    @include main-font(16px, 12px, 1.2, 400);
-    margin-bottom: 37px;
-    letter-spacing: 0.02em;
-    color: #333333;
+    @include main-font(16px, 16px, 1.2, 400);
+    margin-bottom: 28px;
+    color: $white;
+
+    @media (max-width: $small) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 177px;
+      height: 40px;
+      margin-bottom: 10px;
+      border-radius: 4px;
+      font-size: 12px;
+      line-height: 1;
+      letter-spacing: 0.02em;
+      background-color: #4f4f4f;
+      transition: all 0.3s ease;
+    }
 
     &:hover,
     &:focus {
-      color: #2255ce;
+      color: $color-accent;
     }
   }
 
   &--whatsapp {
-    @include main-font(14px, 12px, 1.6, 400);
+    @include main-font(13px, 13px, 1.4, 400);
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 143px;
-    height: 40px;
-    margin-bottom: 12px;
-    border: 1px solid #e0e0e0;
+    width: 130px;
+    height: 42px;
+    margin-right: 8px;
     border-radius: 4px;
     letter-spacing: 0.02em;
-    color: #333333;
+    color: $white;
+    background-color: #4f4f4f;
+    transition: all 0.3s ease;
+
+    @media (max-width: $small) {
+      margin-right: 10px;
+    }
+
+    &:hover,
+    &:focus {
+      color: $color-accent;
+    }
+  }
+
+  &--telegram {
+    @include main-font(13px, 13px, 1.4, 400);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 121px;
+    height: 42px;
+    border-radius: 4px;
+    letter-spacing: 0.02em;
+    color: $white;
+    background-color: #4f4f4f;
     transition: all 0.3s ease;
 
     &:hover,
     &:focus {
-      opacity: 0.8;
-      background: #c5c5c530;
+      color: $color-accent;
+    }
+  }
+}
+
+.connect__link-text {
+  &--mobile {
+    display: none;
+
+    @media (max-width: $small) {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &--desktop {
+    @media (max-width: $small) {
+      display: none;
     }
   }
 }
 
 .connect__item-text {
-  margin-bottom: 11px;
+  @include reset();
+  @include main-font(15px, 15px, 1.4, 400);
+  margin-bottom: 20px;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  color: #828282;
+
+  @media (max-width: $small) {
+    display: none;
+  }
+}
+
+.connect__item-links {
+  display: flex;
 }
 
 .connect__icon {
   margin-right: 10px;
-  fill: #3c3c3c;
+  fill: $white;
   transition: all 0.3s ease;
 
   .connect__link--whatsapp & {
     fill: #25d366;
   }
 
+  .connect__link--telegram & {
+    fill: #0a89ff;
+  }
+
   .connect__link:hover &,
   .connect__link:focus & {
-    fill: #2255ce;
+    fill: $color-accent;
   }
 }

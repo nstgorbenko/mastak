@@ -4,7 +4,6 @@ html(lang="ru")
   head
     meta(charset="UTF-8")
     meta(name="viewport" content="width=device-width, initial-scale=1.0")
-    link(rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css")
     link(rel="stylesheet" href="./css/style.css")
     title Мастак. Ремонт электроинструмента
 
@@ -18,6 +17,20 @@ html(lang="ru")
                 img.top-header__logo-image(width="171" height="40" src="img/icons/icon-logo.svg" alt="Логотип компании Мастак")
               p.top-header__logo-text Мы работаем с 1995 года
                 span Работаем по Москве и Московской области
+
+            .top-header__burger
+              .top-header__burger-icon
+                span.top-header__burger-icon-line
+              p.top-header__burger-text Меню
+
+            ul.top-header__list
+              li.top-header__item
+                a.top-header__link(href="#") Ремонт электроинструмента
+              li.top-header__item
+                a.top-header__link(href="#") Ремонт строительной техники
+              li.top-header__item
+                a.top-header__link(href="#") Ремонт садовой техники
+
             .top-header__call
               a.top-header__call-link(href="tel:89999999999") 8 999 999 99 99
               button.button.top-header__call-button(type="button") Заказать ремонт
@@ -25,24 +38,23 @@ html(lang="ru")
       .bottom-header
         .page__container
           nav.bottom-header__content
-            ul.bottom-header__service-list
-              li.bottom-header__service-item
-                a.bottom-header__service-link.bottom-header__service-link--catalog(href="#") Ремонт электроинструмента
-              li.bottom-header__service-item
-                a.bottom-header__service-link.bottom-header__service-link--catalog(href="#") Ремонт строительной техники
-              li.bottom-header__service-item
-                a.bottom-header__service-link.bottom-header__service-link--catalog(href="#") Ремонт садовой техники
-            ul.bottom-header__main-list
-              li.bottom-header__main-item
-                a.bottom-header__main-link(href="#") Цены
-              li.bottom-header__main-item
-                a.bottom-header__main-link(href="#") О сервисе
-              li.bottom-header__main-item
-                a.bottom-header__main-link(href="#") Сертификаты
-              li.bottom-header__main-item
-                a.bottom-header__main-link(href="#") Отзывы
-              li.bottom-header__main-item
-                a.bottom-header__main-link(href="#") Контакты
+            ul.bottom-header__list
+              li.bottom-header__item
+                a.bottom-header__link.bottom-header__link--catalog(href="#") Ремонт электроинструмента
+              li.bottom-header__item
+                a.bottom-header__link.bottom-header__link--catalog(href="#") Ремонт строительной техники
+              li.bottom-header__item
+                a.bottom-header__link.bottom-header__link--catalog(href="#") Ремонт садовой техники
+              li.bottom-header__item
+                a.bottom-header__link(href="#") Цены
+              li.bottom-header__item
+                a.bottom-header__link(href="#") О сервисе
+              li.bottom-header__item
+                a.bottom-header__link(href="#") Сертификаты
+              li.bottom-header__item
+                a.bottom-header__link(href="#") Отзывы
+              li.bottom-header__item
+                a.bottom-header__link(href="#") Контакты
 
     main.page-main
       section.promo
@@ -51,18 +63,46 @@ html(lang="ru")
             li.promo__item.swiper-slide
               .promo__content
                 .page__container
-                  p.promo__title Ремонт электроинструмента строительной и садовой техники
+                  p.promo__title Ремонт электро&shy;инструмента
+                   br
+                   = " "
+                   | строительной и садовой
+                   br
+                   = " "
+                   | техники
                   p.promo__text Полный комплекс услуг по диагностике, сервисному обслуживанию и профессиональному ремонту по адекватным ценам
                   button.button.promo__button(type="button") Оставить заявку
-        .promo__bullets
-          button.promo__bullet.promo__bullet--1.promo__bullet--active(type="button", aria-label="Перейти на первый слайд")
-          button.promo__bullet.promo__bullet--2(type="button", aria-label="Перейти на второй слайд")
-          button.promo__bullet.promo__bullet--3(type="button", aria-label="Перейти на третий слайд")
+            li.promo__item.swiper-slide
+              .promo__content
+                .page__container
+                  p.promo__title Ремонт электро&shy;инструмента
+                   br
+                   = " "
+                   | строительной и садовой
+                   br
+                   = " "
+                   | техники
+                  p.promo__text Полный комплекс услуг по диагностике, сервисному обслуживанию и профессиональному ремонту по адекватным ценам
+                  button.button.promo__button(type="button") Оставить заявку
+            li.promo__item.swiper-slide
+              .promo__content
+                .page__container
+                  p.promo__title Ремонт электро&shy;инструмента
+                   br
+                   = " "
+                   | строительной и садовой
+                   br
+                   = " "
+                   | техники
+                  p.promo__text Полный комплекс услуг по диагностике, сервисному обслуживанию и профессиональному ремонту по адекватным ценам
+                  button.button.promo__button(type="button") Оставить заявку
+        .promo__bullets.swiper-pagination
 
       section.service
         .page__container
           .title.title--text.service__title
             p.title__name.service__name Ремонт
+              br
               = " "
               span электроинструмента
             p.title__text.service__text Ниже представлен каталог электроинструмента по которым проводим диагностику и ремонтные работы.
@@ -102,14 +142,17 @@ html(lang="ru")
             p.features__name Гарантия на все услуги
           li.features__item.features__item--delivery
             p.features__name Бесплатная доставка
-            p.features__text Для юридических лиц
+              span.features__text Для юридических лиц
 
       section.service
         .page__container
           .title.title--text.service__title
             p.title__name.service__name Ремонт
               = " "
-              span строительной техники
+              span строительной
+                br
+                = " "
+                | техники
             p.title__text.service__text Также наш сервис специализируется на ремонте и обслуживание большого спектра строительной техники. Работы проводят сертифицированные мастера.
           ul.service__list
             li.service__item
@@ -156,7 +199,10 @@ html(lang="ru")
           .title.title--text.service__title
             p.title__name.service__name Ремонт
               = " "
-              span садовой техники
+              span садовой
+                br
+                = " "
+                | техники
             p.title__text.service__text Наш сервисный центр производит ремонт всех самых популярных видов садовой техники. Всегда в наличии имеются оригинальные запасные части. Предоставляется выезд специалиста, доставка и гарантия.
           ul.service__list
             li.service__item
@@ -313,8 +359,11 @@ html(lang="ru")
             .title.center__title
               p.title__name.center__name Наш
                 = " "
-                span сервисный центр
-              a.title__link.center__link(href="#") О сервисе
+                span сервисный
+                  br
+                  = " "
+                  | центр
+              a.title__link.title__link--desktop.center__link(href="#") О сервисе
                 .title__link-arrow
                   svg.title__link-icon(width="16", height="11")
                     use(xlink:href="img/sprite.svg#icon-arrow")
@@ -344,13 +393,20 @@ html(lang="ru")
             li.center__item
               .center__item-image-wrap
                 img.center__item-image(width="471" height="380" src="img/center-8.jpg" alt="Сервисный центр «Мастак»")
+        .center__footer
+          .page__container
+            .title.center__title
+              a.title__link.title__link--mobile.center__link(href="#") О сервисе
+                .title__link-arrow
+                  svg.title__link-icon(width="16", height="11")
+                    use(xlink:href="img/sprite.svg#icon-arrow")
 
       section.cert
         .page__container
           .title.cert__title
             p.title__name.cert__name
               span Сертификаты
-            a.title__link.cert__link(href="#") Все сертификаты
+            a.title__link.title__link--desktop.cert__link(href="#") Все сертификаты
               .title__link-arrow
                 svg.title__link-icon(width="16", height="11")
                   use(xlink:href="img/sprite.svg#icon-arrow")
@@ -358,26 +414,31 @@ html(lang="ru")
             ul.cert__list.swiper-wrapper
               li.cert__item.swiper-slide
                 .cert__item-image-wrap
-                  img.cert__item-image(width="304" height="442" src="img/cert-1.jpg" alt="Сертификат")
+                  img.cert__item-image(src="img/cert-1.jpg" alt="Сертификат")
               li.cert__item.swiper-slide
                 .cert__item-image-wrap
-                  img.cert__item-image(width="304" height="442" src="img/cert-2.jpg" alt="Сертификат")
+                  img.cert__item-image(src="img/cert-2.jpg" alt="Сертификат")
               li.cert__item.swiper-slide
                 .cert__item-image-wrap
-                  img.cert__item-image(width="304" height="442" src="img/cert-3.jpg" alt="Сертификат")
+                  img.cert__item-image(src="img/cert-3.jpg" alt="Сертификат")
               li.cert__item.swiper-slide
                 .cert__item-image-wrap
-                  img.cert__item-image(width="304" height="442" src="img/cert-4.jpg" alt="Сертификат")
+                  img.cert__item-image(src="img/cert-4.jpg" alt="Сертификат")
               li.cert__item.swiper-slide
                 .cert__item-image-wrap
-                  img.cert__item-image(width="304" height="442" src="img/cert-5.jpg" alt="Сертификат")
+                  img.cert__item-image(src="img/cert-5.jpg" alt="Сертификат")
+          .title.cert__title
+            a.title__link.title__link--mobile.cert__link(href="#") Все сертификаты
+              .title__link-arrow
+                svg.title__link-icon(width="16", height="11")
+                  use(xlink:href="img/sprite.svg#icon-arrow")
 
       section.reviews-block
         .page__container
           .title.reviews-block__title
             p.title__name.reviews-block__name
               span Отзывы
-            a.title__link.reviews-block__link(href="#") Все отзывы
+            a.title__link.title__link--desktop.reviews-block__link(href="#") Все отзывы
               .title__link-arrow
                 svg.title__link-icon(width="16", height="11")
                   use(xlink:href="img/sprite.svg#icon-arrow")
@@ -425,6 +486,11 @@ html(lang="ru")
                         span.review__rating-mark 5/5
                   .review__bottom
                     p.review__text “Когда я пришел в компанию, меня приятно поразила обстановка в этом сервисе. Когда меня хорошо обслужил мастер Александр, денег взяли меньше, нежели с меня брали в другом сервисе, профессионально и быстро, не всовывали лишние услуги. Мне очень понравилось.”
+          .title.reviews-block__title
+            a.title__link.title__link--mobile.reviews-block__link(href="#") Все отзывы
+              .title__link-arrow
+                svg.title__link-icon(width="16", height="11")
+                  use(xlink:href="img/sprite.svg#icon-arrow")
 
     footer.page__footer
       .top-footer
@@ -485,60 +551,62 @@ html(lang="ru")
                         li.navigation__sublist-item Москва, Красная 176
 
             .top-footer__column-right
-                .connect
-                  p.connect__title Свяжитесь с нами
-                  ul.connect__list
-                    li.connect__item
-                      a.connect__item-link.connect__item-link--phone(href='tel:+74956613111')
-                        span.connect__item-text.connect__item-text--desktop +7 (495) 661 33 11
-                        span.connect__item-text.connect__item-text--mobile
-                          svg.connect__item-icon(width="24", height="24")
-                            use(xlink:href="img/sprite.svg#icon-phone")
-                          | Позвонить
-                    li.connect__item
-                      a.connect__item-link.connect__item-link--mail(href='mailto:info@tecsanservice.ru')
-                        span.connect__item-text.connect-link-text--desktop info@tecsanservice.ru
-                        span.connect__item-text.connect-link-text--mobile
-                          svg.connect__item-icon(width="16", height="16")
-                            use(xlink:href="img/sprite.svg#icon-mail")
-                          | Написать на почту
-                    li.connect__item
-                      p.connect__item-text Задайте вопрос напрямую :
-                      a.connect__item-link.connect__item-link--whatsapp(href='#')
-                        svg.connect__item-icon(width="16", height="16")
+              .connect
+                p.connect__title Свяжитесь с нами
+                ul.connect__list
+                  li.connect__item
+                    a.connect__link.connect__link--phone(href='tel:+74956613111')
+                      span.connect__link-text.connect__link-text--desktop +7 (495) 661 33 11
+                      span.connect__link-text.connect__link-text--mobile
+                        svg.connect__icon(width="16", height="16")
+                          use(xlink:href="img/sprite.svg#icon-phone")
+                        | Позвонить
+                  li.connect__item
+                    a.connect__link.connect__link--mail(href='mailto:info@tecsanservice.ru')
+                      span.connect__link-text.connect__link-text--desktop info@tecsanservice.ru
+                      span.connect__link-text.connect__link-text--mobile
+                        svg.connect__icon(width="16", height="16")
+                          use(xlink:href="img/sprite.svg#icon-mail")
+                        | Написать на почту
+                  li.connect__item
+                    p.connect__item-text Задайте вопрос напрямую :
+                    .connect__item-links
+                      a.connect__link.connect__link--whatsapp(href='#')
+                        svg.connect__icon(width="16", height="16")
                           use(xlink:href="img/sprite.svg#icon-whatsapp")
                         span WhatsApp
-                      a.connect__item-link.connect__item-link--telegram(href='#')
-                        svg.connect__item-icon(width="16", height="16")
+                      a.connect__link.connect__link--telegram(href='#')
+                        svg.connect__icon(width="16", height="16")
                           use(xlink:href="img/sprite.svg#icon-telegram")
                         span Telegram
 
-      //- .bottom-footer
-      //-   .page__container
-      //-     p.bottom-footer__privacy
-      //-       | © МАСТАК, 2015-2021
-      //-       a.bottom-footer__privacy-link(href='#')
+      .bottom-footer
+        .page__container
+          .bottom-footer__content
+            p.bottom-footer__privacy
+              | © МАСТАК, 2015-2021
+              a.bottom-footer__privacy-link(href='#') Политика конфиденциальности
 
-      //-     ul.social-links.bottom-footer__social-links
-      //-       li.social-links__item
-      //-         a.social-links__link(href='#')
-      //-           svg.social-links__icon(width="16", height="16")
-      //-             use(xlink:href="img/sprite.svg#icon-vk")
-      //-       li.social-links__item
-      //-         a.social-links__link(href='#')
-      //-           svg.social-links__icon(width="16", height="16")
-      //-             use(xlink:href="img/sprite.svg#icon-fb")
-      //-       li.social-links__item
-      //-         a.social-links__link(href='#')
-      //-           svg.social-links__icon(width="16", height="16")
-      //-             use(xlink:href="img/sprite.svg#icon-ig")
+            ul.social-links.bottom-footer__social-links
+              li.social-links__item
+                a.social-links__link(href='#')
+                  svg.social-links__icon(width="16", height="16")
+                    use(xlink:href="img/sprite.svg#icon-vk")
+              li.social-links__item
+                a.social-links__link(href='#')
+                  svg.social-links__icon(width="16", height="16")
+                    use(xlink:href="img/sprite.svg#icon-fb")
+              li.social-links__item
+                a.social-links__link(href='#')
+                  svg.social-links__icon(width="16", height="16")
+                    use(xlink:href="img/sprite.svg#icon-ig")
 
-      //-     a.bottom-footer__develop(href='https://dragoweb.ru/')
-      //-       p.bottom-footer__develop-text Разработка и продвижение
-      //-         svg.bottom-footer__develop-icon(width="81", height="15")
-      //-           use(xlink:href="img/sprite.svg#icon-dragoweb")
+            a.bottom-footer__develop(href='https://dragoweb.ru/')
+              p.bottom-footer__develop-text Разработка и продвижение
+              svg.bottom-footer__develop-icon(width="81", height="15")
+                use(xlink:href="img/sprite.svg#icon-dragoweb")
 
-    script(src="https://unpkg.com/swiper/swiper-bundle.min.js")
+    script(src="js/swiper-bundle.min.js")
     script(src="js/index.js")
 
     .svg-library

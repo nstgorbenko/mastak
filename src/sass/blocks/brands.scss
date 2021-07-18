@@ -2,35 +2,90 @@
   margin: 160px 0;
   padding: 44px 0;
   background: $color-background;
+
+  @media (max-width: $extra-large) {
+    margin: 100px 0;
+  }
+
+  @media (max-width: $large) {
+    margin: 80px 0;
+  }
+
+  @media (max-width: $medium) {
+    margin: 60px 0;
+    padding: 60px 0;
+  }
+
+  @media (max-width: $extra-small) {
+    background: #f5f5f5;
+  }
 }
 
 .brands__wrapper {
   display: flex;
   align-items: center;
+
+  @media (max-width: $large) {
+    flex-direction: column-reverse;
+  }
 }
 
 .brands__image-wrap {
   width: 47.5%;
   height: 766px;
   flex-shrink: 0;
+
+  @media (max-width: $large) {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding-bottom: 70%;
+  }
 }
 
 .brands__image {
   width: 100%;
   height: 100%;
   object-fit: cover;
+
+  @media (max-width: $large) {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
 }
 
 .brands__content {
   padding-left: 86px;
+
+  @media (max-width: $extra-large) {
+    padding-left: 40px;
+  }
+
+  @media (max-width: $large) {
+    width: 100%;
+    padding-left: 0;
+  }
 }
 
 .brands__title {
   @include reset();
   @include accent-font(60px, 28px, 1.02, 600);
-  width: 80%;
+  width: 89%;
   margin-bottom: 38px;
   color: $color-title;
+
+  @media (max-width: $large) {
+    width: 80%;
+    margin: 0 auto 20px;
+    text-align: center;
+  }
+
+  @media (max-width: $extra-small) {
+    width: 100%;
+    margin: 0 0 15px;
+    text-align: left;
+  }
 
   span {
     color: $color-accent;
@@ -43,6 +98,17 @@
   width: 80%;
   margin-bottom: 60px;
   color: $color-text-dark;
+
+  @media (max-width: $large) {
+    margin: 0 auto 43px;
+    text-align: center;
+  }
+
+  @media (max-width: $extra-small) {
+    width: 100%;
+    margin: 0 0 43px;
+    text-align: left;
+  }
 }
 
 .brands__list {
@@ -51,10 +117,28 @@
   grid-template: repeat(3, 1fr) / repeat(4, 1fr);
   gap: 20px 30px;
   margin-bottom: 26px;
+
+  @media (max-width: 1600px) {
+    gap: 15px;
+  }
+
+  @media (max-width: $large) {
+    margin-bottom: 42px;
+  }
+
+  @media (max-width: $extra-small) {
+    grid-template: repeat(4, 1fr) / repeat(3, 1fr);
+    gap: 10px;
+  }
 }
 
 .brands__item {
   height: 80px;
+  background-color: $white;
+
+  @media (max-width: $extra-small) {
+    height: 51px;
+  }
 }
 
 .brands__item-image-wrap {
@@ -65,5 +149,5 @@
 .brands__item-image {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
