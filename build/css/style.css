@@ -813,12 +813,14 @@ template {
 
 .bottom-header {
   position: relative;
-  background-color: rgba(0, 0, 0, 0.28);
+  background-color: #131516;
   transition: all 0.2s ease; }
   @media (max-width: 679px) {
     .bottom-header {
       display: none; } }
-  .page-header:hover .bottom-header {
+  .page-header--main .bottom-header {
+    background-color: rgba(0, 0, 0, 0.28); }
+  .page-header--main:hover .bottom-header {
     background-color: rgba(0, 0, 0, 0.7); }
   .scroll .bottom-header {
     display: none; }
@@ -2470,7 +2472,7 @@ template {
   position: relative;
   padding: 18px 0;
   border-bottom: 1px solid #424242;
-  background-color: rgba(0, 0, 0, 0.28);
+  background-color: #131516;
   transition: all 0.2s ease; }
   @media (max-width: 679px) {
     .top-header {
@@ -2479,14 +2481,16 @@ template {
   @media (max-width: 450px) {
     .top-header {
       padding: 12px 0; } }
-  .page-header:hover .top-header {
+  .page-header--main .top-header {
+    background-color: rgba(0, 0, 0, 0.28); }
+  .page-header--main:hover .top-header {
     background-color: rgba(0, 0, 0, 0.7); }
   .scroll .top-header {
-    background: #131516;
+    background-color: #131516;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.08);
     border-bottom: none; }
   .page-header.scroll:hover .top-header {
-    background: #131516; }
+    background-color: #131516; }
 
 .top-header__content {
   display: flex;

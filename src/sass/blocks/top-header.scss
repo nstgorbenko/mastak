@@ -2,7 +2,7 @@
   position: relative;
   padding: 18px 0;
   border-bottom: 1px solid $color-line;
-  background-color: rgba($black, 0.28);
+  background-color: #131516;
   transition: $main-transition;
 
   @media (max-width: 679px) {
@@ -14,18 +14,22 @@
     padding: 12px 0;
   }
 
-  .page-header:hover & {
+  .page-header--main & {
+    background-color: rgba($black, 0.28);
+  }
+
+  .page-header--main:hover & {
     background-color: rgba($black, 0.7);
   }
 
   .scroll & {
-    background: #131516;
+    background-color: #131516;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.08);
     border-bottom: none;
   }
 
   .page-header.scroll:hover & {
-    background: #131516;
+    background-color: #131516;
   }
 }
 
