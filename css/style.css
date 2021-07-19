@@ -1178,7 +1178,10 @@ template {
       padding: 0;
       background: #f20303 url("../../img/icons/icon-arrow-field.svg") 50% 50% no-repeat; } }
   .call__field-button:hover, .call__field-button:focus {
-    background: #bb1717 url("../../img/icons/icon-arrow-field.svg") 50% 50% no-repeat; }
+    background-image: #bb1717; }
+  @media (max-width: 576px) {
+    .call__field-button:hover, .call__field-button:focus {
+      background: #bb1717 url("../../img/icons/icon-arrow-field.svg") 50% 50% no-repeat; } }
 
 .call__caption {
   margin: 0;
