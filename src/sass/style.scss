@@ -12,6 +12,9 @@
 
 // Common blocks
 @import "./blocks/button";
+@import "./blocks/banner";
+@import "./blocks/call-order";
+@import "./blocks/price-banner";
 @import "./blocks/social-links";
 @import "./blocks/title";
 
@@ -19,11 +22,13 @@
 @import "./blocks/bottom-footer";
 @import "./blocks/bottom-header";
 @import "./blocks/brands";
+@import "./blocks/breadcrumbs";
 @import "./blocks/call";
 @import "./blocks/center";
 @import "./blocks/cert";
 @import "./blocks/connect";
 @import "./blocks/features";
+@import "./blocks/info";
 @import "./blocks/motive";
 @import "./blocks/navigation";
 @import "./blocks/page-header";
@@ -32,7 +37,7 @@
 @import "./blocks/review";
 @import "./blocks/reviews-block";
 @import "./blocks/service";
-@import "./blocks/swiper";
 @import "./blocks/team";
 @import "./blocks/top-header";
 @import "./blocks/top-footer";
+@import "./blocks/top-info";

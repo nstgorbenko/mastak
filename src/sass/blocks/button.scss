@@ -14,6 +14,10 @@
   background: $color-main;
   transition: $main-transition;
 
+  @media (max-width: $extra-small) {
+    padding: 16px 19px;
+  }
+
   &:hover,
   &:focus {
     background: $color-hover;

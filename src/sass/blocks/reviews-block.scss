@@ -51,4 +51,10 @@
       display: block;
     }
   }
+
+  &:last-child {
+    @media (max-width: $small) {
+      margin-bottom: 0;
+    }
+  }
 }

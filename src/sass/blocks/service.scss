@@ -16,6 +16,26 @@
   @media (max-width: $extra-small) {
     margin: 40px 0 60px;
   }
+
+  .top-info + & {
+    margin: 158px 0 160px;
+
+    @media (max-width: $extra-large) {
+      margin: 100px 0 120px;
+    }
+
+    @media (max-width: $large) {
+      margin: 80px 0 100px;
+    }
+
+    @media (max-width: $medium) {
+      margin: 60px 0 80px;
+    }
+
+    @media (max-width: $extra-small) {
+      margin: 40px 0 60px;
+    }
+  }
 }
 
 .service__list {
@@ -36,6 +56,14 @@
   @media (max-width: $small) {
     margin: 40px 0 14px;
   }
+
+  .service--rows & {
+    margin-bottom: -16px;
+
+    @media (max-width: $extra-large) {
+      margin-bottom: 10px;
+    }
+  }
 }
 
 .service__item {
@@ -53,6 +81,30 @@
   &:nth-child(n + 5) {
     @media (max-width: $extra-large) {
       display: none;
+    }
+  }
+
+  .service--rows & {
+    margin-bottom: 62px;
+
+    @media (max-width: $extra-large) {
+      margin-bottom: 40px;
+    }
+
+    @media (max-width: $small) {
+      margin-bottom: 28px;
+    }
+
+    &:nth-child(n + 5) {
+      @media (max-width: $extra-large) {
+        display: block;
+      }
+    }
+
+    &:nth-child(n + 9) {
+      @media (max-width: $extra-large) {
+        display: none;
+      }
     }
   }
 }
@@ -87,6 +139,24 @@
   color: $color-title;
   overflow-wrap: break-word;
   transition: $main-transition;
+
+  .service__link:hover &,
+  .service__link:hover & {
+    color: $color-accent;
+  }
+}
+
+.service__item-price {
+  @include reset();
+  @include main-font(18px, 16px, 1.4, 400);
+  margin-top: 16px;
+  transition: $main-transition;
+
+  .service--rows & {
+    @media (max-width: $extra-large) {
+      margin-top: 9px;
+    }
+  }
 
   .service__link:hover &,
   .service__link:hover & {

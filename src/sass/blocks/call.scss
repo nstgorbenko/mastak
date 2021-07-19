@@ -103,7 +103,11 @@
 
   &:hover,
   &:focus {
-    background: $color-hover url("../../img/icons/icon-arrow-field.svg") 50% 50% no-repeat;
+    background: $color-hover;
+
+    @media (max-width: $extra-small) {
+      background: $color-hover url("../../img/icons/icon-arrow-field.svg") 50% 50% no-repeat;
+    }
   }
 }
 

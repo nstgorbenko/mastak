@@ -1,0 +1,47 @@
+.call-order {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 355px;
+  padding-top: 272px;
+  background-image: url("../../img/icons/icon-gear.png");
+  background-position: 50% 0;
+  background-size: 248px auto;
+  background-repeat: no-repeat;
+
+  @media (max-width: $extra-small) {
+    width: 321px;
+    padding-top: 165px;
+    background-size: 140px auto;
+  }
+}
+
+.call-order__title {
+  @include reset();
+  @include accent-font(27px, 24px, 1, 500);
+  margin-bottom: 9px;
+  color: #2d2d2d;
+
+  @media (max-width: $extra-small) {
+    margin-bottom: 12px;
+  }
+}
+
+.call-order__text {
+  @include reset();
+  @include main-font(18px, 16px, 1.4, 400);
+  margin-bottom: 24px;
+  color: #2d2d2d;
+
+  @media (max-width: $extra-small) {
+    margin-bottom: 20px;
+  }
+}
+
+.call-order__button {
+  padding: 18px 30px;
+
+  @media (max-width: $extra-small) {
+    padding: 16px 19px;
+  }
+}

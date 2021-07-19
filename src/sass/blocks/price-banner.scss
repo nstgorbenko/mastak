@@ -1,0 +1,78 @@
+.price-banner {
+  position: relative;
+  width: 396px;
+  height: 298px;
+  padding: 48px;
+  background: linear-gradient(118.74deg, #FF0A0A 3.57%, #C50101 97.45%);
+
+  @media (max-width: $extra-small) {
+    width: 309px;
+    height: 245px;
+    padding: 40px 30px;
+  }
+}
+
+.price-banner__cost {
+  position: absolute;
+  top: -77px;
+  right: -75px;
+  width: 160px;
+  height: 160px;
+  padding: 53px 0 0 29px;
+  background-image: url("../../img/icons/icon-gear-white.svg");
+  background-size: cover;
+
+  @media (max-width: $extra-small) {
+    top: -81px;
+    right: -7px;
+    width: 115px;
+    height: 115px;
+    padding: 37px 0 0 23px;
+  }
+}
+
+.price-banner__cost-content {
+  @include accent-font(16px, 16px, 1.035, 300);
+  color: $color-accent;
+}
+
+.price-banner__cost-value {
+  display: block;
+  @include accent-font(24px, 18px, 1.035, 700);
+  margin-top: 3px;
+}
+
+.price-banner__title {
+  @include reset();
+  @include accent-font(27px, 24px, 1, 500);
+  width: 250px;
+  margin-bottom: 12px;
+  color: $white;
+}
+
+.price-banner__text {
+  @include reset();
+  @include main-font(18px, 16px, 1.4, 400);
+  width: 211px;
+  margin-bottom: 24px;
+  color: $white;
+
+  @media (max-width: $extra-small) {
+    margin-bottom: 15px;
+  }
+}
+
+.price-banner__button {
+  padding: 18px 30px;
+
+  @media (max-width: $extra-small) {
+    padding: 16px 18px;
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+    color: $color-accent;
+    background-color: $white;
+  }
+}
