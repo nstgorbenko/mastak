@@ -3324,6 +3324,7 @@ template {
   background-color: #fafafa; }
   @media (max-width: 1172px) {
     .top-info {
+      min-height: 0;
       margin-top: -139px;
       padding: 139px 0 0; } }
   .top-info .page__container {
