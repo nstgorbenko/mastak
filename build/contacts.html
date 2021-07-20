@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
-    <title>Мастак. Ошибка 404</title>
+    <title>Мастак. Контакты</title>
   </head>
   <body class="page">
     <header class="page-header">
@@ -47,13 +47,37 @@
       </div>
     </header>
     <main class="page-main">
-      <section class="not-found">
+      <div class="breadcrumbs">
         <div class="page__container">
-          <div class="not-found__wrapper">
-            <div class="not-found__image-wrap"><img class="not-found__image" src="img/404.png" alt="Ошибка 404"></div>
-            <p class="not-found__title">Cтраница не найдена</p>
-            <p class="not-found__text">Страница устарела, удалена или не существовала вовсе</p><a class="button not-found__button" href="">Перейти на главную</a>
+          <ul class="breadcrumbs__list">
+            <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Главная</a></li>
+            <li class="breadcrumbs__item"><a class="breadcrumbs__link">Контакты</a></li>
+          </ul>
+        </div>
+      </div>
+      <section class="contacts">
+        <div class="page__container">
+          <div class="title contacts__title">
+            <p class="title__name contacts__name"><span>Контакты</span></p>
           </div>
+          <ul class="contacts__list">
+            <li class="contacts__item"><img class="contacts__item-image" src="img/icons/icon-circle-phone.png">
+              <p class="contacts__item-name">Телефон</p>
+              <p class="contacts__item-text"><a class="contacts__item-link" href="tel:+74956613311">+7 (495) 661 33 11</a></p>
+            </li>
+            <li class="contacts__item"><img class="contacts__item-image" src="img/icons/icon-circle-mail.png">
+              <p class="contacts__item-name">Почта</p>
+              <p class="contacts__item-text"><a class="contacts__item-link" href="mailto:info@tecsanservice.ru">info@tecsanservice.ru</a></p>
+            </li>
+            <li class="contacts__item"><img class="contacts__item-image" src="img/icons/icon-circle-location.png">
+              <p class="contacts__item-name">Адрес</p>
+              <p class="contacts__item-text">Москва, Красная 176</p>
+            </li>
+            <li class="contacts__item"><img class="contacts__item-image" src="img/icons/icon-circle-time.png">
+              <p class="contacts__item-name">Режим работы</p>
+              <p class="contacts__item-text">Пн-Пт: 9:00 - 18:00<br>Сб-Вс: Выходной</p>
+            </li>
+          </ul>
         </div>
       </section>
     </main>

@@ -1,0 +1,54 @@
+doctype html
+html(lang="ru")
+
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    link(rel="stylesheet" href="./css/style.css")
+    title Мастак. Контакты
+
+  body.page
+    include layout/header.pug
+
+    main.page-main
+      .breadcrumbs
+        .page__container
+          ul.breadcrumbs__list
+            li.breadcrumbs__item
+              a.breadcrumbs__link(href="#") Главная
+            li.breadcrumbs__item
+              a.breadcrumbs__link Контакты
+
+      section.contacts
+        .page__container
+          .title.contacts__title
+            p.title__name.contacts__name
+              span Контакты
+          ul.contacts__list
+            li.contacts__item
+              img.contacts__item-image(src="img/icons/icon-circle-phone.png")
+              p.contacts__item-name Телефон
+              p.contacts__item-text
+                a.contacts__item-link(href="tel:+74956613311") +7 (495) 661 33 11
+            li.contacts__item
+              img.contacts__item-image(src="img/icons/icon-circle-mail.png")
+              p.contacts__item-name Почта
+              p.contacts__item-text
+                a.contacts__item-link(href="mailto:info@tecsanservice.ru") info@tecsanservice.ru
+            li.contacts__item
+              img.contacts__item-image(src="img/icons/icon-circle-location.png")
+              p.contacts__item-name Адрес
+              p.contacts__item-text Москва, Красная 176
+            li.contacts__item
+              img.contacts__item-image(src="img/icons/icon-circle-time.png")
+              p.contacts__item-name Режим работы
+              p.contacts__item-text Пн-Пт: 9:00 - 18:00<br>Сб-Вс: Выходной
+
+    include layout/footer.pug
+
+    script(src="js/swiper-bundle.min.js")
+    script(src="js/fslightbox.js")
+    script(src="js/index.js")
+
+    .svg-library
+      include ../img/sprite.svg
