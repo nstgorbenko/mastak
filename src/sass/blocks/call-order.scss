@@ -10,7 +10,7 @@
   background-repeat: no-repeat;
 
   @media (max-width: $extra-small) {
-    width: 321px;
+    width: auto;
     padding-top: 165px;
     background-size: 140px auto;
   }
@@ -24,6 +24,7 @@
 
   @media (max-width: $extra-small) {
     margin-bottom: 12px;
+    text-align: center;
   }
 }
 

@@ -1,0 +1,488 @@
+doctype html
+html(lang="ru")
+
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    link(rel="stylesheet" href="./css/style.css")
+    title Мастак. Подуслуга
+
+  body.page
+    include layout/header.pug
+
+    main.page-main
+      .breadcrumbs
+        .page__container
+          ul.breadcrumbs__list
+            li.breadcrumbs__item
+              a.breadcrumbs__link(href="#") Главная
+            li.breadcrumbs__item
+              a.breadcrumbs__link Ремонт садовой техники
+            li.breadcrumbs__item
+              a.breadcrumbs__link Мотоблоки
+
+      section.top-info
+        .top-info__bg(style="background-image: url(/img/bg-top-info-2.jpg)")
+        .page__container
+          .top-info__content
+            .top-info__description
+              .title.top-info__title
+                p.title__name.top-info__name Ремонт
+                  = " "
+                  span Мотоблоков
+              p.top-info__text
+                span Помимо этого, устройство можно применять для перевозки тяжелых грузов, а также уборки заснеженных территорий. Во время использования мотоблок часто подвергается огромным нагрузкам и работает в очень неблагоприятных условиях.
+                span В связи с этим, следует делать своевременное техническое обслуживание, а иногда даже ремонт мотоблока. Для этого лучше всего обратиться к профессионалам, имеющим необходимые инструменты, оборудование, а также достаточный опыт.
+              .title.top-info__title
+                a.title__link.top-info___link(href="#") О компании
+                  .title__link-arrow
+                    svg.title__link-icon(width="16", height="11")
+                      use(xlink:href="img/sprite.svg#icon-arrow")
+            .top-info__banner-wrap(style="background-image: url(/img/bg-top-info-2.jpg)")
+              .price-banner.top-info__banner
+                .price-banner__cost
+                  .price-banner__cost-content
+                    | от
+                    span.price-banner__cost-value 21 000 ₽
+                p.price-banner__title Закажите звонок мастера
+                p.price-banner__text Перезвоним в течении 10 минут
+                button.button.button--light.price-banner__button(typr="button") Заказать звонок
+
+      section.main-brands
+        .page__container
+          .title.title--text.main-brands__title
+            p.title__name.main-brands__name
+              span Популярные
+              br
+              = " "
+              | производители
+            p.title__text.main-brands__text Часть  марок обслуживаемых нами садовой, строительной техники и электроинструмента.
+          ul.main-brands__list
+            li.main-brands__item
+              a.main-brands__link(href="")
+                .main-brands__image-wrap
+                  img.main-brands__image(src="img/brand-1.jpg" alt="Bosch")
+            li.main-brands__item
+              a.main-brands__link(href="")
+                .main-brands__image-wrap
+                  img.main-brands__image(src="img/brand-2.jpg" alt="Makita")
+            li.main-brands__item
+              a.main-brands__link(href="")
+                .main-brands__image-wrap
+                  img.main-brands__image(src="img/brand-3.jpg" alt="DeWalt")
+            li.main-brands__item
+              a.main-brands__link(href="")
+                .main-brands__image-wrap
+                  img.main-brands__image(src="img/brand-4.jpg" alt="Metabo")
+            li.main-brands__item
+              a.main-brands__link(href="")
+                .main-brands__image-wrap
+                  img.main-brands__image(src="img/brand-1.jpg" alt="Bosch")
+            li.main-brands__item
+              a.main-brands__link(href="")
+                .main-brands__image-wrap
+                  img.main-brands__image(src="img/brand-2.jpg" alt="Makita")
+            li.main-brands__item
+              a.main-brands__link(href="")
+                .main-brands__image-wrap
+                  img.main-brands__image(src="img/brand-3.jpg" alt="DeWalt")
+            li.main-brands__item
+              a.main-brands__link(href="")
+                .main-brands__image-wrap
+                  img.main-brands__image(src="img/brand-7.jpg" alt="Husqvarna")
+            li.main-brands__item
+              a.main-brands__link(href="")
+                .main-brands__image-wrap
+                  img.main-brands__image(src="img/brand-1.jpg" alt="Bosch")
+            li.main-brands__item
+              a.main-brands__link(href="")
+                .main-brands__image-wrap
+                  img.main-brands__image(src="img/brand-13.jpg" alt="Hyundai")
+            li.main-brands__item
+              a.main-brands__link(href="")
+                .main-brands__image-wrap
+                  img.main-brands__image(src="img/brand-4.jpg" alt="Metabo")
+            li.main-brands__item
+              a.main-brands__link(href="")
+                .main-brands__image-wrap
+                  img.main-brands__image(src="img/brand-1.jpg" alt="Bosch")
+
+      section.motive
+        .page__container
+          .motive__wrapper
+            .motive__image-wrap
+              img.motive__image(width="796" height="766" src="img/motive.jpg" alt="Сервисный центр «Мастак»")
+            .motive__content
+              p.motive__title
+                span 4 причины
+                = " "
+                | выбрать сервисный центр
+                = " "
+                span “МАСТАК”
+              ul.motive__list
+                li.motive__item.motive__item--1
+                  p.motive__item-title Низкие цены
+                  p.motive__item-text Демократичная стоимость услуг – еще одно наше конкурентное преимущество. Для удобства клиентов работаем за наличный и безналичный расчет.
+                li.motive__item.motive__item--2
+                  p.motive__item-title Бесплатная доставка в сервис
+                  p.motive__item-text У нас есть все для профессионального ремонта техники – опытные специалисты
+                li.motive__item.motive__item--3
+                  p.motive__item-title Оперативная работа
+                  p.motive__item-text В зависимости от сложности работ на возвращение работоспособности техники требуется от 15 минут до одного рабочего дня
+                li.motive__item.motive__item--4
+                  p.motive__item-title Качественное предоставление услуг
+                  p.motive__item-text У нас есть все для профессионального ремонта техники – опытные специалисты
+
+      section.info
+        .page__container
+          .info__content
+            .info__description
+              .title.top-info__title
+                p.title__name.info__name Ремонт
+                  = " "
+                  span садовой техники
+                  br
+                  = " "
+                  | в Московской области
+              p.info__text
+                span Мотоблок – это надежный помощник, который предназначен для выполнения самых разнообразных сельскохозяйственных работ, таких как обработка почвы, посадка и сбор урожая, окучивание огородных растений. Помимо этого, устройство можно применять для перевозки тяжелых грузов, а также уборки заснеженных территорий. Во время использования мотоблок часто подвергается огромным нагрузкам и работает в очень неблагоприятных условиях.
+                span В связи с этим, следует делать своевременное техническое обслуживание, а иногда даже ремонт мотоблока. Для этого лучше всего обратиться к профессионалам, имеющим необходимые инструменты, оборудование, а также достаточный опыт
+              .title.info__title
+                a.title__link.info___link(href="#") О компании
+                  .title__link-arrow
+                    svg.title__link-icon(width="16", height="11")
+                      use(xlink:href="img/sprite.svg#icon-arrow")
+            .call-order.info__call-order
+              p.call-order__title Закажите звонок мастера
+              p.call-order__text Перезвоним в течении 10 минут
+              button.button.call-order__button(typr="button") Заказать звонок
+
+      section.team
+        .page__container
+          .title.team__header
+            p.title__name.team__name Наша
+              = " "
+              span команда
+            .title__buttons.team__buttons
+              button.title__button.title__button--prev.team__button.team__button--prev(type="button", aria-label="Предыдущий слайд")
+                svg.title__button-icon(width="16", height="11")
+                  use(xlink:href="img/sprite.svg#icon-arrow")
+              button.title__button.title__button--next.team__button.team__button--next(type="button", aria-label="Следующий слайд")
+                svg.title__button-icon(width="16", height="11")
+                  use(xlink:href="img/sprite.svg#icon-arrow")
+          .team__container.swiper-container
+            ul.team__list.swiper-wrapper
+              li.team__item.swiper-slide
+                .team__image-wrap
+                  img.team__image(src="img/team-1.jpg" alt="Алексей Владимирович")
+                p.team__item-practice Опыт 10 лет
+                p.team__item-name Алексей Владимирович
+                p.team__item-post Мастер по ремонту садовой техники
+              li.team__item.swiper-slide
+                .team__image-wrap
+                  img.team__image(src="img/team-2.jpg" alt="Виктор Сергеев")
+                p.team__item-practice Опыт 20 лет
+                p.team__item-name Виктор Сергеев
+                p.team__item-post Директор
+              li.team__item.swiper-slide
+                .team__image-wrap
+                  img.team__image(src="img/team-3.jpg" alt="Наталья Николаевна ")
+                p.team__item-practice Опыт 15 лет
+                p.team__item-name Наталья Николаевна
+                p.team__item-post Менеджер
+              li.team__item.swiper-slide
+                .team__image-wrap
+                  img.team__image(src="img/team-4.jpg" alt="Дмитрий Петрович")
+                p.team__item-practice Опыт 10 лет
+                p.team__item-name Дмитрий Петрович
+                p.team__item-post Мастер по ремонту сварочного оборудования
+              li.team__item.swiper-slide
+                .team__image-wrap
+                  img.team__image(src="img/team-5.jpg" alt="Федор Григорьевич")
+                p.team__item-practice Опыт 5 лет
+                p.team__item-name Федор Григорьевич
+                p.team__item-post Мастер по ремонту садовой техники
+
+      section.center
+        .center__header
+          .page__container
+            .title.center__title
+              p.title__name.center__name Наш
+                = " "
+                span сервисный
+                  br
+                  = " "
+                  | центр
+              a.title__link.title__link--desktop.center__link(href="#") О сервисе
+                .title__link-arrow
+                  svg.title__link-icon(width="16", height="11")
+                    use(xlink:href="img/sprite.svg#icon-arrow")
+        .center__content
+          ul.center__list
+            li.center__item
+              .center__item-image-wrap
+                img.center__item-image(width="471" height="380" src="img/center-1.jpg" alt="Сервисный центр «Мастак»")
+            li.center__item
+              .center__item-image-wrap
+                img.center__item-image(width="471" height="380" src="img/center-2.jpg" alt="Сервисный центр «Мастак»")
+            li.center__item
+              .center__item-image-wrap
+                img.center__item-image(width="471" height="380" src="img/center-3.jpg" alt="Сервисный центр «Мастак»")
+            li.center__item
+              .center__item-image-wrap
+                img.center__item-image(width="471" height="380" src="img/center-4.jpg" alt="Сервисный центр «Мастак»")
+            li.center__item
+              .center__item-image-wrap
+                img.center__item-image(width="471" height="380" src="img/center-5.jpg" alt="Сервисный центр «Мастак»")
+            li.center__item
+              .center__item-image-wrap
+                img.center__item-image(width="471" height="380" src="img/center-6.jpg" alt="Сервисный центр «Мастак»")
+            li.center__item
+              .center__item-image-wrap
+                img.center__item-image(width="471" height="380" src="img/center-7.jpg" alt="Сервисный центр «Мастак»")
+            li.center__item
+              .center__item-image-wrap
+                img.center__item-image(width="471" height="380" src="img/center-8.jpg" alt="Сервисный центр «Мастак»")
+        .center__footer
+          .page__container
+            .title.center__title
+              a.title__link.title__link--mobile.center__link(href="#") О сервисе
+                .title__link-arrow
+                  svg.title__link-icon(width="16", height="11")
+                    use(xlink:href="img/sprite.svg#icon-arrow")
+
+      section.info
+        .page__container
+          .info__content
+            .info__description
+              .title.top-info__title
+                p.title__name.info__name
+                  span Сервисный центр
+                  = " "
+                  | по
+                  br
+                  = " "
+                  | ремонту садовой техники
+              p.info__text
+                span Мотоблок – это надежный помощник, который предназначен для выполнения самых разнообразных сельскохозяйственных работ, таких как обработка почвы, посадка и сбор урожая, окучивание огородных растений. Помимо этого, устройство можно применять для перевозки тяжелых грузов, а также уборки заснеженных территорий. Во время использования мотоблок часто подвергается огромным нагрузкам и работает в очень неблагоприятных условиях.
+                span В связи с этим, следует делать своевременное техническое обслуживание, а иногда даже ремонт мотоблока. Для этого лучше всего обратиться к профессионалам, имеющим необходимые инструменты, оборудование, а также достаточный опыт
+              .title.info__title
+                a.title__link.info___link(href="#") Услуги
+                  .title__link-arrow
+                    svg.title__link-icon(width="16", height="11")
+                      use(xlink:href="img/sprite.svg#icon-arrow")
+            .banner.info__banner
+              p.banner__title Закажите звонок мастера
+              p.banner__text Перезвоним в течении 10 минут
+              button.button.button--light.banner__button(typr="button") Заказать звонок
+
+      section.cert
+        .page__container
+          .title.cert__title
+            p.title__name.cert__name
+              span Сертификаты
+            a.title__link.title__link--desktop.cert__link(href="#") Все сертификаты
+              .title__link-arrow
+                svg.title__link-icon(width="16", height="11")
+                  use(xlink:href="img/sprite.svg#icon-arrow")
+          .cert__container.swiper-container
+            ul.cert__list.swiper-wrapper
+              li.cert__item.swiper-slide
+                .cert__item-image-wrap
+                  img.cert__item-image(src="img/cert-1.jpg" alt="Сертификат")
+              li.cert__item.swiper-slide
+                .cert__item-image-wrap
+                  img.cert__item-image(src="img/cert-2.jpg" alt="Сертификат")
+              li.cert__item.swiper-slide
+                .cert__item-image-wrap
+                  img.cert__item-image(src="img/cert-3.jpg" alt="Сертификат")
+              li.cert__item.swiper-slide
+                .cert__item-image-wrap
+                  img.cert__item-image(src="img/cert-4.jpg" alt="Сертификат")
+              li.cert__item.swiper-slide
+                .cert__item-image-wrap
+                  img.cert__item-image(src="img/cert-5.jpg" alt="Сертификат")
+          .title.cert__title
+            a.title__link.title__link--mobile.cert__link(href="#") Все сертификаты
+              .title__link-arrow
+                svg.title__link-icon(width="16", height="11")
+                  use(xlink:href="img/sprite.svg#icon-arrow")
+
+      section.reviews-block
+        .page__container
+          .title.reviews-block__title
+            p.title__name.reviews-block__name
+              span Отзывы
+            a.title__link.title__link--desktop.reviews-block__link(href="#") Все отзывы
+              .title__link-arrow
+                svg.title__link-icon(width="16", height="11")
+                  use(xlink:href="img/sprite.svg#icon-arrow")
+          .reviews-block__content
+            ul.reviews-block__list
+              li.reviews-block__item
+                article.review
+                  .review__top
+                    .review__user-photo-wrap
+                      img.review__user-photo(src="img/review-user-1.png" alt="Михаил Петрович")
+                    .review__info
+                      time.review__date(datetime="2020-10-05") 05.10.2020г
+                      p.review__user-name Михаил Петрович
+                      .review__rating
+                        .review__rating-stars
+                          span.review__rating-stars-fill(style="width: 80%")
+                        span.review__rating-mark 4/5
+                  .review__bottom
+                    p.review__text “Когда я пришел в компанию, меня приятно поразила обстановка в этом сервисе. Когда меня хорошо обслужил мастер Александр, денег взяли меньше, нежели с меня брали в другом сервисе, профессионально и быстро, не всовывали лишние услуги. Мне очень понравилось.”
+              li.reviews-block__item
+                article.review
+                  .review__top
+                    .review__user-photo-wrap
+                      img.review__user-photo(src="img/review-user-2.png" alt="Александр Шолин")
+                    .review__info
+                      time.review__date(datetime="2020-10-05") 05.10.2020г
+                      p.review__user-name Александр Шолин
+                      .review__rating
+                        .review__rating-stars
+                          span.review__rating-stars-fill(style="width: 60%")
+                        span.review__rating-mark 3/5
+                  .review__bottom
+                    p.review__text “Когда я пришел в компанию, меня приятно поразила обстановка в этом сервисе. Когда меня хорошо обслужил мастер Александр, денег взяли меньше, нежели с меня брали в другом сервисе, профессионально и быстро, не всовывали лишние услуги. Мне очень понравилось.”
+              li.reviews-block__item
+                article.review
+                  .review__top
+                    .review__user-photo-wrap
+                      img.review__user-photo(src="img/review-user-3.png" alt="Петр Павлов")
+                    .review__info
+                      time.review__date(datetime="2020-10-05") 05.10.2020г
+                      p.review__user-name Петр Павлов
+                      .review__rating
+                        .review__rating-stars
+                          span.review__rating-stars-fill(style="width: 100%")
+                        span.review__rating-mark 5/5
+                  .review__bottom
+                    p.review__text “Когда я пришел в компанию, меня приятно поразила обстановка в этом сервисе. Когда меня хорошо обслужил мастер Александр, денег взяли меньше, нежели с меня брали в другом сервисе, профессионально и быстро, не всовывали лишние услуги. Мне очень понравилось.”
+          .title.reviews-block__title
+            a.title__link.title__link--mobile.reviews-block__link(href="#") Все отзывы
+              .title__link-arrow
+                svg.title__link-icon(width="16", height="11")
+                  use(xlink:href="img/sprite.svg#icon-arrow")
+
+    footer.page__footer
+      .top-footer
+        .page__container
+          .top-footer__content
+            .top-footer__column-left
+              .top-footer__logo
+                a.top-footer__logo-link(href="")
+                  img.top-footer__logo-image(width="171" height="40" src="img/icons/icon-logo.svg" alt="Логотип компании Мастак")
+                p.top-footer__logo-text Профессиональный ремонт строительной техники от авторизованного сервисного центра
+
+            .top-footer__column-center
+              nav.navigation
+                ul.navigation__list
+                  li.navigation__item
+                    input#nav-1.navigation__item-checkbox.visually-hidden(type='checkbox' name='nav')
+                    label.navigation__item-name(for='nav-1')
+                      | Разделы
+                      svg.navigation__item-icon(width="14", height="8")
+                        use(xlink:href="img/sprite.svg#icon-arrow-accordion")
+                    ul.navigation__sublist
+                      li.navigation__sublist-item
+                        a.navigation__sublist-link(href='#') Цены
+                      li.navigation__sublist-item
+                        a.navigation__sublist-link(href='#') О сервисе
+                      li.navigation__sublist-item
+                        a.navigation__sublist-link(href='#') Сертификаты
+                      li.navigation__sublist-item
+                        a.navigation__sublist-link(href='#') Отзывы
+                      li.navigation__sublist-item
+                        a.navigation__sublist-link(href='#') Контакты
+                  li.navigation__item
+                    input#nav-2.navigation__item-checkbox.visually-hidden(type='checkbox' name='nav')
+                    label.navigation__item-name(for='nav-2')
+                      | Услуги
+                      svg.navigation__item-icon(width="14", height="8")
+                        use(xlink:href="img/sprite.svg#icon-arrow-accordion")
+                    ul.navigation__sublist
+                      li.navigation__sublist-item
+                        a.navigation__sublist-link(href='#') Ремонт электроинструмента
+                      li.navigation__sublist-item
+                        a.navigation__sublist-link(href='#') Ремонт строительной техники
+                      li.navigation__sublist-item
+                        a.navigation__sublist-link(href='#') Ремонт садовой техники
+                  li.navigation__item
+                    input#nav-3.navigation__item-checkbox.visually-hidden(type='checkbox' name='nav')
+                    label.navigation__item-name.navigation__item-name--group(for='nav-3')
+                      | Контакты
+                      svg.navigation__item-icon(width="14", height="8")
+                        use(xlink:href="img/sprite.svg#icon-arrow-accordion")
+                    .navigation__sublist.navigation__sublist--group
+                      p.navigation__item-name Режим работы
+                      ul.navigation__sublist
+                        li.navigation__sublist-item Пн-Пт: 9:00 - 18:00
+                        li.navigation__sublist-item Сб-Вс: Выходной
+                      p.navigation__item-name Адрес:
+                      ul.navigation__sublist
+                        li.navigation__sublist-item Москва, Красная 176
+
+            .top-footer__column-right
+              .connect
+                p.connect__title Свяжитесь с нами
+                ul.connect__list
+                  li.connect__item
+                    a.connect__link.connect__link--phone(href='tel:+74956613111')
+                      span.connect__link-text.connect__link-text--desktop +7 (495) 661 33 11
+                      span.connect__link-text.connect__link-text--mobile
+                        svg.connect__icon(width="16", height="16")
+                          use(xlink:href="img/sprite.svg#icon-phone")
+                        | Позвонить
+                  li.connect__item
+                    a.connect__link.connect__link--mail(href='mailto:info@tecsanservice.ru')
+                      span.connect__link-text.connect__link-text--desktop info@tecsanservice.ru
+                      span.connect__link-text.connect__link-text--mobile
+                        svg.connect__icon(width="16", height="16")
+                          use(xlink:href="img/sprite.svg#icon-mail")
+                        | Написать на почту
+                  li.connect__item
+                    p.connect__item-text Задайте вопрос напрямую :
+                    .connect__item-links
+                      a.connect__link.connect__link--whatsapp(href='#')
+                        svg.connect__icon(width="16", height="16")
+                          use(xlink:href="img/sprite.svg#icon-whatsapp")
+                        span WhatsApp
+                      a.connect__link.connect__link--telegram(href='#')
+                        svg.connect__icon(width="16", height="16")
+                          use(xlink:href="img/sprite.svg#icon-telegram")
+                        span Telegram
+
+      .bottom-footer
+        .page__container
+          .bottom-footer__content
+            p.bottom-footer__privacy
+              | © МАСТАК, 2015-2021
+              a.bottom-footer__privacy-link(href='#') Политика конфиденциальности
+
+            ul.social-links.bottom-footer__social-links
+              li.social-links__item
+                a.social-links__link(href='#')
+                  svg.social-links__icon(width="16", height="16")
+                    use(xlink:href="img/sprite.svg#icon-vk")
+              li.social-links__item
+                a.social-links__link(href='#')
+                  svg.social-links__icon(width="16", height="16")
+                    use(xlink:href="img/sprite.svg#icon-fb")
+              li.social-links__item
+                a.social-links__link(href='#')
+                  svg.social-links__icon(width="16", height="16")
+                    use(xlink:href="img/sprite.svg#icon-ig")
+
+            a.bottom-footer__develop(href='https://dragoweb.ru/')
+              p.bottom-footer__develop-text Разработка и продвижение
+              svg.bottom-footer__develop-icon(width="81", height="15")
+                use(xlink:href="img/sprite.svg#icon-dragoweb")
+
+    script(src="js/swiper-bundle.min.js")
+    script(src="js/index.js")
+
+    .svg-library
+      include ../img/sprite.svg
