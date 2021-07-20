@@ -86,4 +86,12 @@
   @media (max-width: $small) {
     line-height: 1.4;
   }
+
+  span {
+    display: block;
+  }
+
+  span + span {
+    margin-top: 22px;
+  }
 }

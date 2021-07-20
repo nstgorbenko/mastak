@@ -1,95 +1,141 @@
-// Init promo slider
-(function () {
-  const promoSlider = document.querySelector('.promo__container');
+document.addEventListener('DOMContentLoaded', () => {
+  // Init promo slider
+  (function () {
+    const promoSlider = document.querySelector('.promo__container');
 
-  if (promoSlider) {
-    new Swiper(promoSlider, {
-      slidesPerView: 1,
-      spaceBetween: 0,
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
-      loop: true,
-      autoplay: {
-        delay: 5000,
-        disableOnInteraction: false,
-      }
-    });
-  }
-})();
-
-// Init team slider
-(function () {
-  const teamSlider = document.querySelector('.team__container');
-
-  if (teamSlider) {
-    new Swiper(teamSlider, {
-      slidesPerView: 2.2,
-      spaceBetween: 10,
-      breakpoints: {
-        768: {
-          slidesPerView: 3,
-          spaceBetween: 15,
+    if (promoSlider) {
+      new Swiper(promoSlider, {
+        slidesPerView: 1,
+        spaceBetween: 0,
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
         },
-        1024: {
-          slidesPerView: 4,
-          spaceBetween: 20,
-        },
-        1600: {
-          slidesPerView: 5,
-          spaceBetween: 20,
+        loop: true,
+        autoplay: {
+          delay: 5000,
+          disableOnInteraction: false,
         }
-      },
-      navigation: {
-        prevEl: '.team__button--prev',
-        nextEl: '.team__button--next',
-      },
-      grabCursor: true,
-      loop: true,
-    });
-  }
-})();
+      });
+    }
+  })();
 
-// Init cert slider
-(function () {
-  const certSlider = document.querySelector('.cert__container');
+  // Init team slider
+  (function () {
+    const teamSlider = document.querySelector('.team__container');
 
-  if (certSlider) {
-    new Swiper(certSlider, {
-      slidesPerView: 2.6,
-      spaceBetween: 10,
-      breakpoints: {
-        768: {
-          slidesPerView: 3,
-          spaceBetween: 15,
+    if (teamSlider) {
+      new Swiper(teamSlider, {
+        slidesPerView: 2.2,
+        spaceBetween: 10,
+        breakpoints: {
+          768: {
+            slidesPerView: 3,
+            spaceBetween: 15,
+          },
+          1024: {
+            slidesPerView: 4,
+            spaceBetween: 20,
+          },
+          1600: {
+            slidesPerView: 5,
+            spaceBetween: 20,
+          }
         },
-        1024: {
-          slidesPerView: 4,
-          spaceBetween: 20,
+        navigation: {
+          prevEl: '.team__button--prev',
+          nextEl: '.team__button--next',
         },
-        1600: {
-          slidesPerView: 5,
-          spaceBetween: 40,
+        grabCursor: true,
+        loop: true,
+      });
+    }
+  })();
+
+  // Init cert slider
+  (function () {
+    const certSlider = document.querySelector('.cert__container');
+
+    if (certSlider) {
+      new Swiper(certSlider, {
+        slidesPerView: 2.6,
+        spaceBetween: 10,
+        breakpoints: {
+          768: {
+            slidesPerView: 3,
+            spaceBetween: 15,
+          },
+          1024: {
+            slidesPerView: 4,
+            spaceBetween: 20,
+          },
+          1600: {
+            slidesPerView: 5,
+            spaceBetween: 40,
+          }
+        },
+        grabCursor: true,
+        loop: true,
+      });
+    }
+  })();
+
+  // Change header with scroll
+  (function () {
+    const header = document.querySelector('.page-header');
+
+    if (header) {
+      window.addEventListener('scroll', () => {
+        if (window.pageYOffset > 0) {
+          header.classList.add('scroll');
+        } else {
+          header.classList.remove('scroll');
         }
-      },
-      grabCursor: true,
-      loop: true,
-    });
-  }
-})();
+      })
+    }
+  })();
 
-// Change header with scroll
-(function () {
-  const header = document.querySelector('.page-header');
+  // Pinterest layout for reviews
+  (function () {
+    const container = document.getElementById('pinterest');
 
-  if (header) {
-    window.addEventListener('scroll', () => {
-      if (window.pageYOffset > 0) {
-        header.classList.add('scroll');
-      } else {
-        header.classList.remove('scroll');
+    if (container) {
+      const ScreenWidth = {
+        TABLET: 1440,
+        MOBILE: 768,
+      };
+
+      const ColumnsCount = {
+        DESKTOP: 3,
+        TABLET: 2,
+        MOBILE: 1,
+      };
+
+      const makePinterestLayout = () => {
+        const currentScreenWidth = document.documentElement.clientWidth;
+
+        let currentColumnsCount;
+        if (currentScreenWidth > ScreenWidth.TABLET) {
+          currentColumnsCount = ColumnsCount.DESKTOP;
+        } else if (currentScreenWidth > ScreenWidth.MOBILE) {
+          currentColumnsCount = ColumnsCount.TABLET;
+        } else {
+          currentColumnsCount = ColumnsCount.MOBILE;
+        }
+
+        const columnsHeights = Array(currentColumnsCount).fill(0);
+
+        Array.from(container.children).forEach((child, i) => {
+          const order = i % currentColumnsCount;
+          child.style.order = order;
+          columnsHeights[order] += parseFloat(child.clientHeight);
+        });
+
+        container.style.height = Math.max(...columnsHeights) + 'px';
       }
-    })
-  }
-})();
+
+      makePinterestLayout();
+      window.addEventListener('resize', makePinterestLayout);
+    }
+  })();
+});
