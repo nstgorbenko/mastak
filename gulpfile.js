@@ -45,6 +45,7 @@ export const styles = () => {
 export const scripts = () => {
   return gulp.src([
     'src/js/index.js',
+    'src/js/fslightbox.js',
     'src/js/swiper-bundle.min.js'
   ])
     .pipe(plumber())
