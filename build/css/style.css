@@ -29,7 +29,13 @@
   src: url("../font/Inter-Bold.woff2") format("woff2"), url("../font/Inter-Bold.woff") format("woff"); }
 
 body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   overflow-x: hidden; }
+
+footer {
+  margin-top: auto; }
 
 *,
 *::before,
@@ -2562,6 +2568,76 @@ template {
       font-size: 16px; } }
   .navigation__sublist--group .navigation__sublist-item {
     margin-bottom: 16px; }
+
+.not-found__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  max-width: 739px;
+  margin: 160px auto; }
+  @media (max-width: 1440px) {
+    .not-found__wrapper {
+      margin: 100px auto; } }
+  @media (max-width: 1200px) {
+    .not-found__wrapper {
+      margin: 80px auto; } }
+  @media (max-width: 1024px) {
+    .not-found__wrapper {
+      margin: 60px auto; } }
+
+.not-found__image-wrap {
+  margin-bottom: 115px; }
+  @media (max-width: 1440px) {
+    .not-found__image-wrap {
+      margin-bottom: 80px; } }
+  @media (max-width: 1200px) {
+    .not-found__image-wrap {
+      margin-bottom: 60px; } }
+
+.not-found__title {
+  font-size: calc( 20px + 40 * ( (100vw - 375px) / 1545 ));
+  line-height: 1.02;
+  font-weight: 600;
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  margin-bottom: 20px;
+  color: #ff0a0a;
+  text-align: center; }
+  @media screen and (max-width: 375px) {
+    .not-found__title {
+      font-size: 20px; } }
+  @media screen and (min-width: 1920px) {
+    .not-found__title {
+      font-size: 60px; } }
+  @media (max-width: 768px) {
+    .not-found__title {
+      margin-bottom: 10px; } }
+
+.not-found__text {
+  font-size: calc( 14px + 6 * ( (100vw - 375px) / 1545 ));
+  line-height: 1.6;
+  font-weight: 300;
+  font-family: "Gilroy", sans-serif;
+  margin: 0;
+  margin-bottom: 30px;
+  color: #6e6e6e;
+  text-align: center; }
+  @media screen and (max-width: 375px) {
+    .not-found__text {
+      font-size: 14px; } }
+  @media screen and (min-width: 1920px) {
+    .not-found__text {
+      font-size: 20px; } }
+  @media (max-width: 768px) {
+    .not-found__text {
+      margin-bottom: 20px; } }
+  @media (max-width: 576px) {
+    .not-found__text {
+      margin-bottom: 15px; } }
+
+.not-found__button {
+  padding: 20px 27px; }
 
 .page-header {
   position: -webkit-sticky;
