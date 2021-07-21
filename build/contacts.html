@@ -80,6 +80,77 @@
           </ul>
         </div>
       </section>
+      <section class="map">
+        <div class="page__container">
+          <div class="map__controls">
+            <button class="map__control" type="button">Карта</button>
+            <button class="map__control" type="button">Панорама</button>
+          </div>
+          <div class="map__content">
+            <iframe src="https://yandex.ru/map-widget/v1/-/CCUauMeyLA" frameborder="0" allowfullscreen="true"></iframe>
+          </div>
+        </div>
+      </section>
+      <section class="bank-details">
+        <div class="page__container">
+          <div class="title bank-details__title">
+            <p class="title__name bank-details__name"><span>Реквизиты</span> компании
+            </p>
+          </div>
+          <div class="bank-details__part">
+            <p class="bank-details__title">Юридическая информация</p>
+            <div class="bank-details__line"><span class="bank-details__key">Полное официальное наименование</span><span class="bank-details__value">Индивидуальный предприниматель Горкунова Кристина Владимировна</span></div>
+            <div class="bank-details__line"><span class="bank-details__key">Сокращенное наименование</span><span class="bank-details__value">ИП Горкунова Кристина Владимировна</span></div>
+            <div class="bank-details__line"><span class="bank-details__key">Руководитель организации</span><span class="bank-details__value">Горкунова Кристина Владимировна</span></div>
+            <div class="bank-details__line"><span class="bank-details__key">Дата регистрации</span><span class="bank-details__value">25.08.2016</span></div>
+            <div class="bank-details__line"><span class="bank-details__key">ИНН</span><span class="bank-details__value">230812298770</span></div>
+            <div class="bank-details__line"><span class="bank-details__key">ОГРНИП</span><span class="bank-details__value">316237500047485</span></div>
+            <div class="bank-details__line"><span class="bank-details__key">ОКВЭД</span><span class="bank-details__value">96.02</span></div>
+            <div class="bank-details__line"><span class="bank-details__key">Система налогообложения</span><span class="bank-details__value">ПСН</span></div>
+          </div>
+          <div class="bank-details__part">
+            <p class="bank-details__title">Адрес</p>
+            <div class="bank-details__line"><span class="bank-details__key">Юридический адрес</span><span class="bank-details__value">350049, Краснодарский край, г. Краснодар, ул. Тургенева, д. 128, кв.25.</span></div>
+            <div class="bank-details__line"><span class="bank-details__key">Почтовый адрес</span><span class="bank-details__value">350049, Краснодарский край, г. Краснодар, ул. Тургенева, д. 128, кв.25.</span></div>
+          </div>
+          <div class="bank-details__part">
+            <p class="bank-details__title">Банковские данные</p>
+            <div class="bank-details__line"><span class="bank-details__key">Банк</span><span class="bank-details__value">ФИЛИАЛ «РОСТОВСКИЙ» АО «АЛЬФА-БАНК» г. Ростов-на-Дону</span></div>
+            <div class="bank-details__line"><span class="bank-details__key">Расчетный счет</span><span class="bank-details__value">30233810714000000919</span></div>
+            <div class="bank-details__line"><span class="bank-details__key">Корреспондентский счет</span><span class="bank-details__value">30302810100180000000</span></div>
+            <div class="bank-details__line"><span class="bank-details__key">ОГРН</span><span class="bank-details__value">серия 23 №312231502500018</span></div>
+            <div class="bank-details__line"><span class="bank-details__key">БИК</span><span class="bank-details__value">046015207</span></div>
+          </div>
+        </div>
+      </section>
+      <section class="vacancy">
+        <div class="vacancy__bg" style="background-image: url(/img/bg-vacancy.jpg)"></div>
+        <div class="page__container">
+          <div class="vacancy__banner-wrap" style="background-image: url(/img/bg-vacancy.jpg)"></div>
+          <div class="vacancy__content-wrap">
+            <form class="vacancy__form" method="post" action="#">
+              <div class="vacancy__content">
+                <p class="vacancy__content-title">Ищем <span>талантливых</span><br> <span>специалистов</span> в компанию
+                </p>
+                <div class="input">
+                  <input class="input__field" id="name" type="text" name="name" placeholder="Иван">
+                  <label class="input__label" for="name">Ваше имя</label>
+                </div>
+                <div class="input">
+                  <!-- Если в поле введены неверные данные, input добавляется класс .input__field--invalid-->
+                  <input class="input__field" id="tel" type="text" name="tel" placeholder="8 999 999 99 99" required>
+                  <label class="input__label" for="tel">Ваш номер телефона <span class="input__label--star">*</span>
+                  </label>
+                  <!-- Текст ошибки указывается в span с классами .input__note .input__note--invalid--><span class="input__note input__note--invalid">Телефон указан неверно, пример: +7 111 222-33-44</span>
+                </div>
+                <button class="button vacancy__button" type="submit">Отправить</button>
+                <p class="vacancy__caption">Нажимая на кнопку «Отправить» я даю согласие на обработку <a class="vacancy__caption-link" href="#">персональных данных</a>
+                </p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
     </main>
     <footer class="page__footer">
       <div class="top-footer">

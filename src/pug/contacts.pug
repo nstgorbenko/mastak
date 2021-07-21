@@ -2,6 +2,7 @@ doctype html
 html(lang="ru")
 
   head
+
     meta(charset="UTF-8")
     meta(name="viewport" content="width=device-width, initial-scale=1.0")
     link(rel="stylesheet" href="./css/style.css")
@@ -43,6 +44,106 @@ html(lang="ru")
               img.contacts__item-image(src="img/icons/icon-circle-time.png")
               p.contacts__item-name Режим работы
               p.contacts__item-text Пн-Пт: 9:00 - 18:00<br>Сб-Вс: Выходной
+
+      section.map
+        .page__container
+          .map__controls
+            button.map__control(type="button") Карта
+            button.map__control(type="button") Панорама
+          .map__content
+            iframe(src="https://yandex.ru/map-widget/v1/-/CCUauMeyLA" frameborder="0" allowfullscreen="true")
+
+      section.bank-details
+        .page__container
+          .title.bank-details__title
+            p.title__name.bank-details__name
+              span Реквизиты
+              = " "
+              | компании
+          .bank-details__part
+            p.bank-details__title Юридическая информация
+            .bank-details__line
+              span.bank-details__key Полное официальное наименование
+              span.bank-details__value Индивидуальный предприниматель Горкунова Кристина Владимировна
+            .bank-details__line
+              span.bank-details__key Сокращенное наименование
+              span.bank-details__value ИП Горкунова Кристина Владимировна
+            .bank-details__line
+              span.bank-details__key Руководитель организации
+              span.bank-details__value Горкунова Кристина Владимировна
+            .bank-details__line
+              span.bank-details__key Дата регистрации
+              span.bank-details__value 25.08.2016
+            .bank-details__line
+              span.bank-details__key ИНН
+              span.bank-details__value 230812298770
+            .bank-details__line
+              span.bank-details__key ОГРНИП
+              span.bank-details__value 316237500047485
+            .bank-details__line
+              span.bank-details__key ОКВЭД
+              span.bank-details__value 96.02
+            .bank-details__line
+              span.bank-details__key Система налогообложения
+              span.bank-details__value ПСН
+
+          .bank-details__part
+            p.bank-details__title Адрес
+            .bank-details__line
+              span.bank-details__key Юридический адрес
+              span.bank-details__value 350049, Краснодарский край, г. Краснодар, ул. Тургенева, д. 128, кв.25.
+            .bank-details__line
+              span.bank-details__key Почтовый адрес
+              span.bank-details__value 350049, Краснодарский край, г. Краснодар, ул. Тургенева, д. 128, кв.25.
+
+          .bank-details__part
+            p.bank-details__title Банковские данные
+            .bank-details__line
+              span.bank-details__key Банк
+              span.bank-details__value ФИЛИАЛ «РОСТОВСКИЙ» АО «АЛЬФА-БАНК» г. Ростов-на-Дону
+            .bank-details__line
+              span.bank-details__key Расчетный счет
+              span.bank-details__value 30233810714000000919
+            .bank-details__line
+              span.bank-details__key Корреспондентский счет
+              span.bank-details__value 30302810100180000000
+            .bank-details__line
+              span.bank-details__key ОГРН
+              span.bank-details__value серия 23 №312231502500018
+            .bank-details__line
+              span.bank-details__key БИК
+              span.bank-details__value 046015207
+
+      section.vacancy
+        .vacancy__bg(style="background-image: url(/img/bg-vacancy.jpg)")
+        .page__container
+          .vacancy__banner-wrap(style="background-image: url(/img/bg-vacancy.jpg)")
+          .vacancy__content-wrap
+            form.vacancy__form(method="post" action="#")
+              .vacancy__content
+                p.vacancy__content-title Ищем
+                  = " "
+                  span талантливых
+                  br
+                  = " "
+                  span специалистов
+                  = " "
+                  | в компанию
+                .input
+                  input#name.input__field(type="text" name="name" placeholder="Иван")
+                  label.input__label(for="name") Ваше имя
+                .input
+                  // Если в поле введены неверные данные, input добавляется класс .input__field--invalid
+                  input#tel.input__field(type="text" name="tel" placeholder="8 999 999 99 99" required)
+                  label.input__label(for="tel") Ваш номер телефона
+                    = " "
+                    span.input__label--star *
+                  // Текст ошибки указывается в span с классами .input__note .input__note--invalid
+                  span.input__note.input__note--invalid Телефон указан неверно, пример: +7 111 222-33-44
+                button.button.vacancy__button(type="submit") Отправить
+                p.vacancy__caption Нажимая на кнопку «Отправить» я даю согласие на обработку
+                  = " "
+                  a.vacancy__caption-link(href="#") персональных данных
 
     include layout/footer.pug
 
