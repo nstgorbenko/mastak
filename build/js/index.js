@@ -136,5 +136,42 @@ document.addEventListener('DOMContentLoaded', () => {
       makePinterestLayout();
       window.addEventListener('resize', makePinterestLayout);
     }
+  })(); // Price list container height
+
+
+  (function () {
+    const priceLists = document.querySelectorAll('.price__list');
+
+    if (priceLists) {
+      const TABLET_WIDTH = 1024;
+      const PRICE_ITEM_MARGIN = 30;
+
+      const setPriceListsHeight = () => {
+        const currentScreenWidth = document.documentElement.clientWidth;
+        priceLists.forEach(priceList => {
+          if (currentScreenWidth > TABLET_WIDTH) {
+            const priceListContainer = priceList.closest('.price__tab');
+            const priceItems = priceList.querySelectorAll(".price__item");
+
+            if (priceItems) {
+              let priceListHeight = 0;
+              priceListContainer.style.display = 'block';
+              priceItems.forEach(priceItem => {
+                priceListHeight += priceItem.offsetHeight + PRICE_ITEM_MARGIN;
+              });
+              priceListContainer.style.display = null;
+              priceList.style.height = "".concat(Math.ceil(priceListHeight / 2) + PRICE_ITEM_MARGIN, "px");
+            } else {
+              priceList.style.height = 0;
+            }
+          } else {
+            priceList.style.height = 'auto';
+          }
+        });
+      };
+
+      setPriceListsHeight();
+      window.addEventListener('resize', setPriceListsHeight);
+    }
   })();
 });
