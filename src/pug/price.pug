@@ -1,0 +1,238 @@
+doctype html
+html(lang="ru")
+
+  head
+
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    link(rel="stylesheet" href="./css/style.css")
+    title Мастак. Цены
+
+  body.page
+    include layout/header.pug
+
+    main.page-main
+      .breadcrumbs
+        .page__container
+          ul.breadcrumbs__list
+            li.breadcrumbs__item
+              a.breadcrumbs__link(href="#") Главная
+            li.breadcrumbs__item
+              a.breadcrumbs__link Цены
+
+      section.price
+        .page__container
+          .title.title--text.price__title
+            p.title__name.title__name--big.price__name
+              span Цены
+          input#toggle-1.price__checkbox.visually-hidden(type="radio" name="price" value="toggle-1" checked)
+          input#toggle-2.price__checkbox.visually-hidden(type="radio" name="price" value="toggle-2")
+          input#toggle-3.price__checkbox.visually-hidden(type="radio" name="price" value="toggle-3")
+          input#toggle-4.price__checkbox.visually-hidden(type="radio" name="price" value="toggle-4")
+          .price__tabs-wrapper
+            label.price__tab-name(for="toggle-1") Ремонт электроинструмента
+            label.price__tab-name(for="toggle-2") Ремонт строительной техники
+            label.price__tab-name(for="toggle-3") Ремонт садовой техники
+          section.price__tab
+            .price__tab-content
+              ul.price__list
+                li.price__item
+                  p.price__item-name Электродрели
+                    span  от 2 000
+                      span  ₽
+                  ul.price__item-sublist
+                    li.price__item-subitem Дрели алмазного бурения
+                    li.price__item-subitem Дрели ударные
+                li.price__item
+                  p.price__item-name Шлифовальные машины
+                    span  от 500
+                      span  ₽
+                  ul.price__item-sublist
+                    li.price__item-subitem Угловые шлифовальные машины
+                li.price__item
+                  p.price__item-name Электропилы
+                    span  от 800
+                      span  ₽
+                  ul.price__item-sublist
+                    li.price__item-subitem Дисковые пилы
+                    li.price__item-subitem Цепные пилы
+                    li.price__item-subitem Пилы торцовочные
+                    li.price__item-subitem Пилы циркулярные
+                    li.price__item-subitem Сабельные пилы
+                li.price__item
+                  p.price__item-name Электролобзики
+                    span  900
+                      span  ₽
+                li.price__item
+                  p.price__item-name Перфораторы
+                    span  800
+                      span  ₽
+                li.price__item
+                  p.price__item-name Отбойные молотки
+                    span  от 200
+                      span  ₽
+                li.price__item
+                  p.price__item-name Шуруповерт
+                    span  800
+                      span  ₽
+                li.price__item
+                  p.price__item-name Гайковерты
+                    span  900
+                      span  ₽
+                li.price__item
+                  p.price__item-name Винтоверты
+                    span  800
+                      span  ₽
+                li.price__item
+                  p.price__item-name Аккумуляторные отвертки
+                    span  от 200
+                      span  ₽
+                li.price__item
+                  p.price__item-name Заклепочники
+                    span  800
+                      span  ₽
+                li.price__item
+                  p.price__item-name Зарядные устройства
+                    span  900
+                      span  ₽
+                li.price__item
+                  p.price__item-name Аккумуляторные батареи
+                    span  800
+                      span  ₽
+                li.price__item
+                  p.price__item-name Строительные фены
+                    span  от 200
+                      span  ₽
+                li.price__item
+                  p.price__item-name Миксеры
+                    span  800
+                      span  ₽
+                li.price__item
+                  p.price__item-name Электролобзики
+                    span  900
+                      span  ₽
+                li.price__item
+                  p.price__item-name Перфораторы
+                    span  800
+                      span  ₽
+                li.price__item
+                  p.price__item-name Отбойные молотки
+                    span  от 200
+                      span  ₽
+                li.price__item
+                  p.price__item-name Шуруповерт
+                    span  800
+                      span  ₽
+                li.price__item
+                  p.price__item-name Гайковерты
+                    span  900
+                      span  ₽
+                li.price__item
+                  p.price__item-name Винтоверты
+                    span  800
+                      span  ₽
+                li.price__item
+                  p.price__item-name Аккумуляторные отвертки
+                    span  от 200
+                      span  ₽
+                li.price__item
+                  p.price__item-name Заклепочники
+                    span  800
+                      span  ₽
+                li.price__item
+                  p.price__item-name Зарядные устройства
+                    span  900
+                      span  ₽
+                li.price__item
+                  p.price__item-name Аккумуляторные батареи
+                    span  800
+                      span  ₽
+                li.price__item
+                  p.price__item-name Строительные фены
+                    span  от 200
+                      span  ₽
+                li.price__item
+                  p.price__item-name Миксеры
+                    span  800
+                      span  ₽
+                li.price__item
+                  p.price__item-name Перфораторы
+                    span  800
+                      span  ₽
+                li.price__item
+                  p.price__item-name Отбойные молотки
+                    span  от 200
+                      span  ₽
+                li.price__item
+                  p.price__item-name Шуруповерт
+                    span  800
+                      span  ₽
+                li.price__item
+                  p.price__item-name Гайковерты
+                    span  900
+                      span  ₽
+                li.price__item
+                  p.price__item-name Винтоверты
+                    span  800
+                      span  ₽
+          section.price__tab
+            .price__tab-content
+              ul.price__list
+                li.price__item
+                  p.price__item-name Электродрели
+                    span  от 2 000
+                      span  ₽
+                li.price__item
+                  p.price__item-name Шлифовальные машины
+                    span  от 500
+                      span  ₽
+                li.price__item
+                  p.price__item-name Электропилы
+                    span  800
+                      span  ₽
+                li.price__item
+                  p.price__item-name Электролобзики
+                    span  900
+                      span  ₽
+                li.price__item
+                  p.price__item-name Перфораторы
+                    span  800
+                      span  ₽
+                li.price__item
+                  p.price__item-name Отбойные молотки
+                    span  от 200
+                      span  ₽
+                li.price__item
+                  p.price__item-name Шуруповерт
+                    span  800
+                      span  ₽
+                li.price__item
+                  p.price__item-name Гайковерты
+                    span  900
+                      span  ₽
+                li.price__item
+                  p.price__item-name Перфораторы
+                    span  800
+                      span  ₽
+                li.price__item
+                  p.price__item-name Винтоверты
+                    span  800
+                      span  ₽
+                li.price__item
+                  p.price__item-name Аккумуляторные отвертки
+                    span  от 200
+                      span  ₽
+                li.price__item
+                  p.price__item-name Заклепочники
+                    span  800
+                      span  ₽
+          section.price__tab
+
+    include layout/footer.pug
+
+    script(src="js/swiper-bundle.min.js")
+    script(src="js/fslightbox.js")
+    script(src="js/index.js")
+
+    .svg-library
+      include ../img/sprite.svg

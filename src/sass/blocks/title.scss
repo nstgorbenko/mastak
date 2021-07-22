@@ -17,6 +17,10 @@
   @include accent-font(60px, 28px, 1.05, 600);
   color: $color-title;
 
+  &--big {
+    @include accent-font(70px, 28px, 1.05, 600);
+  }
+
   span {
     color: $color-accent;
   }

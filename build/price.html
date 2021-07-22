@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Мастак. Цены</title>
+  </head>
+  <body class="page">
+    <header class="page-header">
+      <div class="top-header">
+        <div class="page__container">
+          <div class="top-header__content">
+            <div class="top-header__logo"><a class="top-header__logo-link" href=""><img class="top-header__logo-image" width="171" height="40" src="img/icons/icon-logo.svg" alt="Логотип компании Мастак"></a>
+              <p class="top-header__logo-text">Мы работаем с 1995 года<span>Работаем по Москве и Московской области</span></p>
+            </div>
+            <div class="top-header__burger">
+              <div class="top-header__burger-icon"><span class="top-header__burger-icon-line"></span></div>
+              <p class="top-header__burger-text">Меню</p>
+            </div>
+            <ul class="top-header__list">
+              <li class="top-header__item"><a class="top-header__link" href="#">Ремонт электроинструмента</a></li>
+              <li class="top-header__item"><a class="top-header__link" href="#">Ремонт строительной техники</a></li>
+              <li class="top-header__item"><a class="top-header__link" href="#">Ремонт садовой техники</a></li>
+            </ul>
+            <div class="top-header__call"><a class="top-header__call-link" href="tel:89999999999">8 999 999 99 99</a>
+              <button class="button top-header__call-button" type="button">Заказать ремонт</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bottom-header">
+        <div class="page__container">
+          <nav class="bottom-header__content">
+            <ul class="bottom-header__list">
+              <li class="bottom-header__item"><a class="bottom-header__link bottom-header__link--catalog" href="#">Ремонт электроинструмента</a></li>
+              <li class="bottom-header__item"><a class="bottom-header__link bottom-header__link--catalog" href="#">Ремонт строительной техники</a></li>
+              <li class="bottom-header__item"><a class="bottom-header__link bottom-header__link--catalog" href="#">Ремонт садовой техники</a></li>
+              <li class="bottom-header__item"><a class="bottom-header__link" href="#">Цены</a></li>
+              <li class="bottom-header__item"><a class="bottom-header__link" href="#">О сервисе</a></li>
+              <li class="bottom-header__item"><a class="bottom-header__link" href="#">Сертификаты</a></li>
+              <li class="bottom-header__item"><a class="bottom-header__link" href="#">Отзывы</a></li>
+              <li class="bottom-header__item"><a class="bottom-header__link" href="#">Контакты</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <main class="page-main">
+      <div class="breadcrumbs">
+        <div class="page__container">
+          <ul class="breadcrumbs__list">
+            <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Главная</a></li>
+            <li class="breadcrumbs__item"><a class="breadcrumbs__link">Цены</a></li>
+          </ul>
+        </div>
+      </div>
+      <section class="price">
+        <div class="page__container">
+          <div class="title title--text price__title">
+            <p class="title__name title__name--big price__name"><span>Цены</span></p>
+          </div>
+          <input class="price__checkbox visually-hidden" id="toggle-1" type="radio" name="price" value="toggle-1" checked>
+          <input class="price__checkbox visually-hidden" id="toggle-2" type="radio" name="price" value="toggle-2">
+          <input class="price__checkbox visually-hidden" id="toggle-3" type="radio" name="price" value="toggle-3">
+          <input class="price__checkbox visually-hidden" id="toggle-4" type="radio" name="price" value="toggle-4">
+          <div class="price__tabs-wrapper">
+            <label class="price__tab-name" for="toggle-1">Ремонт электроинструмента</label>
+            <label class="price__tab-name" for="toggle-2">Ремонт строительной техники</label>
+            <label class="price__tab-name" for="toggle-3">Ремонт садовой техники</label>
+          </div>
+          <section class="price__tab">
+            <div class="price__tab-content">
+              <ul class="price__list">
+                <li class="price__item">
+                  <p class="price__item-name">Электродрели<span> от 2 000<span> ₽</span></span></p>
+                  <ul class="price__item-sublist">
+                    <li class="price__item-subitem">Дрели алмазного бурения</li>
+                    <li class="price__item-subitem">Дрели ударные</li>
+                  </ul>
+                </li>
+                <li class="price__item">
+                  <p class="price__item-name">Шлифовальные машины<span> от 500<span> ₽</span></span></p>
+                  <ul class="price__item-sublist">
+                    <li class="price__item-subitem">Угловые шлифовальные машины</li>
+                  </ul>
+                </li>
+                <li class="price__item">
+                  <p class="price__item-name">Электропилы<span> от 800<span> ₽</span></span></p>
+                  <ul class="price__item-sublist">
+                    <li class="price__item-subitem">Дисковые пилы</li>
+                    <li class="price__item-subitem">Цепные пилы</li>
+                    <li class="price__item-subitem">Пилы торцовочные</li>
+                    <li class="price__item-subitem">Пилы циркулярные</li>
+                    <li class="price__item-subitem">Сабельные пилы</li>
+                  </ul>
+                </li>
+                <li class="price__item">
+                  <p class="price__item-name">Электролобзики<span> 900<span> ₽</span></span></p>
+                </li>
+                <li class="price__item">
+                  <p class="price__item-name">Перфораторы<span> 800<span> ₽</span></span></p>
+                </li>
+                <li class="price__item">
+                  <p class="price__item-name">Отбойные молотки<span> от 200<span> ₽</span></span></p>
+                </li>
+                <li class="price__item">
+                  <p class="price__item-name">Шуруповерт<span> 800<span> ₽</span></span></p>
+                </li>
+                <li class="price__item">
+                  <p class="price__item-name">Гайковерты<span> 900<span> ₽</span></span></p>
+                </li>
+                <li class="price__item">
+                  <p class="price__item-name">Винтоверты<span> 800<span> ₽</span></span></p>
+                </li>
+                <li class="price__item">
+                  <p class="price__item-name">Аккумуляторные отвертки<span> от 200<span> ₽</span></span></p>
+                </li>
+                <li class="price__item">
+                  <p class="price__item-name">Заклепочники<span> 800<span> ₽</span></span></p>
+                </li>
+                <li class="price__item">
+                  <p class="price__item-name">Зарядные устройства<span> 900<span> ₽</span></span></p>
+                </li>
+                <li class="price__item">
+                  <p class="price__item-name">Аккумуляторные батареи<span> 800<span> ₽</span></span></p>
+                </li>
+                <li class="price__item">
+                  <p class="price__item-name">Строительные фены<span> от 200<span> ₽</span></span></p>
+                </li>
+                <li class="price__item">
+                  <p class="price__item-name">Миксеры<span> 800<span> ₽</span></span></p>
+                </li>
+                <li class="price__item">
+                  <p class="price__item-name">Электролобзики<span> 900<span> ₽</span></span></p>
+                </li>
+                <li class="price__item">
+                  <p class="price__item-name">Перфораторы<span> 800<span> ₽</span></span></p>
+                </li>
+                <li class="price__item">
+                  <p class="price__item-name">Отбойные молотки<span> от 200<span> ₽</span></span></p>
+                </li>
+                <li class="price__item">
+                  <p class="price__item-name">Шуруповерт<span> 800<span> ₽</span></span></p>
+                </li>
+                <li class="price__item">
+                  <p class="price__item-name">Гайковерты<span> 900<span> ₽</span></span></p>
+                </li>
+                <li class="price__item">
+                  <p class="price__item-name">Винтоверты<span> 800<span> ₽</span></span></p>
+                </li>
+                <li class="price__item">
+                  <p class="price__item-name">Аккумуляторные отвертки<span> от 200<span> ₽</span></span></p>
+                </li>
+                <li class="price__item">
+                  <p class="price__item-name">Заклепочники<span> 800<span> ₽</span></span></p>
+                </li>
+                <li class="price__item">
+                  <p class="price__item-name">Зарядные устройства<span> 900<span> ₽</span></span></p>
+                </li>
+                <li class="price__item">
+                  <p class="price__item-name">Аккумуляторные батареи<span> 800<span> ₽</span></span></p>
+                </li>
+                <li class="price__item">
+                  <p class="price__item-name">Строительные фены<span> от 200<span> ₽</span></span></p>
+                </li>
+                <li class="price__item">
+                  <p class="price__item-name">Миксеры<span> 800<span> ₽</span></span></p>
+                </li>
+                <li class="price__item">
+                  <p class="price__item-name">Перфораторы<span> 800<span> ₽</span></span></p>
+                </li>
+                <li class="price__item">
+                  <p class="price__item-name">Отбойные молотки<span> от 200<span> ₽</span></span></p>
+                </li>
+                <li class="price__item">
+                  <p class="price__item-name">Шуруповерт<span> 800<span> ₽</span></span></p>
+                </li>
+                <li class="price__item">
+                  <p class="price__item-name">Гайковерты<span> 900<span> ₽</span></span></p>
+                </li>
+                <li class="price__item">
+                  <p class="price__item-name">Винтоверты<span> 800<span> ₽</span></span></p>
+                </li>
+              </ul>
+            </div>
+          </section>
+          <section class="price__tab">
+            <div class="price__tab-content">
+              <ul class="price__list">
+                <li class="price__item">
+                  <p class="price__item-name">Электродрели<span> от 2 000<span> ₽</span></span></p>
+                </li>
+                <li class="price__item">
+                  <p class="price__item-name">Шлифовальные машины<span> от 500<span> ₽</span></span></p>
+                </li>
+                <li class="price__item">
+                  <p class="price__item-name">Электропилы<span> 800<span> ₽</span></span></p>
+                </li>
+                <li class="price__item">
+                  <p class="price__item-name">Электролобзики<span> 900<span> ₽</span></span></p>
+                </li>
+                <li class="price__item">
+                  <p class="price__item-name">Перфораторы<span> 800<span> ₽</span></span></p>
+                </li>
+                <li class="price__item">
+                  <p class="price__item-name">Отбойные молотки<span> от 200<span> ₽</span></span></p>
+                </li>
+                <li class="price__item">
+                  <p class="price__item-name">Шуруповерт<span> 800<span> ₽</span></span></p>
+                </li>
+                <li class="price__item">
+                  <p class="price__item-name">Гайковерты<span> 900<span> ₽</span></span></p>
+                </li>
+                <li class="price__item">
+                  <p class="price__item-name">Перфораторы<span> 800<span> ₽</span></span></p>
+                </li>
+                <li class="price__item">
+                  <p class="price__item-name">Винтоверты<span> 800<span> ₽</span></span></p>
+                </li>
+                <li class="price__item">
+                  <p class="price__item-name">Аккумуляторные отвертки<span> от 200<span> ₽</span></span></p>
+                </li>
+                <li class="price__item">
+                  <p class="price__item-name">Заклепочники<span> 800<span> ₽</span></span></p>
+                </li>
+              </ul>
+            </div>
+          </section>
+          <section class="price__tab"></section>
+        </div>
+      </section>
+    </main>
+    <footer class="page__footer">
+      <div class="top-footer">
+        <div class="page__container">
+          <div class="top-footer__content">
+            <div class="top-footer__column-left">
+              <div class="top-footer__logo"><a class="top-footer__logo-link" href=""><img class="top-footer__logo-image" width="171" height="40" src="img/icons/icon-logo.svg" alt="Логотип компании Мастак"></a>
+                <p class="top-footer__logo-text">Профессиональный ремонт строительной техники от авторизованного сервисного центра</p>
+              </div>
+            </div>
+            <div class="top-footer__column-center">
+              <nav class="navigation">
+                <ul class="navigation__list">
+                  <li class="navigation__item">
+                    <input class="navigation__item-checkbox visually-hidden" id="nav-1" type="checkbox" name="nav">
+                    <label class="navigation__item-name" for="nav-1">Разделы
+                      <svg class="navigation__item-icon" width="14" height="8">
+                        <use xlink:href="img/sprite.svg#icon-arrow-accordion"></use>
+                      </svg>
+                    </label>
+                    <ul class="navigation__sublist">
+                      <li class="navigation__sublist-item"><a class="navigation__sublist-link" href="#">Цены</a></li>
+                      <li class="navigation__sublist-item"><a class="navigation__sublist-link" href="#">О сервисе</a></li>
+                      <li class="navigation__sublist-item"><a class="navigation__sublist-link" href="#">Сертификаты</a></li>
+                      <li class="navigation__sublist-item"><a class="navigation__sublist-link" href="#">Отзывы</a></li>
+                      <li class="navigation__sublist-item"><a class="navigation__sublist-link" href="#">Контакты</a></li>
+                    </ul>
+                  </li>
+                  <li class="navigation__item">
+                    <input class="navigation__item-checkbox visually-hidden" id="nav-2" type="checkbox" name="nav">
+                    <label class="navigation__item-name" for="nav-2">Услуги
+                      <svg class="navigation__item-icon" width="14" height="8">
+                        <use xlink:href="img/sprite.svg#icon-arrow-accordion"></use>
+                      </svg>
+                    </label>
+                    <ul class="navigation__sublist">
+                      <li class="navigation__sublist-item"><a class="navigation__sublist-link" href="#">Ремонт электроинструмента</a></li>
+                      <li class="navigation__sublist-item"><a class="navigation__sublist-link" href="#">Ремонт строительной техники</a></li>
+                      <li class="navigation__sublist-item"><a class="navigation__sublist-link" href="#">Ремонт садовой техники</a></li>
+                    </ul>
+                  </li>
+                  <li class="navigation__item">
+                    <input class="navigation__item-checkbox visually-hidden" id="nav-3" type="checkbox" name="nav">
+                    <label class="navigation__item-name navigation__item-name--group" for="nav-3">Контакты
+                      <svg class="navigation__item-icon" width="14" height="8">
+                        <use xlink:href="img/sprite.svg#icon-arrow-accordion"></use>
+                      </svg>
+                    </label>
+                    <div class="navigation__sublist navigation__sublist--group">
+                      <p class="navigation__item-name">Режим работы</p>
+                      <ul class="navigation__sublist">
+                        <li class="navigation__sublist-item">Пн-Пт: 9:00 - 18:00</li>
+                        <li class="navigation__sublist-item">Сб-Вс: Выходной</li>
+                      </ul>
+                      <p class="navigation__item-name">Адрес:</p>
+                      <ul class="navigation__sublist">
+                        <li class="navigation__sublist-item">Москва, Красная 176</li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <div class="top-footer__column-right">
+              <div class="connect">
+                <p class="connect__title">Свяжитесь с нами</p>
+                <ul class="connect__list">
+                  <li class="connect__item"><a class="connect__link connect__link--phone" href="tel:+74956613111"><span class="connect__link-text connect__link-text--desktop">+7 (495) 661 33 11</span><span class="connect__link-text connect__link-text--mobile">
+                        <svg class="connect__icon" width="16" height="16">
+                          <use xlink:href="img/sprite.svg#icon-phone"></use>
+                        </svg>Позвонить</span></a></li>
+                  <li class="connect__item"><a class="connect__link connect__link--mail" href="mailto:info@tecsanservice.ru"><span class="connect__link-text connect__link-text--desktop">info@tecsanservice.ru</span><span class="connect__link-text connect__link-text--mobile">
+                        <svg class="connect__icon" width="16" height="16">
+                          <use xlink:href="img/sprite.svg#icon-mail"></use>
+                        </svg>Написать на почту</span></a></li>
+                  <li class="connect__item">
+                    <p class="connect__item-text">Задайте вопрос напрямую :</p>
+                    <div class="connect__item-links"><a class="connect__link connect__link--whatsapp" href="#">
+                        <svg class="connect__icon" width="16" height="16">
+                          <use xlink:href="img/sprite.svg#icon-whatsapp"></use>
+                        </svg><span>WhatsApp</span></a><a class="connect__link connect__link--telegram" href="#">
+                        <svg class="connect__icon" width="16" height="16">
+                          <use xlink:href="img/sprite.svg#icon-telegram"></use>
+                        </svg><span>Telegram</span></a></div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bottom-footer">
+        <div class="page__container">
+          <div class="bottom-footer__content">
+            <p class="bottom-footer__privacy">© МАСТАК, 2015-2021<a class="bottom-footer__privacy-link" href="#">Политика конфиденциальности</a></p>
+            <ul class="social-links bottom-footer__social-links">
+              <li class="social-links__item"><a class="social-links__link" href="#">
+                  <svg class="social-links__icon" width="16" height="16">
+                    <use xlink:href="img/sprite.svg#icon-vk"></use>
+                  </svg></a></li>
+              <li class="social-links__item"><a class="social-links__link" href="#">
+                  <svg class="social-links__icon" width="16" height="16">
+                    <use xlink:href="img/sprite.svg#icon-fb"></use>
+                  </svg></a></li>
+              <li class="social-links__item"><a class="social-links__link" href="#">
+                  <svg class="social-links__icon" width="16" height="16">
+                    <use xlink:href="img/sprite.svg#icon-ig"></use>
+                  </svg></a></li>
+            </ul><a class="bottom-footer__develop" href="https://dragoweb.ru/">
+              <p class="bottom-footer__develop-text">Разработка и продвижение</p>
+              <svg class="bottom-footer__develop-icon" width="81" height="15">
+                <use xlink:href="img/sprite.svg#icon-dragoweb"></use>
+              </svg></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/fslightbox.js"></script>
+    <script src="js/index.js"></script>
+    <div class="svg-library"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><clipPath id="clip0"><path fill="#fff" d="M0 0h16v16H0z"/></clipPath></defs><symbol id="icon-arrow-accordion" viewBox="0 0 14 8">
+<path d="M13 1L7 7L1 0.999999" stroke-linecap="round" stroke-linejoin="round"/>
+</symbol><symbol id="icon-arrow-pagination" viewBox="0 0 16 11">
+<path d="M1 5.55884L14.6736 5.55884" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M10.1162 0.999268L14.6741 5.55713L10.1162 10.115" stroke-linecap="round" stroke-linejoin="round"/>
+</symbol><symbol id="icon-arrow" viewBox="0 0 16 11">
+<path d="M0.997803 5.56311L14.6714 5.56311" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M10.1138 1.00354L14.6716 5.5614L10.1138 10.1193" stroke-linecap="round" stroke-linejoin="round"/>
+</symbol><symbol id="icon-dragoweb" viewBox="0 0 81 15">
+<path d="M8.34997 13.1764V0H6.80628V4.50536C6.17477 4.29082 5.49063 4.16567 4.61354 4.16567C1.45598 4.16567 0 6.36472 0 8.95709C0 11.3528 0.98235 13.3731 3.75398 13.3731C5.2275 13.3731 6.35019 12.6222 6.87645 11.6746V13.1764H8.34997ZM6.80628 6.00715V9.15375C6.80628 9.74374 6.61332 10.3159 6.35019 10.7449C5.98181 11.3349 5.10471 11.907 4.17499 11.907C2.36816 11.907 1.57878 10.6377 1.57878 8.84982C1.57878 6.88319 2.66638 5.61383 4.75387 5.61383C5.50817 5.61383 6.2274 5.70322 6.80628 6.00715Z"/>
+<path d="M12.3921 13.1764V9.54708C12.3921 8.97497 12.4097 8.22408 12.5324 7.59833C12.6903 6.84744 13.5674 5.61383 14.7252 5.61383C15.1813 5.61383 15.7075 5.73897 16.1812 6.11442L16.9706 4.68415C16.4794 4.32658 15.883 4.1478 15.1462 4.1478C13.7604 4.1478 12.743 5.04172 12.357 6.07867V4.29082H10.8309V13.1764H12.3921Z"/>
+<path d="M24.4981 4.82718V5.4708C23.6561 4.57688 22.6386 4.1478 21.4458 4.1478C20.2529 4.1478 19.2355 4.59476 18.3759 5.48868C17.5339 6.3826 17.1129 7.47318 17.1129 8.74255C17.1129 10.0119 17.5339 11.1025 18.3759 12.0143C19.2355 12.9082 20.2529 13.3552 21.4458 13.3552C22.6386 13.3552 23.6561 12.9082 24.4981 12.0143V13.0155H26.0944V4.48749L24.4981 4.82718ZM21.551 11.907C20.7616 11.907 20.0775 11.6031 19.5162 10.9952C18.9548 10.3695 18.6741 9.61859 18.6741 8.74255C18.6741 7.86651 18.9548 7.13349 19.5162 6.50775C20.0775 5.882 20.7616 5.57807 21.551 5.57807C22.3404 5.57807 23.0246 5.882 23.5859 6.50775C24.1472 7.13349 24.4279 7.86651 24.4279 8.74255C24.4279 9.61859 24.1472 10.3695 23.5859 10.9952C23.0246 11.6031 22.3404 11.907 21.551 11.907Z"/>
+<path d="M33.3519 11.8534C32.6853 11.907 32.1415 11.9964 31.7205 12.1395C31.2995 12.2646 31.0013 12.4076 30.8083 12.5328L30.5101 12.7294L31.3696 11.2455H31.4924C31.6152 11.2455 31.7205 11.2634 31.8082 11.2634C32.9133 11.2634 33.8255 10.9058 34.5623 10.2265C35.299 9.5292 35.6674 8.68891 35.6674 7.7056C35.6674 6.91895 35.3341 6.23957 34.6675 5.66746C34.9307 5.68534 35.5972 5.70322 36.6673 5.70322V4.29082H31.8257C30.5627 4.29082 29.5453 4.61263 28.8085 5.27414C28.0542 5.93564 27.6858 6.77592 27.6858 7.75924C27.6858 8.72467 28.0191 9.56496 28.6857 10.298L28.8085 10.4231C28.8962 10.4768 29.019 10.5483 29.1769 10.6377C29.2821 10.6734 29.3874 10.7271 29.5277 10.7807L28.0893 13.82L29.2295 14.9464L29.6505 14.6961C29.9487 14.5352 30.2996 14.3564 30.7381 14.1597C31.1767 13.9809 31.5451 13.8558 31.8608 13.82C32.1766 13.7664 32.3871 13.7485 32.5274 13.7485C32.8432 13.7485 33.1414 13.8021 33.422 13.9273C33.8255 14.0882 34.1413 14.4458 34.3518 15H36.755L36.7375 14.6782C36.7199 14.4636 36.6673 14.2133 36.5796 13.9094C36.4743 13.5876 36.2989 13.2837 36.0709 12.9797C35.8253 12.6758 35.492 12.4076 35.0534 12.1931C34.6149 11.9785 34.036 11.8713 33.3519 11.8534ZM31.6854 5.66746C33.2291 5.68534 34.0009 6.36472 34.0009 7.7056C33.9658 9.10012 33.194 9.79738 31.7029 9.79738C30.1417 9.74374 29.3523 9.06436 29.3523 7.75924C29.3523 7.20501 29.5453 6.72229 29.9137 6.29321C30.2996 5.882 30.8785 5.66746 31.6854 5.66746Z"/>
+<path d="M46.5074 8.70679C46.5074 6.02503 44.7707 4.07628 41.9465 4.07628C39.1573 4.07628 37.368 6.1323 37.368 8.76043C37.368 11.5137 39.1748 13.3731 41.9114 13.3731C44.6304 13.3731 46.5074 11.4064 46.5074 8.70679ZM44.9286 8.72467C44.9286 10.3516 43.9287 11.907 41.9465 11.907C39.9642 11.907 38.9293 10.4946 38.9293 8.76043C38.9293 7.13349 39.8414 5.54231 41.9465 5.54231C44.0515 5.54231 44.9286 7.09774 44.9286 8.72467Z"/>
+<path d="M51.7823 13.1764C53.3435 9.01073 53.7996 7.59833 54.1154 6.61502C54.4136 7.61621 54.8697 8.99285 56.4309 13.1764H57.7817L60.9041 4.32658H59.2552C57.5887 9.17163 57.308 10.1192 57.0624 11.0489C56.7818 10.1371 56.4309 9.08224 54.7294 4.32658H53.5891C51.8525 9.17163 51.5367 10.1371 51.2736 11.0667C51.0105 10.1013 50.7298 9.15375 49.0458 4.32658H47.3091L50.3965 13.1764H51.7823Z"/>
+<path d="M69.85 12.3182V10.7628C69.008 11.317 68.1659 11.907 66.3416 11.907C64.447 11.907 63.3068 10.6734 63.2893 9.17163H70.2359C70.2534 8.99285 70.2534 8.51013 70.2534 8.33135C70.2534 5.70322 68.7799 4.09416 66.2188 4.09416C63.3594 4.09416 61.728 6.18594 61.728 8.70679C61.728 11.4064 63.3068 13.3731 66.2012 13.3731C68.0432 13.3731 69.1483 12.7652 69.85 12.3182ZM63.377 7.83075C63.5173 6.40048 64.6049 5.4708 66.2012 5.4708C67.7976 5.4708 68.7624 6.50775 68.7624 7.83075H63.377Z"/>
+<path d="M72.1763 12.7294C73.2289 13.087 74.4042 13.3552 75.6321 13.3552C78.0354 13.3552 80.5263 12.1573 80.5263 8.47437C80.5263 5.75685 79.1931 4.1478 76.825 4.1478C75.5619 4.1478 74.2989 4.8093 73.7025 5.89988V0H72.1763V12.7294ZM73.7376 11.5137V8.51013C73.7376 7.84863 73.8779 7.25864 74.141 6.88319C74.6322 6.20381 75.4391 5.6317 76.3689 5.6317C78.0178 5.6317 78.9475 6.6329 78.9475 8.58164C78.9475 10.9774 77.4916 11.8892 75.7724 11.8892C74.8076 11.8892 74.2112 11.7104 73.7376 11.5137Z"/>
+<path d="M42.8232 9.66537C42.1696 10.3191 40.3112 10.5027 40.3112 10.5027C40.3112 10.5027 40.4948 8.64433 41.1485 7.99064C41.8022 7.33696 43.6606 7.15328 43.6606 7.15328C43.6606 7.15328 43.4769 9.01168 42.8232 9.66537Z" fill="#59D87C"/>
+</symbol><symbol id="icon-fb" viewBox="0 0 16 16">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0.882445 2.86831e-08H15.1168C15.6044 -0.000122918 15.9998 0.395019 16 0.882445V15.1168V15.1172C15.9999 15.6049 15.6045 16.0001 15.1168 16H0.883178C0.395629 16.0001 0.000243293 15.605 2.86831e-08 15.1176V0.883178C-0.000122918 0.395629 0.395019 0.000243293 0.882445 2.86831e-08ZM11.0469 9.81235V15.9999H8.54688V9.81235H6.46875V7.39048H8.54688V5.60813C8.54688 3.54123 9.80872 2.41623 11.6525 2.41623C12.5355 2.41623 13.2944 2.48203 13.5156 2.51145V4.67173H12.2443C11.2411 4.67173 11.0469 5.14841 11.0469 5.848V7.39048H13.4453L13.1328 9.81235H11.0469Z"/>
+</symbol><symbol id="icon-ig" viewBox="0 0 16 16">
+<path d="M8 0C5.82667 0 5.55533 0.01 4.702 0.048C3.85 0.088 3.27 0.222 2.76 0.42C2.234 0.624 1.78733 0.898 1.34267 1.34267C0.898 1.78733 0.623333 2.23333 0.42 2.76C0.222 3.27 0.0873333 3.85 0.048 4.702C0.008 5.55533 0 5.82667 0 8C0 10.1733 0.01 10.4447 0.048 11.298C0.088 12.1493 0.222 12.73 0.42 13.24C0.624 13.7653 0.898 14.2127 1.34267 14.6573C1.78733 15.1013 2.23333 15.3767 2.76 15.58C3.27067 15.7773 3.85067 15.9127 4.702 15.952C5.55533 15.992 5.82667 16 8 16C10.1733 16 10.4447 15.99 11.298 15.952C12.1493 15.912 12.73 15.7773 13.24 15.58C13.7653 15.376 14.2127 15.1013 14.6573 14.6573C15.1013 14.2127 15.3767 13.7673 15.58 13.24C15.7773 12.73 15.9127 12.1493 15.952 11.298C15.992 10.4447 16 10.1733 16 8C16 5.82667 15.99 5.55533 15.952 4.702C15.912 3.85067 15.7773 3.26933 15.58 2.76C15.376 2.234 15.1013 1.78733 14.6573 1.34267C14.2127 0.898 13.7673 0.623333 13.24 0.42C12.73 0.222 12.1493 0.0873333 11.298 0.048C10.4447 0.008 10.1733 0 8 0ZM8 1.44C10.1353 1.44 10.39 1.45067 11.2333 1.48733C12.0133 1.524 12.4367 1.65333 12.718 1.764C13.0927 1.90867 13.358 2.082 13.6393 2.36133C13.9187 2.64133 14.092 2.90733 14.2367 3.282C14.346 3.56333 14.4767 3.98667 14.512 4.76667C14.55 5.61067 14.5587 5.864 14.5587 8C14.5587 10.136 14.5487 10.39 14.5093 11.2333C14.4687 12.0133 14.3387 12.4367 14.2287 12.718C14.0793 13.0927 13.9093 13.358 13.6293 13.6393C13.35 13.9187 13.08 14.092 12.7093 14.2367C12.4293 14.346 11.9993 14.4767 11.2193 14.512C10.37 14.55 10.12 14.5587 7.98 14.5587C5.83933 14.5587 5.58933 14.5487 4.74067 14.5093C3.96 14.4687 3.53 14.3387 3.25 14.2287C2.87067 14.0793 2.61 13.9093 2.33067 13.6293C2.05 13.35 1.87067 13.08 1.73067 12.7093C1.62067 12.4293 1.49133 11.9993 1.45067 11.2193C1.42067 10.3793 1.41 10.12 1.41 7.99C1.41 5.85933 1.42067 5.59933 1.45067 4.74933C1.49133 3.96933 1.62067 3.54 1.73067 3.26C1.87067 2.88 2.05 2.62 2.33067 2.33933C2.61 2.06 2.87067 1.88 3.25 1.74067C3.53 1.63 3.95067 1.5 4.73067 1.46C5.58067 1.43 5.83067 1.42 7.97 1.42L8 1.44ZM8 3.892C5.73 3.892 3.892 5.732 3.892 8C3.892 10.27 5.732 12.108 8 12.108C10.27 12.108 12.108 10.268 12.108 8C12.108 5.73 10.268 3.892 8 3.892ZM8 10.6667C6.52667 10.6667 5.33333 9.47333 5.33333 8C5.33333 6.52667 6.52667 5.33333 8 5.33333C9.47333 5.33333 10.6667 6.52667 10.6667 8C10.6667 9.47333 9.47333 10.6667 8 10.6667ZM13.2307 3.73C13.2307 4.26 12.8 4.69 12.2707 4.69C11.7407 4.69 11.3107 4.25933 11.3107 3.73C11.3107 3.20067 11.7413 2.77067 12.2707 2.77067C12.7993 2.77 13.2307 3.20067 13.2307 3.73Z"/>
+</symbol><symbol id="icon-mail" viewBox="0 0 16 16">
+<path d="M2.00004 2H14C14.1769 2 14.3464 2.07024 14.4714 2.19526C14.5965 2.32029 14.6667 2.48986 14.6667 2.66667V13.3333C14.6667 13.5101 14.5965 13.6797 14.4714 13.8047C14.3464 13.9298 14.1769 14 14 14H2.00004C1.82323 14 1.65366 13.9298 1.52864 13.8047C1.40361 13.6797 1.33337 13.5101 1.33337 13.3333V2.66667C1.33337 2.48986 1.40361 2.32029 1.52864 2.19526C1.65366 2.07024 1.82323 2 2.00004 2ZM8.04004 7.78867L3.76537 4.15867L2.90204 5.17467L8.04871 9.54467L13.1027 5.17133L12.2307 4.16267L8.04071 7.78867H8.04004Z"/>
+</symbol><symbol id="icon-phone" viewBox="0 0 24 24">
+<path d="M21.9999 16.92V19.92C22.0011 20.1985 21.944 20.4741 21.8324 20.7293C21.7209 20.9845 21.5572 21.2136 21.352 21.4018C21.1468 21.5901 20.9045 21.7335 20.6407 21.8227C20.3769 21.9119 20.0973 21.945 19.8199 21.92C16.7428 21.5856 13.7869 20.5341 11.1899 18.85C8.77376 17.3146 6.72527 15.2661 5.18993 12.85C3.49991 10.2412 2.44818 7.27097 2.11993 4.17997C2.09494 3.90344 2.12781 3.62474 2.21643 3.3616C2.30506 3.09846 2.4475 2.85666 2.6347 2.6516C2.82189 2.44653 3.04974 2.28268 3.30372 2.1705C3.55771 2.05831 3.83227 2.00024 4.10993 1.99997H7.10993C7.59524 1.9952 8.06572 2.16705 8.43369 2.48351C8.80166 2.79996 9.04201 3.23942 9.10993 3.71997C9.23656 4.68004 9.47138 5.6227 9.80993 6.52997C9.94448 6.8879 9.9736 7.27689 9.89384 7.65086C9.81408 8.02482 9.6288 8.36809 9.35993 8.63998L8.08993 9.90997C9.51349 12.4135 11.5864 14.4864 14.0899 15.91L15.3599 14.64C15.6318 14.3711 15.9751 14.1858 16.3491 14.1061C16.723 14.0263 17.112 14.0554 17.4699 14.19C18.3772 14.5285 19.3199 14.7634 20.2799 14.89C20.7657 14.9585 21.2093 15.2032 21.5265 15.5775C21.8436 15.9518 22.0121 16.4296 21.9999 16.92Z"/>
+</symbol><symbol id="icon-telegram" viewBox="0 0 16 16">
+<path d="M1.26494 8.23244L4.72124 9.52244L6.05904 13.8248C6.14464 14.1003 6.48159 14.2022 6.70524 14.0193L8.63184 12.4487C8.83379 12.2842 9.12144 12.276 9.33249 12.4292L12.8074 14.952C13.0466 15.1259 13.3856 14.9948 13.4456 14.7057L15.9911 2.46119C16.0566 2.14539 15.7463 1.88194 15.4456 1.99824L1.26089 7.47029C0.910844 7.60529 0.913894 8.10089 1.26494 8.23244ZM5.84344 8.83574L12.5983 4.67539C12.7197 4.60084 12.8446 4.76499 12.7404 4.86169L7.16564 10.0437C6.96969 10.2261 6.84329 10.4702 6.80749 10.7351L6.61759 12.1424C6.59244 12.3303 6.32849 12.349 6.27664 12.1671L5.54629 9.60089C5.46264 9.30819 5.58454 8.99554 5.84344 8.83574Z"/>
+</symbol><symbol id="icon-vk" viewBox="0 0 16 16">
+<path d="M10.456 0H5.544C1.06133 0 0 1.06133 0 5.544V10.456C0 14.9387 1.06133 16 5.544 16H10.456C14.9387 16 16 14.9387 16 10.456V5.544C16 1.06133 14.9273 0 10.456 0ZM12.9173 11.4153H11.7547C11.3147 11.4153 11.1787 11.0653 10.388 10.264C9.69933 9.59733 9.39467 9.50733 9.22533 9.50733C8.988 9.50733 8.92 9.57533 8.92 9.90267V10.9527C8.92 11.2353 8.83 11.4047 8.08467 11.4047C6.854 11.4047 5.48733 10.6593 4.528 9.27C3.08267 7.238 2.68667 5.71333 2.68667 5.39733C2.68667 5.228 2.75467 5.07 3.082 5.07H4.24467C4.538 5.07 4.65133 5.20533 4.76467 5.52133C5.34 7.18133 6.3 8.638 6.69533 8.638C6.842 8.638 6.91 8.57 6.91 8.198V6.48067C6.86467 5.69 6.44667 5.62267 6.44667 5.34067C6.44667 5.20467 6.56 5.06933 6.74 5.06933H8.56933C8.818 5.06933 8.908 5.20467 8.908 5.498V7.81333C8.908 8.06133 9.02133 8.152 9.08867 8.152C9.23533 8.152 9.36 8.06133 9.63067 7.79067C10.4667 6.85333 11.0647 5.408 11.0647 5.408C11.144 5.23867 11.2793 5.08067 11.5733 5.08067H12.736C13.086 5.08067 13.1653 5.26067 13.086 5.50933C12.9393 6.18733 11.5167 8.19667 11.5167 8.19667C11.3927 8.4 11.3473 8.49 11.5167 8.71667C11.6407 8.886 12.0473 9.236 12.3187 9.552C12.8153 10.1167 13.1987 10.5907 13.3007 10.9187C13.414 11.2453 13.244 11.4147 12.9167 11.4147L12.9173 11.4153Z"/>
+</symbol><symbol id="icon-whatsapp"><g clip-path="url(#clip0)"><path d="M11.648 9.588c-.198-.1-1.172-.578-1.353-.645-.182-.066-.314-.098-.447.1-.131.198-.511.644-.627.776-.115.133-.23.149-.429.05-.198-.1-.837-.308-1.593-.983a5.964 5.964 0 01-1.102-1.373c-.116-.198-.012-.305.086-.404.09-.088.2-.231.298-.346.1-.116.132-.199.198-.332.066-.132.034-.247-.016-.346-.05-.1-.446-1.075-.61-1.472-.162-.386-.326-.333-.447-.34a8.538 8.538 0 00-.38-.006.726.726 0 00-.528.248c-.181.198-.693.677-.693 1.652 0 .975.71 1.917.808 2.05.1.132 1.398 2.133 3.385 2.991.473.204.841.326 1.13.417.474.151.906.13 1.247.078.38-.056 1.172-.479 1.337-.942.165-.462.165-.859.115-.942-.049-.082-.18-.132-.38-.231h.001zm-3.615 4.935h-.002a6.58 6.58 0 01-3.354-.918l-.24-.143-2.495.655.665-2.432-.156-.25A6.574 6.574 0 011.444 7.93a6.599 6.599 0 016.592-6.59c1.76 0 3.415.687 4.659 1.932a6.552 6.552 0 011.928 4.663c-.002 3.633-2.958 6.59-6.59 6.59zm5.61-12.198A7.877 7.877 0 008.032 0C3.663 0 .107 3.557.105 7.928c0 1.397.364 2.761 1.058 3.963L.038 16l4.203-1.103a7.923 7.923 0 003.79.966h.002c4.37 0 7.927-3.557 7.93-7.929a7.882 7.882 0 00-2.32-5.609z"/></g></symbol></svg>
+    </div>
+  </body>
+</html>
