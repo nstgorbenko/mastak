@@ -1,0 +1,92 @@
+.input {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+
+  @media (max-width: $small) {
+    margin-bottom: 15px;
+  }
+}
+
+.input-double {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+
+  @media (max-width: $extra-small) {
+    flex-direction: column;
+    margin-bottom: 0;
+  }
+}
+
+.input__label {
+  @include main-font(16px, 14px, 1.75, 300);
+  order: -1;
+  margin-bottom: 5px;
+  color: #828282;
+  transition: all 0.3s ease;
+
+  @media (max-width: $small) {
+    margin-bottom: 0;
+  }
+
+  &--star {
+    color: #eb5757;
+  }
+
+  .input__field:not(.input__field--invalid):focus ~ & {
+    color: #131516;
+  }
+
+  .input__field--invalid ~ & {
+    color: #eb5757;
+  }
+}
+
+.input__field {
+  @include main-font(16px, 14px, 1.75, 400);
+  width: auto;
+  max-width: none;
+  padding: 16px 48px 14px 16px;
+  border: 1px solid #e0e0e0;
+  border-radius: 2px;
+  color: #333333;
+  caret-color: #131516;
+  transition: all 0.3s ease;
+  background-image: none;
+  background-color: transparent;
+  box-shadow: none;
+  outline: none;
+  resize: none;
+  cursor: pointer;
+
+  @media (max-width: $small) {
+    padding: 10px 48px 10px 8px;
+  }
+
+  &::placeholder {
+    @include main-font(16px, 14px, 1.75, 400);
+    color: #999999;
+  }
+
+  &:not(.input__field--invalid):hover,
+  &:not(.input__field--invalid):focus {
+    border: 1px solid #131516;
+  }
+
+  &--invalid {
+    border: 1px solid #eb5757;
+    background: url("../img/icon-invalid.svg") no-repeat calc(100% - 16px) 50%;
+  }
+}
+
+.input__note {
+  @include main-font(14px, 12px, 1.2, 400);
+  display: none;
+  margin-top: 2px;
+  color: #eb5757;
+
+  .input__field--invalid ~ &--invalid {
+    display: block;
+  }
+}

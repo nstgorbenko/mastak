@@ -43,12 +43,13 @@ html(lang="ru")
             li.contacts__item
               img.contacts__item-image(src="img/icons/icon-circle-time.png")
               p.contacts__item-name Режим работы
-              p.contacts__item-text Пн-Пт: 9:00 - 18:00<br>Сб-Вс: Выходной
+              p.contacts__item-text Пн-Пт: 9:00 - 18:00
+              p.contacts__item-text Сб-Вс: Выходной
 
       section.map
         .page__container
           .map__controls
-            button.map__control(type="button") Карта
+            button.map__control.map__control--active(type="button") Карта
             button.map__control(type="button") Панорама
           .map__content
             iframe(src="https://yandex.ru/map-widget/v1/-/CCUauMeyLA" frameborder="0" allowfullscreen="true")
@@ -61,7 +62,7 @@ html(lang="ru")
               = " "
               | компании
           .bank-details__part
-            p.bank-details__title Юридическая информация
+            p.bank-details__part-title Юридическая информация
             .bank-details__line
               span.bank-details__key Полное официальное наименование
               span.bank-details__value Индивидуальный предприниматель Горкунова Кристина Владимировна
@@ -88,7 +89,7 @@ html(lang="ru")
               span.bank-details__value ПСН
 
           .bank-details__part
-            p.bank-details__title Адрес
+            p.bank-details__part-title Адрес
             .bank-details__line
               span.bank-details__key Юридический адрес
               span.bank-details__value 350049, Краснодарский край, г. Краснодар, ул. Тургенева, д. 128, кв.25.
@@ -97,10 +98,12 @@ html(lang="ru")
               span.bank-details__value 350049, Краснодарский край, г. Краснодар, ул. Тургенева, д. 128, кв.25.
 
           .bank-details__part
-            p.bank-details__title Банковские данные
+            p.bank-details__part-title Банковские данные
             .bank-details__line
               span.bank-details__key Банк
-              span.bank-details__value ФИЛИАЛ «РОСТОВСКИЙ» АО «АЛЬФА-БАНК» г. Ростов-на-Дону
+              span.bank-details__value ФИЛИАЛ «РОСТОВСКИЙ» АО «АЛЬФА-БАНК»
+                br
+                | г. Ростов-на-Дону
             .bank-details__line
               span.bank-details__key Расчетный счет
               span.bank-details__value 30233810714000000919
@@ -117,33 +120,34 @@ html(lang="ru")
       section.vacancy
         .vacancy__bg(style="background-image: url(/img/bg-vacancy.jpg)")
         .page__container
-          .vacancy__banner-wrap(style="background-image: url(/img/bg-vacancy.jpg)")
-          .vacancy__content-wrap
-            form.vacancy__form(method="post" action="#")
-              .vacancy__content
-                p.vacancy__content-title Ищем
-                  = " "
-                  span талантливых
-                  br
-                  = " "
-                  span специалистов
-                  = " "
-                  | в компанию
-                .input
-                  input#name.input__field(type="text" name="name" placeholder="Иван")
-                  label.input__label(for="name") Ваше имя
-                .input
-                  // Если в поле введены неверные данные, input добавляется класс .input__field--invalid
-                  input#tel.input__field(type="text" name="tel" placeholder="8 999 999 99 99" required)
-                  label.input__label(for="tel") Ваш номер телефона
+          .vacancy__content
+            .vacancy__banner-wrap(style="background-image: url(/img/bg-vacancy.jpg)")
+            .vacancy__content-wrap
+              form.vacancy__form(method="post" action="#")
+                .vacancy__form-content
+                  p.vacancy__content-title Ищем
                     = " "
-                    span.input__label--star *
-                  // Текст ошибки указывается в span с классами .input__note .input__note--invalid
-                  span.input__note.input__note--invalid Телефон указан неверно, пример: +7 111 222-33-44
-                button.button.vacancy__button(type="submit") Отправить
-                p.vacancy__caption Нажимая на кнопку «Отправить» я даю согласие на обработку
-                  = " "
-                  a.vacancy__caption-link(href="#") персональных данных
+                    span талантливых
+                    br
+                    = " "
+                    span специалистов
+                    = " "
+                    | в компанию
+                  .input
+                    input#name.input__field(type="text" name="name" placeholder="Иван")
+                    label.input__label(for="name") Ваше имя
+                  .input
+                    // Если в поле введены неверные данные, input добавляется класс .input__field--invalid
+                    input#tel.input__field(type="text" name="tel" placeholder="8 999 999 99 99" required)
+                    label.input__label(for="tel") Ваш номер телефона
+                      = " "
+                      span.input__label--star *
+                    // Текст ошибки указывается в span с классами .input__note .input__note--invalid
+                    span.input__note.input__note--invalid Телефон указан неверно, пример: +7 111 222-33-44
+                  button.button.vacancy__button(type="submit") Отправить
+                  p.vacancy__caption Нажимая на кнопку «Отправить» я даю согласие на обработку
+                    = " "
+                    a.vacancy__caption-link(href="#") персональных данных
 
     include layout/footer.pug
 
