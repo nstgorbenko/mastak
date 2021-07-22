@@ -1,0 +1,311 @@
+doctype html
+html(lang="ru")
+
+  head
+
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    link(rel="stylesheet" href="./css/style.css")
+    title Мастак. О сервисе
+
+  body.page
+    include layout/header.pug
+
+    main.page-main
+      .breadcrumbs
+        .page__container
+          ul.breadcrumbs__list
+            li.breadcrumbs__item
+              a.breadcrumbs__link(href="#") Главная
+            li.breadcrumbs__item
+              a.breadcrumbs__link О сервисе
+
+      section.top-info
+        .top-info__bg(style="background-image: url(/img/bg-top-info-4.jpg)")
+        .page__container
+          .top-info__content
+            .top-info__description
+              .title.top-info__title
+                p.title__name.top-info__name
+                  span О сервисе
+              p.top-info__text
+                span Помимо этого, устройство можно применять для перевозки тяжелых грузов, а также уборки заснеженных территорий. Во время использования мотоблок часто подвергается огромным нагрузкам и работает в очень неблагоприятных условиях.
+                span В связи с этим, следует делать своевременное техническое обслуживание, а иногда даже ремонт мотоблока. Для этого лучше всего обратиться к профессионалам, имеющим необходимые инструменты, оборудование, а также достаточный опыт.
+              .title.top-info__title
+                a.title__link.top-info___link(href="#") Отзывы
+                  .title__link-arrow
+                    svg.title__link-icon(width="16", height="11")
+                      use(xlink:href="img/sprite.svg#icon-arrow")
+            .top-info__banner-wrap(style="background-image: url(/img/bg-top-info-4.jpg)")
+              .banner.top-info__banner
+                p.banner__title Оставить заявку на ремонт
+                p.banner__text Перезвоним в течении 10 минут
+                button.button.button--light.banner__button(typr="button") Заказать звонок
+
+      section.team
+        .page__container
+          .title.team__header
+            p.title__name.team__name Наша
+              = " "
+              span команда
+            .title__buttons.team__buttons
+              button.title__button.title__button--prev.team__button.team__button--prev(type="button", aria-label="Предыдущий слайд")
+                svg.title__button-icon(width="16", height="11")
+                  use(xlink:href="img/sprite.svg#icon-arrow")
+              button.title__button.title__button--next.team__button.team__button--next(type="button", aria-label="Следующий слайд")
+                svg.title__button-icon(width="16", height="11")
+                  use(xlink:href="img/sprite.svg#icon-arrow")
+          .team__container.swiper-container
+            ul.team__list.swiper-wrapper
+              li.team__item.swiper-slide
+                .team__image-wrap
+                  img.team__image(src="img/team-1.jpg" alt="Алексей Владимирович")
+                p.team__item-practice Опыт 10 лет
+                p.team__item-name Алексей Владимирович
+                p.team__item-post Мастер по ремонту садовой техники
+              li.team__item.swiper-slide
+                .team__image-wrap
+                  img.team__image(src="img/team-2.jpg" alt="Виктор Сергеев")
+                p.team__item-practice Опыт 20 лет
+                p.team__item-name Виктор Сергеев
+                p.team__item-post Директор
+              li.team__item.swiper-slide
+                .team__image-wrap
+                  img.team__image(src="img/team-3.jpg" alt="Наталья Николаевна ")
+                p.team__item-practice Опыт 15 лет
+                p.team__item-name Наталья Николаевна
+                p.team__item-post Менеджер
+              li.team__item.swiper-slide
+                .team__image-wrap
+                  img.team__image(src="img/team-4.jpg" alt="Дмитрий Петрович")
+                p.team__item-practice Опыт 10 лет
+                p.team__item-name Дмитрий Петрович
+                p.team__item-post Мастер по ремонту сварочного оборудования
+              li.team__item.swiper-slide
+                .team__image-wrap
+                  img.team__image(src="img/team-5.jpg" alt="Федор Григорьевич")
+                p.team__item-practice Опыт 5 лет
+                p.team__item-name Федор Григорьевич
+                p.team__item-post Мастер по ремонту садовой техники
+
+      section.faq
+        .page__container
+          .faq__wrapper
+            .faq__content
+              .title.faq__title
+                p.title__name.faq__name Популярные
+                  span  вопросы
+              ul.faq__list
+                li.faq__item
+                  input#faq-1.faq__item-checkbox.visually-hidden(type='checkbox' name='faq')
+                  label.faq__item-name(for='faq-1')
+                    span.faq__item-question Если я не могу привезти свою технику в сервисный центр, что мне делать?
+                    span.faq__item-icon
+                  .faq__answer
+                    p.faq__answer-text Товары нашего магазина доставляют покупателям транспортные компании:
+                    ul.faq__answer-list
+                      li.faq__answer-item Россия — EMS Почта России;
+                      li.faq__answer-item За пределы России - ЕМС Почта, посылка почта России стандарт.
+                li.faq__item
+                  input#faq-2.faq__item-checkbox.visually-hidden(type='checkbox' name='faq')
+                  label.faq__item-name(for='faq-2')
+                    span.faq__item-question Как быстро приезжает специалист?
+                    span.faq__item-icon
+                  .faq__answer
+                    p.faq__answer-text Товары нашего магазина доставляют покупателям транспортные компании:
+                    ul.faq__answer-list
+                      li.faq__answer-item Россия — EMS Почта России;
+                      li.faq__answer-item За пределы России - ЕМС Почта, посылка почта России стандарт.
+                li.faq__item
+                  input#faq-3.faq__item-checkbox.visually-hidden(type='checkbox' name='faq')
+                  label.faq__item-name(for='faq-3')
+                    span.faq__item-question Если я не могу привезти свою технику в сервисный центр, что мне делать?
+                    span.faq__item-icon
+                  .faq__answer
+                    p.faq__answer-text Товары нашего магазина доставляют покупателям транспортные компании:
+                    ul.faq__answer-list
+                      li.faq__answer-item Россия — EMS Почта России;
+                      li.faq__answer-item За пределы России - ЕМС Почта, посылка почта России стандарт.
+                li.faq__item
+                  input#faq-4.faq__item-checkbox.visually-hidden(type='checkbox' name='faq' checked)
+                  label.faq__item-name(for='faq-4')
+                    span.faq__item-question Сколько составляет гарантия?
+                    span.faq__item-icon
+                  .faq__answer
+                    p.faq__answer-text Товары нашего магазина доставляют покупателям транспортные компании:
+                    ul.faq__answer-list
+                      li.faq__answer-item Россия — EMS Почта России;
+                      li.faq__answer-item За пределы России - ЕМС Почта, посылка почта России стандарт.
+
+            .call-order.faq__call-order
+              p.call-order__title Закажите звонок мастера
+              p.call-order__text Перезвоним в течении 10 минут
+              button.button.call-order__button(typr="button") Заказать звонок
+
+      section.brands
+        .page__container
+          .brands__wrapper
+            .brands__image-wrap
+              img.brands__image(width="796" height="766" src="img/brands.jpg" alt="Сервисный центр «Мастак»")
+            .brands__content
+              p.brands__title
+                span Бренды
+                = " "
+                | с которыми мы работаем
+              p.brands__text Часть  марок обслуживаемых нами садовой, строительной техники и электроинструмента.
+              ul.brands__list
+                li.brands__item
+                  .brands__item-image-wrap
+                    img.brands__item-image(src="img/brand-1.jpg" alt="Bosch")
+                li.brands__item
+                  .brands__item-image-wrap
+                    img.brands__item-image(src="img/brand-2.jpg" alt="Makita")
+                li.brands__item
+                  .brands__item-image-wrap
+                    img.brands__item-image(src="img/brand-3.jpg" alt="DeWalt")
+                li.brands__item
+                  .brands__item-image-wrap
+                    img.brands__item-image(src="img/brand-4.jpg" alt="Metabo")
+                li.brands__item
+                  .brands__item-image-wrap
+                    img.brands__item-image(src="img/brand-5.jpg" alt="Stanley")
+                li.brands__item
+                  .brands__item-image-wrap
+                    img.brands__item-image(src="img/brand-6.jpg" alt="Black & Decker")
+                li.brands__item
+                  .brands__item-image-wrap
+                    img.brands__item-image(src="img/brand-7.jpg" alt="Husqvarna")
+                li.brands__item
+                  .brands__item-image-wrap
+                    img.brands__item-image(src="img/brand-8.jpg" alt="Partner")
+                li.brands__item
+                  .brands__item-image-wrap
+                    img.brands__item-image(src="img/brand-9.jpg" alt="Dremel")
+                li.brands__item
+                  .brands__item-image-wrap
+                    img.brands__item-image(src="img/brand-10.jpg" alt="Gardena")
+                li.brands__item
+                  .brands__item-image-wrap
+                    img.brands__item-image(src="img/brand-11.jpg" alt="JET")
+                li.brands__item
+                  .brands__item-image-wrap
+                    img.brands__item-image(src="img/brand-12.jpg" alt="FERM")
+
+      section.center
+        .center__header
+          .page__container
+            .title.center__title
+              p.title__name.center__name Наш
+                = " "
+                span сервисный
+                  br
+                  = " "
+                  | центр
+              a.title__link.title__link--desktop.center__link(href="#") О сервисе
+                .title__link-arrow
+                  svg.title__link-icon(width="16", height="11")
+                    use(xlink:href="img/sprite.svg#icon-arrow")
+        .center__content
+          ul.center__list
+            li.center__item
+              .center__item-image-wrap
+                img.center__item-image(width="471" height="380" src="img/center-1.jpg" alt="Сервисный центр «Мастак»")
+            li.center__item
+              .center__item-image-wrap
+                img.center__item-image(width="471" height="380" src="img/center-2.jpg" alt="Сервисный центр «Мастак»")
+            li.center__item
+              .center__item-image-wrap
+                img.center__item-image(width="471" height="380" src="img/center-3.jpg" alt="Сервисный центр «Мастак»")
+            li.center__item
+              .center__item-image-wrap
+                img.center__item-image(width="471" height="380" src="img/center-4.jpg" alt="Сервисный центр «Мастак»")
+            li.center__item
+              .center__item-image-wrap
+                img.center__item-image(width="471" height="380" src="img/center-5.jpg" alt="Сервисный центр «Мастак»")
+            li.center__item
+              .center__item-image-wrap
+                img.center__item-image(width="471" height="380" src="img/center-6.jpg" alt="Сервисный центр «Мастак»")
+            li.center__item
+              .center__item-image-wrap
+                img.center__item-image(width="471" height="380" src="img/center-7.jpg" alt="Сервисный центр «Мастак»")
+            li.center__item
+              .center__item-image-wrap
+                img.center__item-image(width="471" height="380" src="img/center-8.jpg" alt="Сервисный центр «Мастак»")
+        .center__footer
+          .page__container
+            .title.center__title
+              a.title__link.title__link--mobile.center__link(href="#") О сервисе
+                .title__link-arrow
+                  svg.title__link-icon(width="16", height="11")
+                    use(xlink:href="img/sprite.svg#icon-arrow")
+
+      section.cert
+        .page__container
+          .title.cert__title
+            p.title__name.cert__name
+              span Сертификаты
+            a.title__link.title__link--desktop.cert__link(href="#") Все сертификаты
+              .title__link-arrow
+                svg.title__link-icon(width="16", height="11")
+                  use(xlink:href="img/sprite.svg#icon-arrow")
+          .cert__container.swiper-container
+            ul.cert__list.swiper-wrapper
+              li.cert__item.swiper-slide
+                .cert__item-image-wrap
+                  img.cert__item-image(src="img/cert-1.jpg" alt="Сертификат")
+              li.cert__item.swiper-slide
+                .cert__item-image-wrap
+                  img.cert__item-image(src="img/cert-2.jpg" alt="Сертификат")
+              li.cert__item.swiper-slide
+                .cert__item-image-wrap
+                  img.cert__item-image(src="img/cert-3.jpg" alt="Сертификат")
+              li.cert__item.swiper-slide
+                .cert__item-image-wrap
+                  img.cert__item-image(src="img/cert-4.jpg" alt="Сертификат")
+              li.cert__item.swiper-slide
+                .cert__item-image-wrap
+                  img.cert__item-image(src="img/cert-5.jpg" alt="Сертификат")
+          .title.cert__title
+            a.title__link.title__link--mobile.cert__link(href="#") Все сертификаты
+              .title__link-arrow
+                svg.title__link-icon(width="16", height="11")
+                  use(xlink:href="img/sprite.svg#icon-arrow")
+
+      section.feedback
+        .feedback__bg(style="background-image: url(/img/bg-legal.jpg)")
+        .page__container
+          .feedback__content
+            .feedback__banner-wrap(style="background-image: url(/img/bg-legal.jpg)")
+            .feedback__content-wrap
+              form.feedback__form(method="post" action="#")
+                .feedback__form-content
+                  p.feedback__content-title
+                    span Индивидуальные условия
+                    br
+                    |  сервисного обслуживания
+                    br
+                    |  для
+                    span  юридических лиц
+                  .input
+                    input#name.input__field(type="text" name="company" placeholder="ЮгСтрой")
+                    label.input__label(for="company") Название компании
+                  .input
+                    // Если в поле введены неверные данные, input добавляется класс .input__field--invalid
+                    input#tel.input__field(type="text" name="tel" placeholder="8 999 999 99 99" required)
+                    label.input__label(for="tel") Ваш номер телефона
+                      = " "
+                      span.input__label--star *
+                    // Текст ошибки указывается в span с классами .input__note .input__note--invalid
+                    span.input__note.input__note--invalid Телефон указан неверно, пример: +7 111 222-33-44
+                  button.button.feedback__button(type="submit") Отправить
+                  p.feedback__caption Нажимая на кнопку «Отправить» я даю согласие на обработку
+                    = " "
+                    a.feedback__caption-link(href="#") персональных данных
+    include layout/footer.pug
+
+    script(src="js/swiper-bundle.min.js")
+    script(src="js/fslightbox.js")
+    script(src="js/index.js")
+
+    .svg-library
+      include ../img/sprite.svg

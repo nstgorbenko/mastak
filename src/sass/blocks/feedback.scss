@@ -1,4 +1,4 @@
-.vacancy {
+.feedback {
   position: relative;
   padding: 110px 0 108px;
   background-color: #fafafa;
@@ -12,7 +12,7 @@
   }
 }
 
-.vacancy__bg {
+.feedback__bg {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -26,7 +26,7 @@
   }
 }
 
-.vacancy__content {
+.feedback__content {
   display: flex;
 
   @media (max-width: $medium) {
@@ -39,7 +39,7 @@
   }
 }
 
-.vacancy__banner-wrap {
+.feedback__banner-wrap {
   width: 50%;
 
   @media (max-width: $medium) {
@@ -53,10 +53,12 @@
 
   @media (max-width: $medium) {
     height: 274px;
+    background-position: 50% 50%;
+    background-size: cover;
   }
 }
 
-.vacancy__content-wrap  {
+.feedback__content-wrap  {
   width: 50%;
 
   @media (max-width: $medium) {
@@ -70,7 +72,7 @@
   }
 }
 
-.vacancy__form {
+.feedback__form {
   width: 548px;
   margin-left: auto;
   margin-right: auto;
@@ -96,7 +98,7 @@
   }
 }
 
-.vacancy__content-title {
+.feedback__content-title {
   @include reset();
   @include accent-font(38px, 28px, 1.2, 500);
   margin-bottom: 32px;
@@ -107,7 +109,7 @@
   }
 }
 
-.vacancy__button {
+.feedback__button {
   margin: 40px 0 20px;
   padding: 16px 85px;
 
@@ -116,14 +118,14 @@
   }
 }
 
-.vacancy__caption {
+.feedback__caption {
   @include reset();
   @include main-font(12px, 12px, 1.6, 300);
   width: 280px;
   color: #828282;
 }
 
-.vacancy__caption-link {
+.feedback__caption-link {
   transition: $main-transition;
 
   &:hover,

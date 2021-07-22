@@ -117,15 +117,15 @@ html(lang="ru")
               span.bank-details__key БИК
               span.bank-details__value 046015207
 
-      section.vacancy
-        .vacancy__bg(style="background-image: url(/img/bg-vacancy.jpg)")
+      section.feedback
+        .feedback__bg(style="background-image: url(/img/bg-vacancy.jpg)")
         .page__container
-          .vacancy__content
-            .vacancy__banner-wrap(style="background-image: url(/img/bg-vacancy.jpg)")
-            .vacancy__content-wrap
-              form.vacancy__form(method="post" action="#")
-                .vacancy__form-content
-                  p.vacancy__content-title Ищем
+          .feedback__content
+            .feedback__banner-wrap(style="background-image: url(/img/bg-vacancy.jpg)")
+            .feedback__content-wrap
+              form.feedback__form(method="post" action="#")
+                .feedback__form-content
+                  p.feedback__content-title Ищем
                     = " "
                     span талантливых
                     br
@@ -144,10 +144,10 @@ html(lang="ru")
                       span.input__label--star *
                     // Текст ошибки указывается в span с классами .input__note .input__note--invalid
                     span.input__note.input__note--invalid Телефон указан неверно, пример: +7 111 222-33-44
-                  button.button.vacancy__button(type="submit") Отправить
-                  p.vacancy__caption Нажимая на кнопку «Отправить» я даю согласие на обработку
+                  button.button.feedback__button(type="submit") Отправить
+                  p.feedback__caption Нажимая на кнопку «Отправить» я даю согласие на обработку
                     = " "
-                    a.vacancy__caption-link(href="#") персональных данных
+                    a.feedback__caption-link(href="#") персональных данных
 
     include layout/footer.pug
 

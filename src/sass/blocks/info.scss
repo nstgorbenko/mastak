@@ -98,4 +98,8 @@
   @media (max-width: $medium) {
     margin: auto;
   }
+
+  @media (max-width: $extra-small) {
+    width: 100%;
+  }
 }
