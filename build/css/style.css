@@ -1644,7 +1644,8 @@ template {
   font-weight: 400;
   font-family: "Gilroy", sans-serif;
   display: inline-block;
-  color: #C5C5C5; }
+  color: #c5c5c5;
+  transition: all 0.2s ease; }
   @media screen and (max-width: 375px) {
     .breadcrumbs__item {
       font-size: 16px; } }
@@ -1652,7 +1653,7 @@ template {
     .breadcrumbs__item {
       font-size: 14px; } }
   .breadcrumbs__item:last-child {
-    color: #6E6E6E; }
+    color: #6e6e6e; }
   @media (max-width: 768px) {
     .breadcrumbs__item:nth-last-child(2) {
       padding-left: 15px;
@@ -1667,7 +1668,7 @@ template {
     font-family: "Gilroy", sans-serif;
     content: "/";
     margin: 0 5px 0 12px;
-    color: #C5C5C5; }
+    color: #c5c5c5; }
     @media screen and (max-width: 375px) {
       .breadcrumbs__item:not(:last-child)::after {
         font-size: 16px; } }
@@ -1677,6 +1678,8 @@ template {
     @media (max-width: 768px) {
       .breadcrumbs__item:not(:last-child)::after {
         display: none; } }
+  .breadcrumbs__item:hover, .breadcrumbs__item:focus {
+    color: #ff0a0a; }
 
 .breadcrumbs__link {
   display: inline-block;
