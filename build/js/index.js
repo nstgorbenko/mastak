@@ -173,5 +173,69 @@ document.addEventListener('DOMContentLoaded', () => {
       setPriceListsHeight();
       window.addEventListener('resize', setPriceListsHeight);
     }
+  })(); // Open review popup
+
+
+  (function () {
+    const reviewPopup = document.querySelector('.review-popup');
+
+    if (reviewPopup) {
+      const closeButton = reviewPopup.querySelector('.popup__button-close');
+      const openButtons = document.querySelectorAll('.open-review-popup');
+      const overlay = document.querySelector('.overlay');
+      const body = document.querySelector('body');
+
+      const closePopup = () => {
+        overlay.classList.remove('show');
+        reviewPopup.classList.remove('show');
+        body.classList.remove('no-scroll');
+        closeButton.removeEventListener('click', closePopup);
+        overlay.removeEventListener('click', closePopup);
+      };
+
+      if (openButtons && overlay) {
+        openButtons.forEach(openButton => {
+          openButton.addEventListener('click', () => {
+            overlay.classList.add('show');
+            reviewPopup.classList.add('show');
+            body.classList.add('no-scroll');
+            closeButton.addEventListener('click', closePopup);
+            overlay.addEventListener('click', closePopup);
+          });
+        });
+      }
+    }
+  })(); // Open data popup
+
+
+  (function () {
+    const dataPopup = document.querySelector('.data-popup');
+
+    if (dataPopup) {
+      const closeButton = dataPopup.querySelector('.popup__button-close');
+      const openButtons = document.querySelectorAll('.open-data-popup');
+      const overlay = document.querySelector('.overlay');
+      const body = document.querySelector('body');
+
+      const closePopup = () => {
+        overlay.classList.remove('show');
+        dataPopup.classList.remove('show');
+        body.classList.remove('no-scroll');
+        closeButton.removeEventListener('click', closePopup);
+        overlay.removeEventListener('click', closePopup);
+      };
+
+      if (openButtons && overlay) {
+        openButtons.forEach(openButton => {
+          openButton.addEventListener('click', () => {
+            overlay.classList.add('show');
+            dataPopup.classList.add('show');
+            body.classList.add('no-scroll');
+            closeButton.addEventListener('click', closePopup);
+            overlay.addEventListener('click', closePopup);
+          });
+        });
+      }
+    }
   })();
 });

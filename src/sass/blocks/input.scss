@@ -6,6 +6,18 @@
   @media (max-width: $small) {
     margin-bottom: 15px;
   }
+
+  .popup & {
+    margin-bottom: 9px;
+  }
+
+  .input-double & {
+    width: 48.5%;
+
+    @media (max-width: $extra-small) {
+      width: 100%;
+    }
+  }
 }
 
 .input-double {

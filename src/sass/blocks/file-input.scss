@@ -1,0 +1,30 @@
+.file-input__label {
+  @include main-font(14px, 12px, 1, 400);
+  display: flex;
+  align-items: center;
+  color: $color-accent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover,
+  &:focus {
+    color: #333333;
+  }
+}
+
+.file-input__label-icon {
+  margin-left: 15px;
+  fill: $color-accent;
+  transition: all 0.3s ease;
+
+  @media (max-width: $extra-small) {
+    width: 14px;
+    height: auto;
+    margin-left: 5px;
+  }
+
+  .file-input__label:hover &,
+  .file-input__label:focus & {
+    fill: #333333;
+  }
+}

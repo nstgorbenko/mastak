@@ -47,7 +47,7 @@ html(lang="ru")
                     span.price-banner__cost-value 21 000 ₽
                 p.price-banner__title Закажите звонок мастера
                 p.price-banner__text Перезвоним в течении 10 минут
-                button.button.button--light.price-banner__button(typr="button") Заказать звонок
+                button.button.button--light.price-banner__button.open-data-popup(type="button") Заказать звонок
 
       section.service.service--rows
         .page__container
@@ -171,7 +171,7 @@ html(lang="ru")
             .call-order.info__call-order
               p.call-order__title Закажите звонок мастера
               p.call-order__text Перезвоним в течении 10 минут
-              button.button.call-order__button(typr="button") Заказать звонок
+              button.button.call-order__button.open-data-popup(type="button") Заказать звонок
 
       section.team
         .page__container
@@ -291,7 +291,7 @@ html(lang="ru")
             .banner.info__banner
               p.banner__title Закажите звонок мастера
               p.banner__text Перезвоним в течении 10 минут
-              button.button.button--light.banner__button(typr="button") Заказать звонок
+              button.button.button--light.banner__button.open-data-popup(type="button") Заказать звонок
 
       section.cert
         .page__container
@@ -385,6 +385,31 @@ html(lang="ru")
                   use(xlink:href="img/sprite.svg#icon-arrow")
 
     include layout/footer.pug
+
+    .overlay
+    section.popup.popup--data.data-popup
+      a.popup__button-close(aria-label='Закрыть окно')
+        svg.popup__button-close-icon(width="24", height="24")
+          use(xlink:href="img/sprite.svg#icon-cross")
+      form.popup__form(method='post' action='#')
+        .popup__content
+          p.popup__title
+            | Оставьте свои данные
+            span.popup__title-text И мы вам обязательно перезвоним
+          .input
+            input#name.input__field(type='text' name='name' placeholder='Иван')
+            label.input__label(for='name') Ваше имя
+          .input
+            // Если в поле введены неверные данные, input добавляется класс .input__field--invalid
+            input#tel.input__field(type='text' name='tel' placeholder='8 999 999 99 99' required='')
+            label.input__label(for='tel') Ваш номер телефона
+              span.input__label--star  *
+            // Текст ошибки указывается в span с классами .input__note .input__note--invalid
+            span.input__note.input__note--invalid Телефон указан неверно, пример: +7 111 222-33-44
+          button.button.popup__button(type='submit') Отправить
+          p.popup__caption
+            | Нажимая на кнопку «Отправить» я даю согласие на обработку
+            a.popup__caption-link(href='#')  персональных данных
 
     script(src="js/swiper-bundle.min.js")
     script(src="js/fslightbox.js")

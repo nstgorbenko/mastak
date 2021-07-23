@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
-    <title>Мастак. Ошибка 404</title>
+    <title>Мастак. Оставьте свои данные</title>
   </head>
-  <body class="page">
+  <body class="page no-scroll">
     <header class="page-header">
       <div class="top-header">
         <div class="page__container">
@@ -47,12 +47,63 @@
       </div>
     </header>
     <main class="page-main">
-      <section class="not-found">
+      <div class="breadcrumbs">
         <div class="page__container">
-          <div class="not-found__wrapper">
-            <div class="not-found__image-wrap"><img class="not-found__image" src="img/404.png" alt="Ошибка 404"></div>
-            <p class="not-found__title">Cтраница не найдена</p>
-            <p class="not-found__text">Страница устарела, удалена или не существовала вовсе</p><a class="button not-found__button" href="">Перейти на главную</a>
+          <ul class="breadcrumbs__list">
+            <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Главная</a></li>
+            <li class="breadcrumbs__item"><a class="breadcrumbs__link">Сертификаты</a></li>
+          </ul>
+        </div>
+      </div>
+      <section class="info">
+        <div class="page__container">
+          <div class="info__content">
+            <div class="info__description">
+              <div class="title top-info__title">
+                <p class="title__name info__name"><span>Сертификаты</span> наших<br> специалистов
+                </p>
+              </div>
+              <p class="info__text"><span>Помимо этого, устройство можно применять для перевозки тяжелых грузов, а также уборки заснеженных территорий. Во время использования мотоблок часто подвергается огромным нагрузкам и работает в очень неблагоприятных условиях.</span><span>В связи с этим, следует делать своевременное техническое обслуживание, а иногда даже ремонт мотоблока. Для этого лучше всего обратиться к профессионалам, имеющим необходимые инструменты, оборудование, а также достаточный опыт.</span></p>
+              <div class="title info__title"><a class="title__link info___link" href="#">О компании
+                  <div class="title__link-arrow">
+                    <svg class="title__link-icon" width="16" height="11">
+                      <use xlink:href="img/sprite.svg#icon-arrow"></use>
+                    </svg>
+                  </div></a></div>
+            </div>
+            <div class="banner info__banner">
+              <p class="banner__title">Закажите звонок мастера</p>
+              <p class="banner__text">Перезвоним в течении 10 минут</p>
+              <button class="button button--light banner__button open-data-popup" type="button">Заказать звонок</button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="all-cert">
+        <div class="page__container">
+          <div class="all-cert__container">
+            <ul class="all-cert__list">
+              <li class="all-cert__item"><a class="all-cert__link" data-fslightbox="works" href="img/cert-1.jpg">
+                  <div class="all-cert__item-image-wrap"><img class="all-cert__item-image" src="img/cert-1.jpg" alt="Сертификат"></div></a></li>
+              <li class="all-cert__item"><a class="all-cert__link" data-fslightbox="works" href="img/cert-2.jpg">
+                  <div class="all-cert__item-image-wrap"><img class="all-cert__item-image" src="img/cert-2.jpg" alt="Сертификат"></div></a></li>
+              <li class="all-cert__item"><a class="all-cert__link" data-fslightbox="works" href="img/cert-3.jpg">
+                  <div class="all-cert__item-image-wrap"><img class="all-cert__item-image" src="img/cert-3.jpg" alt="Сертификат"></div></a></li>
+              <li class="all-cert__item"><a class="all-cert__link" data-fslightbox="works" href="img/cert-4.jpg">
+                  <div class="all-cert__item-image-wrap"><img class="all-cert__item-image" src="img/cert-4.jpg" alt="Сертификат"></div></a></li>
+              <li class="all-cert__item"><a class="all-cert__link" data-fslightbox="works" href="img/cert-5.jpg">
+                  <div class="all-cert__item-image-wrap"><img class="all-cert__item-image" src="img/cert-5.jpg" alt="Сертификат"></div></a></li>
+              <li class="all-cert__item"><a class="all-cert__link" data-fslightbox="works" href="img/cert-3.jpg">
+                  <div class="all-cert__item-image-wrap"><img class="all-cert__item-image" src="img/cert-3.jpg" alt="Сертификат"></div></a></li>
+              <li class="all-cert__item"><a class="all-cert__link" data-fslightbox="works" href="img/cert-1.jpg">
+                  <div class="all-cert__item-image-wrap"><img class="all-cert__item-image" src="img/cert-1.jpg" alt="Сертификат"></div></a></li>
+              <li class="all-cert__item"><a class="all-cert__link" data-fslightbox="works" href="img/cert-5.jpg">
+                  <div class="all-cert__item-image-wrap"><img class="all-cert__item-image" src="img/cert-5.jpg" alt="Сертификат"></div></a></li>
+              <li class="all-cert__item"><a class="all-cert__link" data-fslightbox="works" href="img/cert-2.png">
+                  <div class="all-cert__item-image-wrap"><img class="all-cert__item-image" src="img/cert-2.jpg" alt="Сертификат"></div></a></li>
+              <li class="all-cert__item"><a class="all-cert__link" data-fslightbox="works" href="img/cert-1.jpg">
+                  <div class="all-cert__item-image-wrap"><img class="all-cert__item-image" src="img/cert-1.jpg" alt="Сертификат"></div></a></li>
+            </ul>
           </div>
         </div>
       </section>
@@ -173,6 +224,29 @@
         </div>
       </div>
     </footer>
+    <div class="overlay show"></div>
+    <section class="popup popup--data data-popup show"><a class="popup__button-close" aria-label="Закрыть окно">
+        <svg class="popup__button-close-icon" width="24" height="24">
+          <use xlink:href="img/sprite.svg#icon-cross"></use>
+        </svg></a>
+      <form class="popup__form" method="post" action="#">
+        <div class="popup__content">
+          <p class="popup__title">Оставьте свои данные<span class="popup__title-text">И мы вам обязательно перезвоним</span></p>
+          <div class="input">
+            <input class="input__field" id="name" type="text" name="name" placeholder="Иван">
+            <label class="input__label" for="name">Ваше имя</label>
+          </div>
+          <div class="input">
+            <!-- Если в поле введены неверные данные, input добавляется класс .input__field--invalid-->
+            <input class="input__field" id="tel" type="text" name="tel" placeholder="8 999 999 99 99" required="">
+            <label class="input__label" for="tel">Ваш номер телефона<span class="input__label--star"> *</span></label>
+            <!-- Текст ошибки указывается в span с классами .input__note .input__note--invalid--><span class="input__note input__note--invalid">Телефон указан неверно, пример: +7 111 222-33-44</span>
+          </div>
+          <button class="button popup__button" type="submit">Отправить</button>
+          <p class="popup__caption">Нажимая на кнопку «Отправить» я даю согласие на обработку<a class="popup__caption-link" href="#"> персональных данных</a></p>
+        </div>
+      </form>
+    </section>
     <script src="js/swiper-bundle.min.js"></script>
     <script src="js/fslightbox.js"></script>
     <script src="js/index.js"></script>

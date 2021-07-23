@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
-    <title>Мастак. Ошибка 404</title>
+    <title>Мастак. Оставить отзыв</title>
   </head>
-  <body class="page">
+  <body class="page no-scroll">
     <header class="page-header">
       <div class="top-header">
         <div class="page__container">
@@ -47,12 +47,175 @@
       </div>
     </header>
     <main class="page-main">
-      <section class="not-found">
+      <div class="breadcrumbs">
         <div class="page__container">
-          <div class="not-found__wrapper">
-            <div class="not-found__image-wrap"><img class="not-found__image" src="img/404.png" alt="Ошибка 404"></div>
-            <p class="not-found__title">Cтраница не найдена</p>
-            <p class="not-found__text">Страница устарела, удалена или не существовала вовсе</p><a class="button not-found__button" href="">Перейти на главную</a>
+          <ul class="breadcrumbs__list">
+            <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Главная</a></li>
+            <li class="breadcrumbs__item"><a class="breadcrumbs__link">Отзывы</a></li>
+          </ul>
+        </div>
+      </div>
+      <section class="reviews">
+        <div class="page__container">
+          <div class="title reviews__title">
+            <p class="title__name reviews__name"><span>Отзывы</span></p>
+          </div>
+          <ul class="reviews__list" id="pinterest">
+            <li class="reviews__item">
+              <div class="review-banner">
+                <div class="review-banner__content">
+                  <p class="review-banner__lead">Хотите оставить отзыв о сотрудничестве с&nbsp;нами&nbsp;?</p>
+                  <button class="button button--light review-banner__button">Оставить отзыв</button>
+                </div>
+              </div>
+            </li>
+            <li class="reviews__item">
+              <article class="review">
+                <div class="review__top">
+                  <div class="review__user-photo-wrap"><img class="review__user-photo" src="img/review-user-2.png" alt="Александр Шолин"></div>
+                  <div class="review__info">
+                    <time class="review__date" datetime="2020-10-05">05.10.2020г</time>
+                    <p class="review__user-name">Александр Шолин</p>
+                    <div class="review__rating">
+                      <div class="review__rating-stars"><span class="review__rating-stars-fill" style="width: 60%"></span></div><span class="review__rating-mark">3/5</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="review__bottom">
+                  <p class="review__text"><span>Выражаю благодарность за высокое качество выполнения работ по ремонту фасадов здания и помещений колледжа, помощь в подготовке колледжа к учебному году. Надеемся на дальнейшее сотрудничество.</span><span>Выражаю благодарность за высокое качество выполнения работ по ремонту фасадов здания и помещений колледжа, помощь в подготовке колледжа к учебному году. Надеемся на дальнейшее сотрудничество.</span></p>
+                </div>
+              </article>
+            </li>
+            <li class="reviews__item">
+              <article class="review">
+                <div class="review__top">
+                  <div class="review__user-photo-wrap"><img class="review__user-photo" src="img/review-user-1.png" alt="Михаил Петрович"></div>
+                  <div class="review__info">
+                    <time class="review__date" datetime="2020-10-05">05.10.2020г</time>
+                    <p class="review__user-name">Михаил Петрович</p>
+                    <div class="review__rating">
+                      <div class="review__rating-stars"><span class="review__rating-stars-fill" style="width: 80%"></span></div><span class="review__rating-mark">4/5</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="review__bottom">
+                  <p class="review__text">“Когда я пришел в компанию, меня приятно поразила обстановка в этом сервисе. Когда меня хорошо обслужил мастер Александр, денег взяли меньше, нежели с меня брали в другом сервисе, профессионально и быстро, не всовывали лишние услуги. Мне очень понравилось.”лнения работ по ремонту фасадов здания и помещений колледжа, помощь в подготовке колледжа к учебному году. Надеемся на дальнейшее сотрудничество.</p>
+                </div>
+              </article>
+            </li>
+            <li class="reviews__item">
+              <article class="review">
+                <div class="review__top">
+                  <div class="review__user-photo-wrap"><img class="review__user-photo" src="img/review-user-1.png" alt="Михаил Петрович"></div>
+                  <div class="review__info">
+                    <time class="review__date" datetime="2020-10-05">05.10.2020г</time>
+                    <p class="review__user-name">Михаил Петрович</p>
+                    <div class="review__rating">
+                      <div class="review__rating-stars"><span class="review__rating-stars-fill" style="width: 80%"></span></div><span class="review__rating-mark">4/5</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="review__bottom">
+                  <p class="review__text"><span>Выражаю благодарность за высокое качество выполнения работ по ремонту фасадов здания и помещений колледжа, помощь в подготовке колледжа к учебному году. Надеемся на дальнейшее сотрудничество. Выражаю благодарность за высокое качество выполнения работ по ремонту фасадов здания и помещений колледжа, помощь в подготовке колледжа к учебному году. Надеемся на дальнейшее сотрудничество.</span></p>
+                </div>
+              </article>
+            </li>
+            <li class="reviews__item">
+              <article class="review">
+                <div class="review__top">
+                  <div class="review__user-photo-wrap"><img class="review__user-photo" src="img/review-user-4.png" alt="Михаил Петрович"></div>
+                  <div class="review__info">
+                    <time class="review__date" datetime="2020-10-05">05.10.2020г</time>
+                    <p class="review__user-name">Михаил Петрович</p>
+                    <div class="review__rating">
+                      <div class="review__rating-stars"><span class="review__rating-stars-fill" style="width: 80%"></span></div><span class="review__rating-mark">4/5</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="review__bottom">
+                  <p class="review__text">“Когда я пришел в компанию, меня приятно поразила обстановка в этом сервисе. Когда меня хорошо обслужил мастер Александр, денег взяли меньше, нежели с меня брали в другом сервисе, профессионально и быстро, не всовывали лишние услуги. Мне очень понравилось.”</p>
+                </div>
+              </article>
+            </li>
+            <li class="reviews__item">
+              <article class="review">
+                <div class="review__top">
+                  <div class="review__user-photo-wrap"><img class="review__user-photo" src="img/review-user-5.png" alt="Петр Павлов"></div>
+                  <div class="review__info">
+                    <time class="review__date" datetime="2020-10-05">05.10.2020г</time>
+                    <p class="review__user-name">Петр Павлов</p>
+                    <div class="review__rating">
+                      <div class="review__rating-stars"><span class="review__rating-stars-fill" style="width: 100%"></span></div><span class="review__rating-mark">5/5</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="review__bottom">
+                  <p class="review__text">“Когда я пришел в компанию, меня приятно поразила обстановка в этом сервисе. Когда меня хорошо обслужил мастер Александр, денег взяли меньше, нежели с меня брали в другом сервисе, профессионально и быстро, не всовывали лишние услуги. Мне очень понравилось.”</p>
+                </div>
+              </article>
+            </li>
+            <li class="reviews__item">
+              <article class="review">
+                <div class="review__top">
+                  <div class="review__user-photo-wrap"><img class="review__user-photo" src="img/review-user-6.png" alt="Михаил Петрович"></div>
+                  <div class="review__info">
+                    <time class="review__date" datetime="2020-10-05">05.10.2020г</time>
+                    <p class="review__user-name">Михаил Петрович</p>
+                    <div class="review__rating">
+                      <div class="review__rating-stars"><span class="review__rating-stars-fill" style="width: 80%"></span></div><span class="review__rating-mark">4/5</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="review__bottom">
+                  <p class="review__text">“Когда я пришел в компанию, меня приятно поразила обстановка в этом сервисе. Когда меня хорошо обслужил мастер Александр, денег взяли меньше, нежели с меня брали в другом сервисе, профессионально и быстро, не всовывали лишние услуги. Мне очень понравилось.”</p>
+                </div>
+              </article>
+            </li>
+            <li class="reviews__item">
+              <article class="review">
+                <div class="review__top">
+                  <div class="review__user-photo-wrap"><img class="review__user-photo" src="img/review-user-1.png" alt="Михаил Петрович"></div>
+                  <div class="review__info">
+                    <time class="review__date" datetime="2020-10-05">05.10.2020г</time>
+                    <p class="review__user-name">Михаил Петрович</p>
+                    <div class="review__rating">
+                      <div class="review__rating-stars"><span class="review__rating-stars-fill" style="width: 80%"></span></div><span class="review__rating-mark">4/5</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="review__bottom">
+                  <p class="review__text">“Когда я пришел в компанию, меня приятно поразила обстановка в этом сервисе. Когда меня хорошо обслужил мастер Александр, денег взяли меньше, нежели с меня брали в другом сервисе, профессионально и быстро, не всовывали лишние услуги. Мне очень понравилось.”</p>
+                </div>
+              </article>
+            </li>
+            <li class="reviews__item">
+              <article class="review">
+                <div class="review__top">
+                  <div class="review__user-photo-wrap"><img class="review__user-photo" src="img/review-user-1.png" alt="Петр Павлов"></div>
+                  <div class="review__info">
+                    <time class="review__date" datetime="2020-10-05">05.10.2020г</time>
+                    <p class="review__user-name">Петр Павлов</p>
+                    <div class="review__rating">
+                      <div class="review__rating-stars"><span class="review__rating-stars-fill" style="width: 100%"></span></div><span class="review__rating-mark">5/5</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="review__bottom">
+                  <p class="review__text">“Когда я пришел в компанию, меня приятно поразила обстановка в этом сервисе. Когда меня хорошо обслужил мастер Александр, денег взяли меньше, нежели с меня брали в другом сервисе, профессионально и быстро, не всовывали лишние услуги. Мне очень понравилось.”</p>
+                </div>
+              </article>
+            </li>
+          </ul>
+        </div>
+        <div class="pagination reviews__pagination">
+          <div class="pagination__list"><a class="pagination__button pagination__button--arrow-left" href="#" aria-label="Переход на предыдущую страницу">
+              <svg class="pagination__button-icon" width="16" height="11">
+                <use xlink:href="img/sprite.svg#icon-arrow-pagination"></use>
+              </svg></a>
+            <div class="pagination__pages"><a class="pagination__button pagination__button--active" href="#" aria-label="Переход на страницу 1">1</a><a class="pagination__button" href="#" aria-label="Переход на страницу 2">2</a><a class="pagination__button" href="#" aria-label="Переход на страницу 3">3</a></div><a class="pagination__button pagination__button--arrow-right" href="#" aria-label="Переход на следующую страницу">
+              <svg class="pagination__button-icon" width="16" height="11">
+                <use xlink:href="img/sprite.svg#icon-arrow-pagination"></use>
+              </svg></a>
           </div>
         </div>
       </section>
@@ -173,6 +336,84 @@
         </div>
       </div>
     </footer>
+    <div class="overlay overlay show"></div>
+    <section class="popup popup--review review-popup show"><a class="popup__button-close" aria-label="Закрыть окно">
+        <svg class="popup__button-close-icon" width="24" height="24">
+          <use xlink:href="img/sprite.svg#icon-cross"></use>
+        </svg></a>
+      <form class="popup__form" method="post" action="#">
+        <div class="popup__content">
+          <p class="popup__title">Оставить отзыв</p>
+          <div class="input-double">
+            <div class="input">
+              <input class="input__field" id="name" type="text" name="name" placeholder="Наталья">
+              <label class="input__label" for="name">Ваше имя</label>
+            </div>
+            <div class="input">
+              <!-- Если в поле введены неверные данные, input добавляется класс .input__field--invalid-->
+              <input class="input__field" id="tel" type="text" name="tel" placeholder="8 999 999 99 99" required>
+              <label class="input__label" for="tel">Ваш номер телефона<span class="input__label--star"> *</span></label>
+              <!-- Текст ошибки указывается в span с классами .input__note .input__note--invalid--><span class="input__note input__note--invalid">Телефон указан неверно, пример: +7 111 222-33-44</span>
+            </div>
+          </div>
+          <div class="input">
+            <textarea class="input__field" id="review" type="text" name="review" placeholder="Комментарий" rows="4"></textarea>
+            <label class="input__label" for="review">Ваш отзыв</label>
+          </div>
+          <div class="popup__wrap">
+            <div class="rating popup__rating">
+              <p class="rating__title">Ваша оценка</p>
+              <div class="rating__mark">
+                <input class="rating__input visually-hidden" id="5-stars" name="rating" value="5" type="radio">
+                <label class="rating__label" for="5-stars" title="5 баллов">
+                  <svg class="rating__label-icon" width="16" height="16">
+                    <use xlink:href="img/sprite.svg#icon-star"></use>
+                  </svg>
+                </label>
+                <input class="rating__input visually-hidden" id="4-stars" name="rating" value="4" type="radio" checked>
+                <label class="rating__label" for="4-stars" title="4 балла">
+                  <svg class="rating__label-icon" width="16" height="16">
+                    <use xlink:href="img/sprite.svg#icon-star"></use>
+                  </svg>
+                </label>
+                <input class="rating__input visually-hidden" id="3-stars" name="rating" value="3" type="radio">
+                <label class="rating__label" for="3-stars" title="3 балла">
+                  <svg class="rating__label-icon" width="16" height="16">
+                    <use xlink:href="img/sprite.svg#icon-star"></use>
+                  </svg>
+                </label>
+                <input class="rating__input visually-hidden" id="2-stars" name="rating" value="2" type="radio">
+                <label class="rating__label" for="2-stars" title="2 балла">
+                  <svg class="rating__label-icon" width="16" height="16">
+                    <use xlink:href="img/sprite.svg#icon-star"></use>
+                  </svg>
+                </label>
+                <input class="rating__input visually-hidden" id="1-star" name="rating" value="1" type="radio">
+                <label class="rating__label" for="1-star" title="1 балл">
+                  <svg class="rating__label-icon" width="16" height="16">
+                    <use xlink:href="img/sprite.svg#icon-star"></use>
+                  </svg>
+                </label>
+              </div>
+              <p class="rating__count"><span class="rating__score">4</span>/5</p>
+            </div>
+            <div class="file-input">
+              <input class="file-input__field visually-hidden" id="photo" type="file" name="photo">
+              <label class="file-input__label" for="photo">Добавить фото
+                <svg class="file-input__label-icon" width="19" height="20">
+                  <use xlink:href="img/sprite.svg#icon-clip"></use>
+                </svg>
+              </label>
+            </div>
+          </div>
+          <div class="popup__button-wrap">
+            <button class="button popup__button" type="submit">Отправить</button>
+            <p class="popup__caption">Нажимая на кнопку «Отправить» я даю согласие на обработку <a class="popup__caption-link" href="#">персональных данных</a>
+            </p>
+          </div>
+        </div>
+      </form>
+    </section>
     <script src="js/swiper-bundle.min.js"></script>
     <script src="js/fslightbox.js"></script>
     <script src="js/index.js"></script>
