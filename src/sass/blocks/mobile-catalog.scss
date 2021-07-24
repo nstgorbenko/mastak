@@ -1,0 +1,124 @@
+.mobile-catalog {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 14px 10px 90px 10px;
+  background: #2b2a2a;
+  overflow-y: auto;
+
+  &::-webkit-scrollbar-track {
+    background-color: #525252;
+  }
+
+  &::-webkit-scrollbar {
+    width: 5px;
+    background-color: #525252;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $color-hover;
+  }
+}
+
+.mobile-catalog__back-link {
+  @include button-reset();
+  @include main-font(18px, 18px, 22px, 400);
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 17px;
+  padding-left: 7px;
+  padding-bottom: 19px;
+  border-bottom: 1px solid #525252;
+  color: #a4a4a4;
+
+  &:hover,
+  &:focus {
+    color: $color-accent;
+  }
+}
+
+.mobile-catalog__link-icon {
+  margin-right: 15px;
+  fill: transparent;
+  stroke: #a4a4a4;
+
+  .mobile-catalog__back-link:hover &,
+  .mobile-catalog__back-link:focus & {
+    stroke: $color-accent;
+  }
+}
+
+.mobile-catalog__list {
+  @include list-reset();
+}
+
+.mobile-catalog__item {
+  margin-bottom: 13px;
+}
+
+.mobile-catalog__link {
+  @include link-reset();
+  @include main-font(18px, 18px, 1.4, 400);
+  width: 100%;
+  padding-bottom: 14px;
+  padding-left: 13px;
+  border-bottom: 1px solid #525252;
+  color: #ffffff;
+
+  span {
+    position: relative;
+
+    &::before {
+      @include pseudo(0, 2px);
+      left: 0;
+      top: 55%;
+      transform: translateY(-50%);
+      background-color: $color-accent;
+      transition: $main-transition;
+    }
+
+    &:hover::before,
+    &:focus::before {
+      width: 100%;
+    }
+  }
+}
+
+.mobile-catalog__sublist {
+  @include list-reset();
+}
+
+.mobile-catalog__subitem {
+  margin-top: 13px;
+}
+
+.mobile-catalog__sublink {
+  @include link-reset();
+  @include main-font(18px, 18px, 1.4, 400);
+  width: calc(100% - 26px);
+  margin: 0 0 0 26px;
+  padding: 0 0 14px 10px;
+  border-bottom: 1px solid #525252;
+  color: #a4a4a4;
+
+  span {
+    position: relative;
+
+    &::before {
+      @include pseudo(0, 2px);
+      left: 0;
+      top: 55%;
+      transform: translateY(-50%);
+      background-color: $color-accent;
+      transition: $main-transition;
+    }
+
+    &:hover::before,
+    &:focus::before {
+      width: 100%;
+    }
+  }
+}

@@ -1,5 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><clipPath id="clip0"><path fill="#fff" d="M0 0h16v16H0z"/></clipPath></defs><symbol id="icon-arrow-accordion" viewBox="0 0 14 8">
 <path d="M13 1L7 7L1 0.999999" stroke-linecap="round" stroke-linejoin="round"/>
+</symbol><symbol id="icon-arrow-breadcrumbs" viewBox="0 0 8 14">
+<path d="M7 13L1 7L7 1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</symbol><symbol id="icon-arrow-menu" viewBox="0 0 10 16">
+<path d="M1.12549 14.75L8.47595 8L1.12549 1.25" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
 </symbol><symbol id="icon-arrow-pagination" viewBox="0 0 16 11">
 <path d="M1 5.55884L14.6736 5.55884" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M10.1162 0.999268L14.6741 5.55713L10.1162 10.115" stroke-linecap="round" stroke-linejoin="round"/>
