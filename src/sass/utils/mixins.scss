@@ -61,6 +61,7 @@
 @mixin input-reset {
   margin: 0;
   padding: 0;
+  border-radius: 0;
   background-image: none;
   background-color: transparent;
   box-shadow: none;

@@ -1806,6 +1806,7 @@ template {
 .call__field-input {
   margin: 0;
   padding: 0;
+  border-radius: 0;
   background-image: none;
   background-color: transparent;
   box-shadow: none;
@@ -3175,7 +3176,10 @@ template {
   height: 100%;
   padding: 14px 10px 90px 10px;
   background: #2b2a2a;
-  overflow-y: auto; }
+  overflow-y: auto;
+  transition: all 0.2s ease; }
+  .mobile-catalog.show {
+    left: 100vw; }
   .mobile-catalog::-webkit-scrollbar-track {
     background-color: #525252; }
   .mobile-catalog::-webkit-scrollbar {
@@ -3311,8 +3315,33 @@ template {
       width: 100%; }
 
 .mobile-menu {
-  position: relative;
-  flex-grow: 1; }
+  position: fixed;
+  top: 139px;
+  height: calc(100vh - 139px);
+  left: -100vw;
+  width: 400px;
+  z-index: 20; }
+  @media (max-width: 679px) {
+    .mobile-menu {
+      top: 84px;
+      height: calc(100vh - 84px); } }
+  @media (max-width: 450px) {
+    .mobile-menu {
+      top: 63px;
+      height: calc(100vh - 63px); } }
+  @media (max-width: 400px) {
+    .mobile-menu {
+      width: 100%; } }
+  .scroll + .mobile-menu {
+    top: 84px;
+    height: calc(100vh - 84px); }
+    @media (max-width: 450px) {
+      .scroll + .mobile-menu {
+        top: 63px;
+        height: calc(100vh - 63px); } }
+    @media (max-width: 400px) {
+      .scroll + .mobile-menu {
+        width: 100%; } }
 
 .mobile-navigation {
   position: absolute;
@@ -3322,7 +3351,10 @@ template {
   height: 100%;
   padding: 20px 10px 90px;
   background: #2b2a2a;
-  overflow-y: auto; }
+  overflow-y: auto;
+  transition: all 0.2s ease; }
+  .mobile-navigation.show {
+    left: 100vw; }
   .mobile-navigation::-webkit-scrollbar-track {
     background-color: #525252; }
   .mobile-navigation::-webkit-scrollbar {
@@ -3822,12 +3854,13 @@ template {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 15;
   width: 100%;
   height: 100%;
   background-color: rgba(14, 14, 14, 0.58); }
   .overlay--header {
     z-index: 10; }
+  .overlay--popup {
+    z-index: 30; }
   .overlay.show {
     display: block; }
 
@@ -3838,11 +3871,7 @@ template {
   left: 0;
   right: 0;
   z-index: 11;
-  display: flex;
-  flex-direction: column;
-  height: 100vh; }
-  .page-header.open-menu {
-    height: 100vh; }
+  -webkit-transform: translateZ(0); }
 
 .page__container {
   width: 100%;
@@ -3866,7 +3895,7 @@ template {
   left: 50%;
   transform: translate(-50%, -50%);
   left: 50%;
-  z-index: 20;
+  z-index: 50;
   max-height: calc(100vh - 40px);
   overflow-y: auto;
   padding: 60px;
@@ -5134,7 +5163,7 @@ template {
   .top-header__burger-icon-line::before {
     top: -5px; }
   .top-header__burger.show .top-header__burger-icon-line {
-    background: #ff0a0a; }
+    background: transparent; }
     .top-header__burger.show .top-header__burger-icon-line::before, .top-header__burger.show .top-header__burger-icon-line::after {
       top: 0; }
     .top-header__burger.show .top-header__burger-icon-line::after {

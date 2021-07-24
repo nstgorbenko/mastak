@@ -1,4 +1,36 @@
 .mobile-menu {
-  position: relative;
-  flex-grow: 1;
+  position: fixed;
+  top: 139px;
+  height: calc(100vh - 139px);
+  left: -100vw;
+  width: 400px;
+  z-index: 20;
+
+  @media (max-width: 679px) {
+    top: 84px;
+    height: calc(100vh - 84px);
+  }
+
+  @media (max-width: 450px) {
+    top: 63px;
+    height: calc(100vh - 63px);
+  }
+
+  @media (max-width: 400px) {
+    width: 100%;
+  }
+
+  .scroll + & {
+    top: 84px;
+    height: calc(100vh - 84px);
+
+    @media (max-width: 450px) {
+      top: 63px;
+      height: calc(100vh - 63px);
+    }
+
+    @media (max-width: 400px) {
+      width: 100%;
+    }
+  }
 }

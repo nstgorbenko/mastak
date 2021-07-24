@@ -7,6 +7,11 @@
   padding: 20px 10px 90px;
   background: #2b2a2a;
   overflow-y: auto;
+  transition: $main-transition;
+
+  &.show {
+    left: 100vw;
+  }
 
   &::-webkit-scrollbar-track {
     background-color: #525252;

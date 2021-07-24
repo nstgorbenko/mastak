@@ -183,7 +183,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const ESC_KEYCODE = 27;
       const closeButton = reviewPopup.querySelector('.popup__button-close');
       const openButtons = document.querySelectorAll('.open-review-popup');
-      const overlay = document.querySelector('.overlay');
+      const overlay = document.querySelector('.overlay--popup');
       const body = document.querySelector('body');
 
       const closePopup = () => {
@@ -224,7 +224,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const ESC_KEYCODE = 27;
       const closeButton = dataPopup.querySelector('.popup__button-close');
       const openButtons = document.querySelectorAll('.open-data-popup');
-      const overlay = document.querySelector('.overlay');
+      const overlay = document.querySelector('.overlay--popup');
       const body = document.querySelector('body');
 
       const closePopup = () => {
@@ -333,7 +333,7 @@ document.addEventListener('DOMContentLoaded', () => {
       openButtons.forEach(openButton => {
         openButton.addEventListener('click', evt => {
           evt.preventDefault();
-          const catalogID = openButton.getAttribute("data-name");
+          const catalogID = openButton.getAttribute('data-name');
           const catalogMenu = headerCatalog.querySelector("#".concat(catalogID));
           headerCatalog.classList.add('show');
           closeCatalogMenus();
@@ -349,6 +349,69 @@ document.addEventListener('DOMContentLoaded', () => {
         if (document.documentElement.clientWidth <= HIDE_CATALOG_SCREEN_WIDTH) {
           closeHeaderCatalog();
         }
+      });
+    }
+  })(); // Open mobile menu
+
+
+  (function () {
+    const mobileMenu = document.querySelector('.mobile-menu');
+
+    if (mobileMenu) {
+      const ESC_KEYCODE = 27;
+      const mobileNavigation = mobileMenu.querySelector('.mobile-navigation');
+      const mobileCatalogs = mobileMenu.querySelectorAll('.mobile-catalog');
+      const burgerButton = document.querySelector('.top-header__burger');
+      const openMobileCatalogsButtons = mobileMenu.querySelectorAll('.mobile-navigation__more-link');
+      const closeMobileCatalogsButtons = mobileMenu.querySelectorAll('.mobile-catalog__back-link');
+      const overlay = document.querySelector('.overlay--header');
+      const body = document.querySelector('body');
+
+      const closeMobileMenu = () => {
+        burgerButton.classList.remove('show');
+        mobileNavigation.classList.remove('show');
+        mobileCatalogs.forEach(mobileCatalog => {
+          mobileCatalog.classList.remove('show');
+        });
+        overlay.classList.remove('show');
+        body.classList.remove('no-scroll');
+        burgerButton.removeEventListener('click', closeMobileMenu);
+        overlay.removeEventListener('click', closeMobileMenu);
+        document.removeEventListener('keydown', onEscPress);
+      };
+
+      const onEscPress = evt => {
+        if (evt.keyCode === ESC_KEYCODE) {
+          closeMobileMenu();
+        }
+      };
+
+      if (burgerButton) {
+        burgerButton.addEventListener('click', () => {
+          burgerButton.classList.add('show');
+          mobileNavigation.classList.add('show');
+          overlay.classList.add('show');
+          body.classList.add('no-scroll');
+          burgerButton.addEventListener('click', closeMobileMenu);
+          overlay.addEventListener('click', closeMobileMenu);
+          document.addEventListener('keydown', onEscPress);
+        });
+      }
+
+      openMobileCatalogsButtons.forEach(openButton => {
+        openButton.addEventListener('click', evt => {
+          evt.preventDefault();
+          const mobileCatalogID = openButton.getAttribute('data-name');
+          const mobileCatalog = mobileMenu.querySelector("#".concat(mobileCatalogID));
+          mobileCatalog.classList.add('show');
+        });
+      });
+      closeMobileCatalogsButtons.forEach(closeButton => {
+        closeButton.addEventListener('click', evt => {
+          evt.preventDefault();
+          const mobileCatalog = closeButton.closest('.mobile-catalog');
+          mobileCatalog.classList.remove('show');
+        });
       });
     }
   })();

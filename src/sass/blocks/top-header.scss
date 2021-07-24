@@ -250,7 +250,7 @@
   }
 
   .top-header__burger.show & {
-    background: $color-accent;
+    background: transparent;
 
     &::before,
     &::after {
