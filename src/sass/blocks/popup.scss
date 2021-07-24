@@ -54,6 +54,7 @@
 }
 
 .popup__button-close {
+  @include button-reset();
   display: flex;
   justify-content: center;
   align-items: center;

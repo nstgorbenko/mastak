@@ -151,7 +151,7 @@ document.addEventListener('DOMContentLoaded', () => {
         priceLists.forEach(priceList => {
           if (currentScreenWidth > TABLET_WIDTH) {
             const priceListContainer = priceList.closest('.price__tab');
-            const priceItems = priceList.querySelectorAll(".price__item");
+            const priceItems = priceList.querySelectorAll('.price__item');
 
             if (priceItems) {
               let priceListHeight = 0;
@@ -180,6 +180,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const reviewPopup = document.querySelector('.review-popup');
 
     if (reviewPopup) {
+      const ESC_KEYCODE = 27;
       const closeButton = reviewPopup.querySelector('.popup__button-close');
       const openButtons = document.querySelectorAll('.open-review-popup');
       const overlay = document.querySelector('.overlay');
@@ -191,6 +192,13 @@ document.addEventListener('DOMContentLoaded', () => {
         body.classList.remove('no-scroll');
         closeButton.removeEventListener('click', closePopup);
         overlay.removeEventListener('click', closePopup);
+        document.removeEventListener('keydown', onEscPress);
+      };
+
+      const onEscPress = evt => {
+        if (evt.keyCode === ESC_KEYCODE) {
+          closePopup();
+        }
       };
 
       if (openButtons && overlay) {
@@ -201,6 +209,7 @@ document.addEventListener('DOMContentLoaded', () => {
             body.classList.add('no-scroll');
             closeButton.addEventListener('click', closePopup);
             overlay.addEventListener('click', closePopup);
+            document.addEventListener('keydown', onEscPress);
           });
         });
       }
@@ -212,6 +221,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const dataPopup = document.querySelector('.data-popup');
 
     if (dataPopup) {
+      const ESC_KEYCODE = 27;
       const closeButton = dataPopup.querySelector('.popup__button-close');
       const openButtons = document.querySelectorAll('.open-data-popup');
       const overlay = document.querySelector('.overlay');
@@ -223,6 +233,13 @@ document.addEventListener('DOMContentLoaded', () => {
         body.classList.remove('no-scroll');
         closeButton.removeEventListener('click', closePopup);
         overlay.removeEventListener('click', closePopup);
+        document.removeEventListener('keydown', onEscPress);
+      };
+
+      const onEscPress = evt => {
+        if (evt.keyCode === ESC_KEYCODE) {
+          closePopup();
+        }
       };
 
       if (openButtons && overlay) {
@@ -233,9 +250,106 @@ document.addEventListener('DOMContentLoaded', () => {
             body.classList.add('no-scroll');
             closeButton.addEventListener('click', closePopup);
             overlay.addEventListener('click', closePopup);
+            document.addEventListener('keydown', onEscPress);
           });
         });
       }
+    }
+  })(); // Header catalog height
+
+
+  (function () {
+    const headerCatalog = document.querySelector('.header-catalog');
+
+    if (headerCatalog) {
+      const COLUMNS_COUNT = 4;
+      const CATALOG_ITEM_MARGIN = 15;
+      const headerCatalogContent = headerCatalog.querySelector('.header-catalog__content');
+      const catalogLists = headerCatalog.querySelectorAll('.header-catalog__list');
+
+      const setHeaderCatalogHeight = () => {
+        let catalogListsHeights = [];
+        headerCatalog.style.display = 'block';
+        catalogLists.forEach(catalogList => {
+          catalogList.style.display = 'block';
+          const catalogItems = catalogList.querySelectorAll('.header-catalog__item');
+          let catalogListHeight = 0;
+
+          if (catalogItems) {
+            let catalogItemsHeight = 0;
+            catalogItems.forEach(catalogItem => {
+              // add 1px because Firefox calculate element height as decimal, when JS offsetHeight show integer
+              catalogItemsHeight += catalogItem.offsetHeight + CATALOG_ITEM_MARGIN + 1;
+            });
+            catalogList.style.display = null;
+            catalogListHeight = Math.ceil(catalogItemsHeight / COLUMNS_COUNT) + (COLUMNS_COUNT - 2) * CATALOG_ITEM_MARGIN;
+          }
+
+          catalogListsHeights.push(catalogListHeight);
+        });
+        headerCatalog.style.display = null;
+        headerCatalogContent.style.height = "".concat(Math.max(...catalogListsHeights), "px");
+      };
+
+      setHeaderCatalogHeight();
+    }
+  })(); // Open header catalog
+
+
+  (function () {
+    const openButtons = document.querySelectorAll('.open-header-catalog');
+
+    if (openButtons) {
+      const ESC_KEYCODE = 27;
+      const HIDE_CATALOG_SCREEN_WIDTH = 1600;
+      const headerCatalog = document.querySelector('.header-catalog');
+      const catalogMenus = headerCatalog.querySelectorAll('.header-catalog__list');
+      const closeButton = headerCatalog.querySelector('.header-catalog__button-close');
+      const overlay = document.querySelector('.overlay--header');
+      const body = document.querySelector('body');
+
+      const closeCatalogMenus = () => {
+        catalogMenus.forEach(catalogMenu => {
+          catalogMenu.classList.remove('show');
+        });
+      };
+
+      const closeHeaderCatalog = () => {
+        closeCatalogMenus();
+        headerCatalog.classList.remove('show');
+        overlay.classList.remove('show');
+        body.classList.remove('no-scroll');
+        closeButton.removeEventListener('click', closeHeaderCatalog);
+        overlay.removeEventListener('click', closeHeaderCatalog);
+        document.removeEventListener('keydown', onEscPress);
+      };
+
+      const onEscPress = evt => {
+        if (evt.keyCode === ESC_KEYCODE) {
+          closeHeaderCatalog();
+        }
+      };
+
+      openButtons.forEach(openButton => {
+        openButton.addEventListener('click', evt => {
+          evt.preventDefault();
+          const catalogID = openButton.getAttribute("data-name");
+          const catalogMenu = headerCatalog.querySelector("#".concat(catalogID));
+          headerCatalog.classList.add('show');
+          closeCatalogMenus();
+          catalogMenu.classList.add('show');
+          overlay.classList.add('show');
+          body.classList.add('no-scroll');
+          closeButton.addEventListener('click', closeHeaderCatalog);
+          overlay.addEventListener('click', closeHeaderCatalog);
+          document.addEventListener('keydown', onEscPress);
+        });
+      });
+      window.addEventListener('resize', () => {
+        if (document.documentElement.clientWidth <= HIDE_CATALOG_SCREEN_WIDTH) {
+          closeHeaderCatalog();
+        }
+      });
     }
   })();
 });

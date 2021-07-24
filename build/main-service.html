@@ -7,6 +7,7 @@
     <title>Мастак. Услуга</title>
   </head>
   <body class="page">
+    <div class="overlay overlay--header"></div>
     <header class="page-header">
       <div class="top-header">
         <div class="page__container">
@@ -19,9 +20,9 @@
               <p class="top-header__burger-text">Меню</p>
             </div>
             <ul class="top-header__list">
-              <li class="top-header__item"><a class="top-header__link" href="#">Ремонт электроинструмента</a></li>
-              <li class="top-header__item"><a class="top-header__link" href="#">Ремонт строительной техники</a></li>
-              <li class="top-header__item"><a class="top-header__link" href="#">Ремонт садовой техники</a></li>
+              <li class="top-header__item"><a class="top-header__link open-header-catalog" href="#" data-name="catalog-1">Ремонт электроинструмента</a></li>
+              <li class="top-header__item"><a class="top-header__link open-header-catalog" href="#" data-name="catalog-2">Ремонт строительной техники</a></li>
+              <li class="top-header__item"><a class="top-header__link open-header-catalog" href="#" data-name="catalog-3">Ремонт садовой техники</a></li>
             </ul>
             <div class="top-header__call"><a class="top-header__call-link" href="tel:89999999999">8 999 999 99 99</a>
               <button class="button top-header__call-button open-data-popup" type="button">Заказать ремонт</button>
@@ -33,9 +34,9 @@
         <div class="page__container">
           <nav class="bottom-header__content">
             <ul class="bottom-header__list">
-              <li class="bottom-header__item"><a class="bottom-header__link bottom-header__link--catalog" href="#">Ремонт электроинструмента</a></li>
-              <li class="bottom-header__item"><a class="bottom-header__link bottom-header__link--catalog" href="#">Ремонт строительной техники</a></li>
-              <li class="bottom-header__item"><a class="bottom-header__link bottom-header__link--catalog" href="#">Ремонт садовой техники</a></li>
+              <li class="bottom-header__item"><a class="bottom-header__link bottom-header__link--catalog open-header-catalog" href="#" data-name="catalog-1">Ремонт электроинструмента</a></li>
+              <li class="bottom-header__item"><a class="bottom-header__link bottom-header__link--catalog open-header-catalog" href="#" data-name="catalog-2">Ремонт строительной техники</a></li>
+              <li class="bottom-header__item"><a class="bottom-header__link bottom-header__link--catalog open-header-catalog" href="#" data-name="catalog-3">Ремонт садовой техники</a></li>
               <li class="bottom-header__item"><a class="bottom-header__link" href="#">Цены</a></li>
               <li class="bottom-header__item"><a class="bottom-header__link" href="#">О сервисе</a></li>
               <li class="bottom-header__item"><a class="bottom-header__link" href="#">Сертификаты</a></li>
@@ -43,6 +44,86 @@
               <li class="bottom-header__item"><a class="bottom-header__link" href="#">Контакты</a></li>
             </ul>
           </nav>
+        </div>
+      </div>
+      <div class="header-catalog">
+        <div class="page__container">
+          <div class="header-catalog__content">
+            <button class="header-catalog__button-close" type="button" aria-label="Закрыть каталог">
+              <svg class="header-catalog__button-close-icon" width="24" height="24">
+                <use xlink:href="img/sprite.svg#icon-cross"></use>
+              </svg>
+            </button><span class="header-catalog__divider"></span>
+            <ul class="header-catalog__list" id="catalog-1">
+              <li class="header-catalog__item"><a class="header-catalog__link" href="#">Электродрели</a>
+                <ul class="header-catalog__sublist">
+                  <li class="header-catalog__subitem"><a class="header-catalog__sublink" href="#">Дрели алмазного бурения</a></li>
+                  <li class="header-catalog__subitem"><a class="header-catalog__sublink" href="#">Дрели ударные</a></li>
+                </ul>
+              </li>
+              <li class="header-catalog__item"><a class="header-catalog__link" href="#">Шлифовальные машины</a>
+                <ul class="header-catalog__sublist">
+                  <li class="header-catalog__subitem"><a class="header-catalog__sublink" href="#">Угловые шлифовальные машины</a></li>
+                </ul>
+              </li>
+              <li class="header-catalog__item"><a class="header-catalog__link" href="#">Электропилы</a>
+                <ul class="header-catalog__sublist">
+                  <li class="header-catalog__subitem"><a class="header-catalog__sublink" href="#">Дисковые пилы</a></li>
+                  <li class="header-catalog__subitem"><a class="header-catalog__sublink" href="#">Цепные пилы</a></li>
+                  <li class="header-catalog__subitem"><a class="header-catalog__sublink" href="#">Пилы торцовочные</a></li>
+                  <li class="header-catalog__subitem"><a class="header-catalog__sublink" href="#">Пилы циркулярные</a></li>
+                  <li class="header-catalog__subitem"><a class="header-catalog__sublink" href="#">Сабельные пилы</a></li>
+                </ul>
+              </li>
+              <li class="header-catalog__item"><a class="header-catalog__link" href="#">Электролобзики</a></li>
+              <li class="header-catalog__item"><a class="header-catalog__link" href="#">Перфораторы</a></li>
+              <li class="header-catalog__item"><a class="header-catalog__link" href="#">Отбойные молотки</a></li>
+              <li class="header-catalog__item"><a class="header-catalog__link" href="#">Шуруповерт</a></li>
+              <li class="header-catalog__item"><a class="header-catalog__link" href="#">Гайковерты</a></li>
+              <li class="header-catalog__item"><a class="header-catalog__link" href="#">Винтоверты</a></li>
+              <li class="header-catalog__item"><a class="header-catalog__link" href="#">Аккумуляторные отвертки</a></li>
+              <li class="header-catalog__item"><a class="header-catalog__link" href="#">Заклепочники</a></li>
+              <li class="header-catalog__item"><a class="header-catalog__link" href="#">Зарядные устройства</a></li>
+              <li class="header-catalog__item"><a class="header-catalog__link" href="#">Аккумуляторные батареи</a></li>
+              <li class="header-catalog__item"><a class="header-catalog__link" href="#">Строительные фены</a></li>
+              <li class="header-catalog__item"><a class="header-catalog__link" href="#">Миксеры</a></li>
+              <li class="header-catalog__item"><a class="header-catalog__link" href="#">Электрорубанки</a></li>
+              <li class="header-catalog__item"><a class="header-catalog__link" href="#">Краскопульты</a></li>
+              <li class="header-catalog__item"><a class="header-catalog__link" href="#">Глубинные вибраторы</a></li>
+              <li class="header-catalog__item"><a class="header-catalog__link" href="#">Граверы</a></li>
+              <li class="header-catalog__item"><a class="header-catalog__link" href="#">Фрезеры</a></li>
+              <li class="header-catalog__item"><a class="header-catalog__link" href="#">Штроборезы</a></li>
+              <li class="header-catalog__item"><a class="header-catalog__link" href="#">Паяльники для труб</a></li>
+              <li class="header-catalog__item"><a class="header-catalog__link" href="#">Электроножницы</a></li>
+              <li class="header-catalog__item"><a class="header-catalog__link" href="#">Измерительные приборы</a></li>
+              <li class="header-catalog__item"><a class="header-catalog__link" href="#">Реноваторы</a></li>
+              <li class="header-catalog__item"><a class="header-catalog__link" href="#">Клеевые пистолеты</a></li>
+              <li class="header-catalog__item"><a class="header-catalog__link" href="#">Мини-пилы</a></li>
+              <li class="header-catalog__item"><a class="header-catalog__link" href="#">Полировальные машины</a></li>
+              <li class="header-catalog__item"><a class="header-catalog__link" href="#">Пылесосы строительные</a></li>
+              <li class="header-catalog__item"><a class="header-catalog__link" href="#">Степлеры</a></li>
+              <li class="header-catalog__item"><a class="header-catalog__link" href="#">УШМ (болгарки)</a></li>
+              <li class="header-catalog__item"><a class="header-catalog__link" href="#">Фены технические</a></li>
+              <li class="header-catalog__item"><a class="header-catalog__link" href="#">Плиткорезы</a></li>
+              <li class="header-catalog__item"><a class="header-catalog__link" href="#">Рейсмусно-фуговальные станки</a></li>
+              <li class="header-catalog__item"><a class="header-catalog__link" href="#">Тельферы</a></li>
+              <li class="header-catalog__item"><a class="header-catalog__link" href="#">Электрофуганки</a></li>
+              <li class="header-catalog__item"><a class="header-catalog__link" href="#">Сварочные аппараты</a></li>
+            </ul>
+            <ul class="header-catalog__list" id="catalog-2">
+              <li class="header-catalog__item"><a class="header-catalog__link" href="#">Фены технические</a></li>
+              <li class="header-catalog__item"><a class="header-catalog__link" href="#">Плиткорезы</a></li>
+              <li class="header-catalog__item"><a class="header-catalog__link" href="#">Рейсмусно-фуговальные станки</a></li>
+              <li class="header-catalog__item"><a class="header-catalog__link" href="#">Тельферы</a></li>
+              <li class="header-catalog__item"><a class="header-catalog__link" href="#">Электрофуганки</a></li>
+              <li class="header-catalog__item"><a class="header-catalog__link" href="#">Сварочные аппараты</a></li>
+            </ul>
+            <ul class="header-catalog__list" id="catalog-3">
+              <li class="header-catalog__item"><a class="header-catalog__link" href="#">Тельферы</a></li>
+              <li class="header-catalog__item"><a class="header-catalog__link" href="#">Электрофуганки</a></li>
+              <li class="header-catalog__item"><a class="header-catalog__link" href="#">Сварочные аппараты</a></li>
+            </ul>
+          </div>
         </div>
       </div>
     </header>
@@ -546,10 +627,12 @@
       </div>
     </footer>
     <div class="overlay"></div>
-    <section class="popup popup--data data-popup"><a class="popup__button-close" aria-label="Закрыть окно">
+    <section class="popup popup--data data-popup">
+      <button class="popup__button-close" type="button" aria-label="Закрыть окно">
         <svg class="popup__button-close-icon" width="24" height="24">
           <use xlink:href="img/sprite.svg#icon-cross"></use>
-        </svg></a>
+        </svg>
+      </button>
       <form class="popup__form" method="post" action="#">
         <div class="popup__content">
           <p class="popup__title">Оставьте свои данные<span class="popup__title-text">И мы вам обязательно перезвоним</span></p>
