@@ -25,13 +25,13 @@
     background-color: rgba($black, 0.7);
   }
 
-  .scroll & {
+  .page-header--fixed & {
     background-color: #131516;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.08);
     border-bottom: none;
   }
 
-  .page-header.scroll:hover & {
+  .page-header--fixed:hover & {
     background-color: #131516;
   }
 }
@@ -62,7 +62,7 @@
     margin-right: 0;
   }
 
-  .scroll & {
+  .page-header--fixed & {
     margin-right: 44px;
 
     @media (max-width: $small) {
@@ -87,7 +87,7 @@
     display: none;
   }
 
-  .scroll & {
+  .page-header--fixed & {
     display: none;
   }
 
@@ -106,7 +106,7 @@
     margin-left: 0;
   }
 
-  .scroll & {
+  .page-header--fixed & {
     margin-left: 0;
 
     @media (max-width: 1600px) {
@@ -147,7 +147,7 @@
     display: none;
   }
 
-  .scroll & {
+  .page-header--fixed & {
     margin-left: 28px;
     padding: 11px 17px;
 
@@ -170,7 +170,7 @@
     order: -1;
   }
 
-  .scroll & {
+  .page-header--fixed & {
     display: flex;
   }
 }
@@ -270,7 +270,7 @@
 .top-header__list {
   display: none;
 
-  .scroll & {
+  .page-header--fixed & {
     @include list-reset();
     width: 750px;
     display: flex;

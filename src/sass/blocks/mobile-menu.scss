@@ -20,7 +20,7 @@
     width: 100%;
   }
 
-  .scroll + & {
+  .scroll ~ & {
     top: 84px;
     height: calc(100vh - 84px);
 

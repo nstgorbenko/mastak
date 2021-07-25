@@ -84,13 +84,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   (function () {
-    const header = document.querySelector('.page-header');
+    const header = document.querySelector('.page-header--fixed');
 
     if (header) {
+      const isHeaderScrolling = () => header.classList.contains('scroll');
+
       window.addEventListener('scroll', () => {
-        if (window.pageYOffset > 0) {
+        if (window.pageYOffset > 200 && !isHeaderScrolling()) {
           header.classList.add('scroll');
-        } else {
+        } else if (window.pageYOffset <= 200 && isHeaderScrolling()) {
           header.classList.remove('scroll');
         }
       });
@@ -307,6 +309,22 @@ document.addEventListener('DOMContentLoaded', () => {
       const closeButton = headerCatalog.querySelector('.header-catalog__button-close');
       const overlay = document.querySelector('.overlay--header');
       const body = document.querySelector('body');
+      const mobileNavigation = document.querySelector('.mobile-navigation');
+      const mobileCatalogs = document.querySelectorAll('.mobile-catalog');
+      const burgerButtons = document.querySelectorAll('.top-header__burger');
+
+      const closeMobileMenu = () => {
+        burgerButtons.forEach(burgerButton => {
+          burgerButton.classList.remove('show');
+        });
+        mobileNavigation.classList.remove('show');
+        mobileCatalogs.forEach(mobileCatalog => {
+          mobileCatalog.classList.remove('show');
+        });
+        burgerButtons.forEach(burgerButton => {
+          burgerButton.removeEventListener('click', closeMobileMenu);
+        });
+      };
 
       const closeCatalogMenus = () => {
         catalogMenus.forEach(catalogMenu => {
@@ -333,6 +351,7 @@ document.addEventListener('DOMContentLoaded', () => {
       openButtons.forEach(openButton => {
         openButton.addEventListener('click', evt => {
           evt.preventDefault();
+          closeMobileMenu();
           const catalogID = openButton.getAttribute('data-name');
           const catalogMenu = headerCatalog.querySelector("#".concat(catalogID));
           headerCatalog.classList.add('show');
@@ -361,58 +380,75 @@ document.addEventListener('DOMContentLoaded', () => {
       const ESC_KEYCODE = 27;
       const mobileNavigation = mobileMenu.querySelector('.mobile-navigation');
       const mobileCatalogs = mobileMenu.querySelectorAll('.mobile-catalog');
-      const burgerButton = document.querySelector('.top-header__burger');
+      const burgerButtons = document.querySelectorAll('.top-header__burger');
       const openMobileCatalogsButtons = mobileMenu.querySelectorAll('.mobile-navigation__more-link');
       const closeMobileCatalogsButtons = mobileMenu.querySelectorAll('.mobile-catalog__back-link');
       const overlay = document.querySelector('.overlay--header');
       const body = document.querySelector('body');
+      const headerCatalog = document.querySelector('.header-catalog');
+      const catalogMenus = headerCatalog.querySelectorAll('.header-catalog__list');
+      const closeHeaderCatalogButton = headerCatalog.querySelector('.header-catalog__button-close');
 
-      const closeMobileMenu = () => {
-        burgerButton.classList.remove('show');
-        mobileNavigation.classList.remove('show');
-        mobileCatalogs.forEach(mobileCatalog => {
-          mobileCatalog.classList.remove('show');
+      if (burgerButtons) {
+        const closeHeaderCatalog = () => {
+          catalogMenus.forEach(catalogMenu => {
+            catalogMenu.classList.remove('show');
+          });
+          headerCatalog.classList.remove('show');
+          closeHeaderCatalogButton.removeEventListener('click', closeHeaderCatalog);
+        };
+
+        const closeMobileMenu = () => {
+          burgerButtons.forEach(burgerButton => {
+            burgerButton.classList.remove('show');
+          });
+          mobileNavigation.classList.remove('show');
+          mobileCatalogs.forEach(mobileCatalog => {
+            mobileCatalog.classList.remove('show');
+          });
+          overlay.classList.remove('show');
+          body.classList.remove('no-scroll');
+          burgerButtons.forEach(burgerButton => {
+            burgerButton.removeEventListener('click', closeMobileMenu);
+          });
+          overlay.removeEventListener('click', closeMobileMenu);
+          document.removeEventListener('keydown', onEscPress);
+        };
+
+        const onEscPress = evt => {
+          if (evt.keyCode === ESC_KEYCODE) {
+            closeMobileMenu();
+          }
+        };
+
+        burgerButtons.forEach(burgerButton => {
+          burgerButton.addEventListener('click', () => {
+            closeHeaderCatalog();
+            burgerButton.classList.add('show');
+            mobileNavigation.classList.add('show');
+            overlay.classList.add('show');
+            body.classList.add('no-scroll');
+            burgerButton.addEventListener('click', closeMobileMenu);
+            overlay.addEventListener('click', closeMobileMenu);
+            document.addEventListener('keydown', onEscPress);
+          });
         });
-        overlay.classList.remove('show');
-        body.classList.remove('no-scroll');
-        burgerButton.removeEventListener('click', closeMobileMenu);
-        overlay.removeEventListener('click', closeMobileMenu);
-        document.removeEventListener('keydown', onEscPress);
-      };
-
-      const onEscPress = evt => {
-        if (evt.keyCode === ESC_KEYCODE) {
-          closeMobileMenu();
-        }
-      };
-
-      if (burgerButton) {
-        burgerButton.addEventListener('click', () => {
-          burgerButton.classList.add('show');
-          mobileNavigation.classList.add('show');
-          overlay.classList.add('show');
-          body.classList.add('no-scroll');
-          burgerButton.addEventListener('click', closeMobileMenu);
-          overlay.addEventListener('click', closeMobileMenu);
-          document.addEventListener('keydown', onEscPress);
+        openMobileCatalogsButtons.forEach(openButton => {
+          openButton.addEventListener('click', evt => {
+            evt.preventDefault();
+            const mobileCatalogID = openButton.getAttribute('data-name');
+            const mobileCatalog = mobileMenu.querySelector("#".concat(mobileCatalogID));
+            mobileCatalog.classList.add('show');
+          });
+        });
+        closeMobileCatalogsButtons.forEach(closeButton => {
+          closeButton.addEventListener('click', evt => {
+            evt.preventDefault();
+            const mobileCatalog = closeButton.closest('.mobile-catalog');
+            mobileCatalog.classList.remove('show');
+          });
         });
       }
-
-      openMobileCatalogsButtons.forEach(openButton => {
-        openButton.addEventListener('click', evt => {
-          evt.preventDefault();
-          const mobileCatalogID = openButton.getAttribute('data-name');
-          const mobileCatalog = mobileMenu.querySelector("#".concat(mobileCatalogID));
-          mobileCatalog.classList.add('show');
-        });
-      });
-      closeMobileCatalogsButtons.forEach(closeButton => {
-        closeButton.addEventListener('click', evt => {
-          evt.preventDefault();
-          const mobileCatalog = closeButton.closest('.mobile-catalog');
-          mobileCatalog.classList.remove('show');
-        });
-      });
     }
   })();
 });

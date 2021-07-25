@@ -1,5 +1,5 @@
 .overlay.overlay--header
-header.page-header
+header.page-header.page-header--flow
   .top-header
     .page__container
       .top-header__content
@@ -47,129 +47,177 @@ header.page-header
           li.bottom-header__item
             a.bottom-header__link(href="#") Контакты
 
-  .header-catalog
+header.page-header.page-header--fixed
+  .top-header
     .page__container
-      .header-catalog__content
-        button.header-catalog__button-close(type="button" aria-label='Закрыть каталог')
-          svg.header-catalog__button-close-icon(width="24", height="24")
-            use(xlink:href="img/sprite.svg#icon-cross")
-        span.header-catalog__divider
-        ul#catalog-1.header-catalog__list
-          li.header-catalog__item
-            a.header-catalog__link(href="#") Электродрели
-            ul.header-catalog__sublist
-              li.header-catalog__subitem
-                a.header-catalog__sublink(href="#") Дрели алмазного бурения
-              li.header-catalog__subitem
-                a.header-catalog__sublink(href="#") Дрели ударные
-          li.header-catalog__item
-            a.header-catalog__link(href="#") Шлифовальные машины
-            ul.header-catalog__sublist
-              li.header-catalog__subitem
-                a.header-catalog__sublink(href="#") Угловые шлифовальные машины
-          li.header-catalog__item
-            a.header-catalog__link(href="#") Электропилы
-            ul.header-catalog__sublist
-              li.header-catalog__subitem
-                a.header-catalog__sublink(href="#") Дисковые пилы
-              li.header-catalog__subitem
-                a.header-catalog__sublink(href="#") Цепные пилы
-              li.header-catalog__subitem
-                a.header-catalog__sublink(href="#") Пилы торцовочные
-              li.header-catalog__subitem
-                a.header-catalog__sublink(href="#") Пилы циркулярные
-              li.header-catalog__subitem
-                a.header-catalog__sublink(href="#") Сабельные пилы
-          li.header-catalog__item
-            a.header-catalog__link(href="#") Электролобзики
-          li.header-catalog__item
-            a.header-catalog__link(href="#") Перфораторы
-          li.header-catalog__item
-            a.header-catalog__link(href="#") Отбойные молотки
-          li.header-catalog__item
-            a.header-catalog__link(href="#") Шуруповерт
-          li.header-catalog__item
-            a.header-catalog__link(href="#") Гайковерты
-          li.header-catalog__item
-            a.header-catalog__link(href="#") Винтоверты
-          li.header-catalog__item
-            a.header-catalog__link(href="#") Аккумуляторные отвертки
-          li.header-catalog__item
-            a.header-catalog__link(href="#") Заклепочники
-          li.header-catalog__item
-            a.header-catalog__link(href="#") Зарядные устройства
-          li.header-catalog__item
-            a.header-catalog__link(href="#") Аккумуляторные батареи
-          li.header-catalog__item
-            a.header-catalog__link(href="#") Строительные фены
-          li.header-catalog__item
-            a.header-catalog__link(href="#") Миксеры
-          li.header-catalog__item
-            a.header-catalog__link(href="#") Электрорубанки
-          li.header-catalog__item
-            a.header-catalog__link(href="#") Краскопульты
-          li.header-catalog__item
-            a.header-catalog__link(href="#") Глубинные вибраторы
-          li.header-catalog__item
-            a.header-catalog__link(href="#") Граверы
-          li.header-catalog__item
-            a.header-catalog__link(href="#") Фрезеры
-          li.header-catalog__item
-            a.header-catalog__link(href="#") Штроборезы
-          li.header-catalog__item
-            a.header-catalog__link(href="#") Паяльники для труб
-          li.header-catalog__item
-            a.header-catalog__link(href="#") Электроножницы
-          li.header-catalog__item
-            a.header-catalog__link(href="#") Измерительные приборы
-          li.header-catalog__item
-            a.header-catalog__link(href="#") Реноваторы
-          li.header-catalog__item
-            a.header-catalog__link(href="#") Клеевые пистолеты
-          li.header-catalog__item
-            a.header-catalog__link(href="#") Мини-пилы
-          li.header-catalog__item
-            a.header-catalog__link(href="#") Полировальные машины
-          li.header-catalog__item
-            a.header-catalog__link(href="#") Пылесосы строительные
-          li.header-catalog__item
-            a.header-catalog__link(href="#") Степлеры
-          li.header-catalog__item
-            a.header-catalog__link(href="#") УШМ (болгарки)
-          li.header-catalog__item
-            a.header-catalog__link(href="#") Фены технические
-          li.header-catalog__item
-            a.header-catalog__link(href="#") Плиткорезы
-          li.header-catalog__item
-            a.header-catalog__link(href="#") Рейсмусно-фуговальные станки
-          li.header-catalog__item
-            a.header-catalog__link(href="#") Тельферы
-          li.header-catalog__item
-            a.header-catalog__link(href="#") Электрофуганки
-          li.header-catalog__item
-            a.header-catalog__link(href="#") Сварочные аппараты
+      .top-header__content
+        .top-header__logo
+          a.top-header__logo-link(href="")
+            img.top-header__logo-image(width="171" height="40" src="img/icons/icon-logo.svg" alt="Логотип компании Мастак")
+          p.top-header__logo-text Мы работаем с 1995 года
+            span Работаем по Москве и Московской области
 
-        ul#catalog-2.header-catalog__list
-          li.header-catalog__item
-            a.header-catalog__link(href="#") Фены технические
-          li.header-catalog__item
-            a.header-catalog__link(href="#") Плиткорезы
-          li.header-catalog__item
-            a.header-catalog__link(href="#") Рейсмусно-фуговальные станки
-          li.header-catalog__item
-            a.header-catalog__link(href="#") Тельферы
-          li.header-catalog__item
-            a.header-catalog__link(href="#") Электрофуганки
-          li.header-catalog__item
-            a.header-catalog__link(href="#") Сварочные аппараты
+        .top-header__burger
+          .top-header__burger-icon
+            span.top-header__burger-icon-line
+          p.top-header__burger-text Меню
 
-        ul#catalog-3.header-catalog__list
-          li.header-catalog__item
-            a.header-catalog__link(href="#") Тельферы
-          li.header-catalog__item
-            a.header-catalog__link(href="#") Электрофуганки
-          li.header-catalog__item
-            a.header-catalog__link(href="#") Сварочные аппараты
+        ul.top-header__list
+          li.top-header__item
+            a.top-header__link.open-header-catalog(href="#" data-name="catalog-1") Ремонт электроинструмента
+          li.top-header__item
+            a.top-header__link.open-header-catalog(href="#" data-name="catalog-2") Ремонт строительной техники
+          li.top-header__item
+            a.top-header__link.open-header-catalog(href="#" data-name="catalog-3") Ремонт садовой техники
+
+        .top-header__call
+          a.top-header__call-link(href="tel:89999999999") 8 999 999 99 99
+          button.button.top-header__call-button.open-data-popup(type="button") Заказать ремонт
+
+  .bottom-header
+    .page__container
+      nav.bottom-header__content
+        ul.bottom-header__list
+          li.bottom-header__item
+            a.bottom-header__link.bottom-header__link--catalog.open-header-catalog(href="#" data-name="catalog-1") Ремонт электроинструмента
+          li.bottom-header__item
+            a.bottom-header__link.bottom-header__link--catalog.open-header-catalog(href="#" data-name="catalog-2") Ремонт строительной техники
+          li.bottom-header__item
+            a.bottom-header__link.bottom-header__link--catalog.open-header-catalog(href="#" data-name="catalog-3") Ремонт садовой техники
+          li.bottom-header__item
+            a.bottom-header__link(href="#") Цены
+          li.bottom-header__item
+            a.bottom-header__link(href="#") О сервисе
+          li.bottom-header__item
+            a.bottom-header__link(href="#") Сертификаты
+          li.bottom-header__item
+            a.bottom-header__link(href="#") Отзывы
+          li.bottom-header__item
+            a.bottom-header__link(href="#") Контакты
+
+.header-catalog
+  .page__container
+    .header-catalog__content
+      button.header-catalog__button-close(type="button" aria-label='Закрыть каталог')
+        svg.header-catalog__button-close-icon(width="24", height="24")
+          use(xlink:href="img/sprite.svg#icon-cross")
+      span.header-catalog__divider
+      ul#catalog-1.header-catalog__list
+        li.header-catalog__item
+          a.header-catalog__link(href="#") Электродрели
+          ul.header-catalog__sublist
+            li.header-catalog__subitem
+              a.header-catalog__sublink(href="#") Дрели алмазного бурения
+            li.header-catalog__subitem
+              a.header-catalog__sublink(href="#") Дрели ударные
+        li.header-catalog__item
+          a.header-catalog__link(href="#") Шлифовальные машины
+          ul.header-catalog__sublist
+            li.header-catalog__subitem
+              a.header-catalog__sublink(href="#") Угловые шлифовальные машины
+        li.header-catalog__item
+          a.header-catalog__link(href="#") Электропилы
+          ul.header-catalog__sublist
+            li.header-catalog__subitem
+              a.header-catalog__sublink(href="#") Дисковые пилы
+            li.header-catalog__subitem
+              a.header-catalog__sublink(href="#") Цепные пилы
+            li.header-catalog__subitem
+              a.header-catalog__sublink(href="#") Пилы торцовочные
+            li.header-catalog__subitem
+              a.header-catalog__sublink(href="#") Пилы циркулярные
+            li.header-catalog__subitem
+              a.header-catalog__sublink(href="#") Сабельные пилы
+        li.header-catalog__item
+          a.header-catalog__link(href="#") Электролобзики
+        li.header-catalog__item
+          a.header-catalog__link(href="#") Перфораторы
+        li.header-catalog__item
+          a.header-catalog__link(href="#") Отбойные молотки
+        li.header-catalog__item
+          a.header-catalog__link(href="#") Шуруповерт
+        li.header-catalog__item
+          a.header-catalog__link(href="#") Гайковерты
+        li.header-catalog__item
+          a.header-catalog__link(href="#") Винтоверты
+        li.header-catalog__item
+          a.header-catalog__link(href="#") Аккумуляторные отвертки
+        li.header-catalog__item
+          a.header-catalog__link(href="#") Заклепочники
+        li.header-catalog__item
+          a.header-catalog__link(href="#") Зарядные устройства
+        li.header-catalog__item
+          a.header-catalog__link(href="#") Аккумуляторные батареи
+        li.header-catalog__item
+          a.header-catalog__link(href="#") Строительные фены
+        li.header-catalog__item
+          a.header-catalog__link(href="#") Миксеры
+        li.header-catalog__item
+          a.header-catalog__link(href="#") Электрорубанки
+        li.header-catalog__item
+          a.header-catalog__link(href="#") Краскопульты
+        li.header-catalog__item
+          a.header-catalog__link(href="#") Глубинные вибраторы
+        li.header-catalog__item
+          a.header-catalog__link(href="#") Граверы
+        li.header-catalog__item
+          a.header-catalog__link(href="#") Фрезеры
+        li.header-catalog__item
+          a.header-catalog__link(href="#") Штроборезы
+        li.header-catalog__item
+          a.header-catalog__link(href="#") Паяльники для труб
+        li.header-catalog__item
+          a.header-catalog__link(href="#") Электроножницы
+        li.header-catalog__item
+          a.header-catalog__link(href="#") Измерительные приборы
+        li.header-catalog__item
+          a.header-catalog__link(href="#") Реноваторы
+        li.header-catalog__item
+          a.header-catalog__link(href="#") Клеевые пистолеты
+        li.header-catalog__item
+          a.header-catalog__link(href="#") Мини-пилы
+        li.header-catalog__item
+          a.header-catalog__link(href="#") Полировальные машины
+        li.header-catalog__item
+          a.header-catalog__link(href="#") Пылесосы строительные
+        li.header-catalog__item
+          a.header-catalog__link(href="#") Степлеры
+        li.header-catalog__item
+          a.header-catalog__link(href="#") УШМ (болгарки)
+        li.header-catalog__item
+          a.header-catalog__link(href="#") Фены технические
+        li.header-catalog__item
+          a.header-catalog__link(href="#") Плиткорезы
+        li.header-catalog__item
+          a.header-catalog__link(href="#") Рейсмусно-фуговальные станки
+        li.header-catalog__item
+          a.header-catalog__link(href="#") Тельферы
+        li.header-catalog__item
+          a.header-catalog__link(href="#") Электрофуганки
+        li.header-catalog__item
+          a.header-catalog__link(href="#") Сварочные аппараты
+
+      ul#catalog-2.header-catalog__list
+        li.header-catalog__item
+          a.header-catalog__link(href="#") Фены технические
+        li.header-catalog__item
+          a.header-catalog__link(href="#") Плиткорезы
+        li.header-catalog__item
+          a.header-catalog__link(href="#") Рейсмусно-фуговальные станки
+        li.header-catalog__item
+          a.header-catalog__link(href="#") Тельферы
+        li.header-catalog__item
+          a.header-catalog__link(href="#") Электрофуганки
+        li.header-catalog__item
+          a.header-catalog__link(href="#") Сварочные аппараты
+
+      ul#catalog-3.header-catalog__list
+        li.header-catalog__item
+          a.header-catalog__link(href="#") Тельферы
+        li.header-catalog__item
+          a.header-catalog__link(href="#") Электрофуганки
+        li.header-catalog__item
+          a.header-catalog__link(href="#") Сварочные аппараты
 
 .mobile-menu
   .mobile-navigation
