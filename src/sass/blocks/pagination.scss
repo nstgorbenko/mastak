@@ -50,7 +50,7 @@
   &--arrow-left,
   &--arrow-right {
     position: relative;
-    border: 1px solid rgba(#6E6E6E, 0.5);
+    border: 1px solid $color-accent;
   }
 
   &--arrow-left {
@@ -62,8 +62,20 @@
     margin-left: 16px;
   }
 
-  &:not(.pagination__button--active):hover,
-  &:not(.pagination__button--active):focus {
+  &--disabled {
+    border: 1px solid rgba(#6E6E6E, 0.5);
+  }
+
+  &--arrow-left:not(.pagination__button--disabled):hover,
+  &--arrow-left:not(.pagination__button--disabled):focus,
+  &--arrow-right:not(.pagination__button--disabled):hover,
+  &--arrow-right:not(.pagination__button--disabled):focus {
+    background-color: $color-accent;
+    border: 1px solid $color-accent;
+  }
+
+  &:not(.pagination__button--active):not(.pagination__button--disabled):hover,
+  &:not(.pagination__button--active):not(.pagination__button--disabled):focus {
     color: #131516;
     border: 1px solid $color-accent;
   }
@@ -71,11 +83,15 @@
 
 .pagination__button-icon {
   fill: transparent;
-  stroke: rgba(#6E6E6E, 0.5);
+  stroke: #131516;
   transition: $main-transition;
 
-  .pagination__button:hover &,
-  .pagination__button:focus & {
-    stroke: #131516;
+  .pagination__button--disabled & {
+    stroke: rgba(#6E6E6E, 0.5);
+  }
+
+  .pagination__button:not(.pagination__button--disabled):hover &,
+  .pagination__button:not(.pagination__button--disabled):focus & {
+    stroke: #ffffff;
   }
 }

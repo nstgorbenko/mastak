@@ -155,3 +155,29 @@
     stroke: $white;
   }
 }
+
+.title__drag {
+  display: none;
+
+  .team & {
+    @media (max-width: $extra-small) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      align-self: flex-end;
+      width: 25px;
+      opacity: 0.5;
+    }
+  }
+
+  .cert & {
+    @media (max-width: $small) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      align-self: flex-end;
+      width: 25px;
+      opacity: 0.5;
+    }
+  }
+}

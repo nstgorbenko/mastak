@@ -91,12 +91,17 @@ html(lang="ru")
       section.features
         ul.features__list
           li.features__item.features__item--time
+            img(src="img/icons/icon-time.svg")
             p.features__name Срочный ремонт за час
+              a.features__link(href="#") Подробнее
           li.features__item.features__item--guarantee
+            img(src="img/icons/icon-guarantee.svg")
             p.features__name Гарантия на все услуги
+              a.features__link(href="#") Подробнее
           li.features__item.features__item--delivery
+            img(src="img/icons/icon-delivery.svg")
             p.features__name Бесплатная доставка
-              span.features__text Для юридических лиц
+              a.features__link(href="#") Подробнее
 
       section.service
         .page__container
@@ -190,7 +195,7 @@ html(lang="ru")
         .page__container
           .motive__wrapper
             .motive__image-wrap
-              img.motive__image(width="796" height="766" src="img/motive.jpg" alt="Сервисный центр «Мастак»")
+              img.motive__image(width="796" height="766" src="img/bg-vacancy.jpg" alt="Сервисный центр «Мастак»")
             .motive__content
               p.motive__title
                 span 4 причины
@@ -225,6 +230,8 @@ html(lang="ru")
               button.title__button.title__button--next.team__button.team__button--next(type="button", aria-label="Следующий слайд")
                 svg.title__button-icon(width="16", height="11")
                   use(xlink:href="img/sprite.svg#icon-arrow")
+            .title__drag
+              img.title__drag-image(src="img/icons/icon-drag.gif")
           .team__container.swiper-container
             ul.team__list.swiper-wrapper
               li.team__item.swiper-slide
@@ -364,6 +371,8 @@ html(lang="ru")
               .title__link-arrow
                 svg.title__link-icon(width="16", height="11")
                   use(xlink:href="img/sprite.svg#icon-arrow")
+            .title__drag
+              img.title__drag-image(src="img/icons/icon-drag.gif")
           .cert__container.swiper-container
             ul.cert__list.swiper-wrapper
               li.cert__item.swiper-slide

@@ -71,12 +71,13 @@
   color: $color-title;
 
   @media (max-width: $extra-large) {
-    margin: 46px auto;
-    text-align: center;
+    margin: 46px 0;
   }
 
   @media (max-width: $large) {
     width: 80%;
+    margin: 46px auto;
+    text-align: center;
   }
 
   @media (max-width: $extra-small) {

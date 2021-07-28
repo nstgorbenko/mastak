@@ -25,18 +25,20 @@
 }
 
 .features__item {
+  position: relative;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 33%;
   height: 240px;
+  padding-top: 87px;
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: cover;
 
   @media (max-width: $extra-large) {
     height: 200px;
+    padding-top: 66px;
   }
 
   @media (max-width: $medium) {
@@ -72,86 +74,119 @@
 .features__name {
   @include reset();
   @include accent-font(30px, 16px, 1.1, 600);
-  position: relative;
-  max-width: 390px;
-  padding-left: 91px;
+  display: flex;
+  flex-direction: column;
+  // max-width: 390px;
+  max-width: 360px;
+  // margin-top: 20px;
+  // padding-left: 91px;
   color: $white;
   text-transform: uppercase;
   letter-spacing: 0.02em;
 
   @media (max-width: $extra-large) {
+    width: 285px;
+    // padding-left: 70px;
+  }
+
+  @media (max-width: 1080px) {
     width: 280px;
-    padding-left: 70px;
   }
 
   @media (max-width: $large) {
-    padding-left: 59px;
+    // padding-left: 59px;
   }
 
   @media (max-width: $medium) {
     width: 80%;
     padding-top: 58px;
-    padding-left: 0;
+    // padding-left: 0;
     text-align: center;
   }
 
   @media (max-width: $small) {
     width: 280px;
     padding-top: 0;
-    padding-left: 59px;
+    // padding-left: 59px;
     text-align: left;
   }
 
   @media (max-width: $extra-small) {
     width: 235px;
-    padding-left: 47px;
+    // padding-left: 47px;
   }
 
-  &::before {
-    @include pseudo(58px, 58px);
-    display: block;
-    top: 0;
-    left: 0;
-    background-position: 0 0;
-    background-size: contain;
-    background-repeat: no-repeat;
+  // &::before {
+  //   @include pseudo(58px, 58px);
+  //   display: block;
+  //   top: 0;
+  //   left: 0;
+  //   background-position: 0 0;
+  //   background-size: contain;
+  //   background-repeat: no-repeat;
 
-    @media (max-width: $large) {
-      @include pseudo(47px, 47px);
-    }
+  //   @media (max-width: $large) {
+  //     @include pseudo(47px, 47px);
+  //   }
 
-    @media (max-width: $medium) {
-      left: 50%;
-      transform: translateX(-50%);
-    }
+  //   @media (max-width: $medium) {
+  //     left: 50%;
+  //     transform: translateX(-50%);
+  //   }
 
-    @media (max-width: $small) {
-      left: 0;
-      transform: translateX(0);
-    }
+  //   @media (max-width: $small) {
+  //     left: 0;
+  //     transform: translateX(0);
+  //   }
 
-    @media (max-width: $extra-small) {
-      @include pseudo(36px, 36px);
-    }
-  }
+  //   @media (max-width: $extra-small) {
+  //     @include pseudo(36px, 36px);
+  //   }
+  // }
 
-  .features__item--time &::before {
-    background-image: url("../../img/icons/icon-time.svg");
-  }
+  // .features__item--time &::before {
+  //   background-image: url("../../img/icons/icon-time.svg");
+  // }
 
-  .features__item--guarantee &::before {
-    background-image: url("../../img/icons/icon-guarantee.svg");
-  }
+  // .features__item--guarantee &::before {
+  //   background-image: url("../../img/icons/icon-guarantee.svg");
+  // }
 
-  .features__item--delivery &::before {
-    background-image: url("../../img/icons/icon-delivery.svg");
-  }
+  // .features__item--delivery &::before {
+  //   background-image: url("../../img/icons/icon-delivery.svg");
+  // }
 }
 
-.features__text {
-  @include accent-font(15px, 13px, 1.1, 500);
-  display: block;
-  margin: 8px 0 0 0;
-  color: $white;
+.features__link {
+  @include link-reset();
+  @include accent-font(13px, 12px, 1.1, 500);
+  align-self: start;
+  position: relative;
+  margin-top: 7px;
+  color: $color-accent;
+  letter-spacing: 0.01em;
   text-transform: uppercase;
+
+  @media (max-width: $medium) {
+    align-self: center;
+  }
+
+  @media (max-width: $small) {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    color: #ffffff;
+  }
+
+  &:after {
+    @include pseudo(100%, 1px);
+    bottom: -2px;
+    left: 0;
+    background-color: $color-accent;
+
+    @media (max-width: $small) {
+      background-color: #ffffff;
+    }
+  }
 }
