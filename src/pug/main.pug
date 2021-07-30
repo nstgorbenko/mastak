@@ -91,17 +91,20 @@ html(lang="ru")
       section.features
         ul.features__list
           li.features__item.features__item--time
-            img(src="img/icons/icon-time.svg")
-            p.features__name Срочный ремонт за час
-              a.features__link(href="#") Подробнее
+            .features__item-content
+              img.features__icon(src="img/icons/icon-time.svg")
+              p.features__name Срочный ремонт за час
+                a.features__link(href="#") Подробнее
           li.features__item.features__item--guarantee
-            img(src="img/icons/icon-guarantee.svg")
-            p.features__name Гарантия на все услуги
-              a.features__link(href="#") Подробнее
+            .features__item-content
+              img.features__icon(src="img/icons/icon-guarantee.svg")
+              p.features__name Гарантия на все услуги
+                a.features__link(href="#") Подробнее
           li.features__item.features__item--delivery
-            img(src="img/icons/icon-delivery.svg")
-            p.features__name Бесплатная доставка
-              a.features__link(href="#") Подробнее
+            .features__item-content
+              img.features__icon(src="img/icons/icon-delivery.svg")
+              p.features__name Бесплатная доставка
+                a.features__link(href="#") Подробнее
 
       section.service
         .page__container

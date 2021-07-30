@@ -368,15 +368,19 @@ document.addEventListener('DOMContentLoaded', () => {
           const catalogID = openButton.getAttribute('data-name');
           const catalogMenu = headerCatalog.querySelector(`#${catalogID}`);
 
-          headerCatalog.classList.add('show');
-          closeCatalogMenus();
-          catalogMenu.classList.add('show');
-          overlay.classList.add('show');
-          body.classList.add('no-scroll');
+          if (!catalogMenu.classList.contains('show')) {
+            headerCatalog.classList.add('show');
+            closeCatalogMenus();
+            catalogMenu.classList.add('show');
+            overlay.classList.add('show');
+            body.classList.add('no-scroll');
 
-          closeButton.addEventListener('click', closeHeaderCatalog);
-          overlay.addEventListener('click', closeHeaderCatalog);
-          document.addEventListener('keydown', onEscPress);
+            closeButton.addEventListener('click', closeHeaderCatalog);
+            overlay.addEventListener('click', closeHeaderCatalog);
+            document.addEventListener('keydown', onEscPress);
+          } else {
+            closeHeaderCatalog();
+          }
         })
       });
 
