@@ -257,6 +257,74 @@ document.addEventListener('DOMContentLoaded', () => {
         });
       }
     }
+  })(); // Open feature popup
+
+
+  (function () {
+    const openButtons = document.querySelectorAll('.features__link');
+
+    if (openButtons) {
+      const ESC_KEYCODE = 27;
+      const overlay = document.querySelector('.overlay--popup');
+      const body = document.querySelector('body');
+      openButtons.forEach(openButton => {
+        openButton.addEventListener('click', evt => {
+          evt.preventDefault();
+          const featurePopupID = openButton.getAttribute('data-name');
+          const featurePopup = document.querySelector("#".concat(featurePopupID));
+
+          if (featurePopup) {
+            const featurePopupCloseButton = featurePopup.querySelector('.popup__button-close');
+
+            const closePopup = () => {
+              overlay.classList.remove('show');
+              featurePopup.classList.remove('show');
+              body.classList.remove('no-scroll');
+              featurePopupCloseButton.removeEventListener('click', closePopup);
+              overlay.removeEventListener('click', closePopup);
+              document.removeEventListener('keydown', onEscPress);
+            };
+
+            const onEscPress = evt => {
+              if (evt.keyCode === ESC_KEYCODE) {
+                closePopup();
+              }
+            };
+
+            overlay.classList.add('show');
+            featurePopup.classList.add('show');
+            body.classList.add('no-scroll');
+            featurePopupCloseButton.addEventListener('click', closePopup);
+            overlay.addEventListener('click', closePopup);
+            document.addEventListener('keydown', onEscPress);
+          }
+        });
+      }); // const closePopup = () => {
+      //   overlay.classList.remove('show');
+      //   dataPopup.classList.remove('show');
+      //   body.classList.remove('no-scroll');
+      //   closeButton.removeEventListener('click', closePopup);
+      //   overlay.removeEventListener('click', closePopup);
+      //   document.removeEventListener('keydown', onEscPress);
+      // }
+      // const onEscPress = (evt) => {
+      //   if (evt.keyCode === ESC_KEYCODE) {
+      //     closePopup();
+      //   }
+      // };
+      // if (openButtons && overlay) {
+      //   openButtons.forEach(openButton => {
+      //     openButton.addEventListener('click', () => {
+      //       overlay.classList.add('show');
+      //       dataPopup.classList.add('show');
+      //       body.classList.add('no-scroll');
+      //       closeButton.addEventListener('click', closePopup);
+      //       overlay.addEventListener('click', closePopup);
+      //       document.addEventListener('keydown', onEscPress);
+      //     });
+      //   });
+      // }
+    }
   })(); // Header catalog height
 
 
@@ -354,14 +422,19 @@ document.addEventListener('DOMContentLoaded', () => {
           closeMobileMenu();
           const catalogID = openButton.getAttribute('data-name');
           const catalogMenu = headerCatalog.querySelector("#".concat(catalogID));
-          headerCatalog.classList.add('show');
-          closeCatalogMenus();
-          catalogMenu.classList.add('show');
-          overlay.classList.add('show');
-          body.classList.add('no-scroll');
-          closeButton.addEventListener('click', closeHeaderCatalog);
-          overlay.addEventListener('click', closeHeaderCatalog);
-          document.addEventListener('keydown', onEscPress);
+
+          if (!catalogMenu.classList.contains('show')) {
+            headerCatalog.classList.add('show');
+            closeCatalogMenus();
+            catalogMenu.classList.add('show');
+            overlay.classList.add('show');
+            body.classList.add('no-scroll');
+            closeButton.addEventListener('click', closeHeaderCatalog);
+            overlay.addEventListener('click', closeHeaderCatalog);
+            document.addEventListener('keydown', onEscPress);
+          } else {
+            closeHeaderCatalog();
+          }
         });
       });
       window.addEventListener('resize', () => {
