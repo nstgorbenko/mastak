@@ -3270,11 +3270,12 @@ template {
   line-height: 18px;
   font-weight: 400;
   font-family: "Gilroy", sans-serif;
+  position: relative;
   display: flex;
   align-items: center;
   width: 100%;
   margin-bottom: 17px;
-  padding: 19px 0 19px 7px;
+  padding: 19px 0 19px 30px;
   border-bottom: 1px solid #525252;
   color: #a4a4a4; }
   @media screen and (max-width: 375px) {
@@ -3287,6 +3288,9 @@ template {
     color: #ff0a0a; }
 
 .mobile-catalog__link-icon {
+  position: absolute;
+  top: 21px;
+  left: 7px;
   margin-right: 15px;
   fill: transparent;
   stroke: #a4a4a4; }
