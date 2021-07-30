@@ -3261,14 +3261,11 @@ template {
     background-color: #bb1717; }
 
 .mobile-catalog__back-link {
-  margin: 0;
-  padding: 0;
-  text-align: left;
-  border: none;
+  display: inline-block;
+  text-decoration: none;
   outline: none;
-  background-color: transparent;
+  color: inherit;
   transition: all 0.2s ease;
-  cursor: pointer;
   font-size: calc( 18px + 0 * ( (100vw - 375px) / 1545 ));
   line-height: 18px;
   font-weight: 400;

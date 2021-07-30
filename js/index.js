@@ -299,31 +299,7 @@ document.addEventListener('DOMContentLoaded', () => {
             document.addEventListener('keydown', onEscPress);
           }
         });
-      }); // const closePopup = () => {
-      //   overlay.classList.remove('show');
-      //   dataPopup.classList.remove('show');
-      //   body.classList.remove('no-scroll');
-      //   closeButton.removeEventListener('click', closePopup);
-      //   overlay.removeEventListener('click', closePopup);
-      //   document.removeEventListener('keydown', onEscPress);
-      // }
-      // const onEscPress = (evt) => {
-      //   if (evt.keyCode === ESC_KEYCODE) {
-      //     closePopup();
-      //   }
-      // };
-      // if (openButtons && overlay) {
-      //   openButtons.forEach(openButton => {
-      //     openButton.addEventListener('click', () => {
-      //       overlay.classList.add('show');
-      //       dataPopup.classList.add('show');
-      //       body.classList.add('no-scroll');
-      //       closeButton.addEventListener('click', closePopup);
-      //       overlay.addEventListener('click', closePopup);
-      //       document.addEventListener('keydown', onEscPress);
-      //     });
-      //   });
-      // }
+      });
     }
   })(); // Header catalog height
 
