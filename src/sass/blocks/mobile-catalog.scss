@@ -29,7 +29,7 @@
 
 .mobile-catalog__back-link {
   @include link-reset();
-  @include main-font(18px, 18px, 20px, 400);
+  @include main-font(18px, 18px, 18px, 400);
   display: flex;
   align-items: center;
   width: 100%;
