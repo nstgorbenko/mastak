@@ -42,11 +42,15 @@
   &:focus {
     color: $color-accent;
   }
+
+  span {
+    display: block;
+  }
 }
 
 .mobile-catalog__link-icon {
+  display: block;
   margin-right: 3px;
-  margin-bottom: 2px;
   fill: transparent;
   stroke: #a4a4a4;
   transition: $main-transition;
