@@ -30,11 +30,10 @@
 .mobile-catalog__back-link {
   @include link-reset();
   @include main-font(18px, 18px, 18px, 400);
-  display: flex;
-  align-items: center;
+  position: relative;
   width: 100%;
   margin-bottom: 17px;
-  padding: 19px 0 19px 7px;
+  padding: 19px 0 19px 30px;
   border-bottom: 1px solid #525252;
   color: #a4a4a4;
 
@@ -49,6 +48,10 @@
 }
 
 .mobile-catalog__link-icon {
+  position: absolute;
+  top: 50%;
+  left: 7px;
+  transform: translateY(-50%);
   display: block;
   margin-right: 3px;
   fill: transparent;
