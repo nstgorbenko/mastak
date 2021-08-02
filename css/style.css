@@ -3285,10 +3285,12 @@ template {
       font-size: 18px; } }
   .mobile-catalog__back-link:hover, .mobile-catalog__back-link:focus {
     color: #ff0a0a; }
+  .mobile-catalog__back-link span {
+    display: block; }
 
 .mobile-catalog__link-icon {
+  display: block;
   margin-right: 3px;
-  margin-bottom: 2px;
   fill: transparent;
   stroke: #a4a4a4;
   transition: all 0.2s ease; }
