@@ -3288,8 +3288,10 @@ template {
 
 .mobile-catalog__link-icon {
   margin-right: 3px;
+  margin-bottom: 2px;
   fill: transparent;
-  stroke: #a4a4a4; }
+  stroke: #a4a4a4;
+  transition: all 0.2s ease; }
   .mobile-catalog__back-link:hover .mobile-catalog__link-icon,
   .mobile-catalog__back-link:focus .mobile-catalog__link-icon {
     stroke: #ff0a0a; }

@@ -46,8 +46,10 @@
 
 .mobile-catalog__link-icon {
   margin-right: 3px;
+  margin-bottom: 2px;
   fill: transparent;
   stroke: #a4a4a4;
+  transition: $main-transition;
 
   .mobile-catalog__back-link:hover &,
   .mobile-catalog__back-link:focus & {
