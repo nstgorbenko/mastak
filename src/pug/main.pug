@@ -147,7 +147,7 @@ html(lang="ru")
       section.call
         form.call__form(method="post")
           .call__content
-            p.call__title Заказать выезд мастера
+            p.call__title Заказать звонок мастера
             p.call__text Оставьте свой номер и мы вам перезвоним
             .call__field
               input.call__field-input(type="text" name="tel" placeholder="Ваш телефон" required)
@@ -483,7 +483,8 @@ html(lang="ru")
           button.button.popup__button(type='submit') Отправить
           p.popup__caption
             | Нажимая на кнопку «Отправить» я даю согласие на обработку
-            a.popup__caption-link(href='#')  персональных данных
+            = " "
+            a.popup__caption-link(href='#') персональных данных
 
     section#feature-1.popup.popup--feature
       button.popup__button-close(type="button" aria-label='Закрыть окно')
