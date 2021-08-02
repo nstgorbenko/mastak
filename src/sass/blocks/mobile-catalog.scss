@@ -29,18 +29,29 @@
 
 .mobile-catalog__back-link {
   @include link-reset();
-  @include main-font(18px, 18px, 18px, 400);
+  @include main-font(18px, 18px, 20px, 400);
+  display: flex;
+  align-items: center;
   width: 100%;
   margin-bottom: 17px;
-  padding: 19px 0 19px 30px;
+  padding: 19px 0 19px 7px;
   border-bottom: 1px solid #525252;
   color: #a4a4a4;
-  background: url("../img/icons/icon-arrow-breadcrumbs.svg") 6px 50% / 10px auto no-repeat;
 
   &:hover,
   &:focus {
     color: $color-accent;
-    background: url("../img/icons/icon-arrow-breadcrumbs-active.svg") 6px 50% / 10px auto no-repeat;
+  }
+}
+
+.mobile-catalog__link-icon {
+  margin-right: 3px;
+  fill: transparent;
+  stroke: #a4a4a4;
+
+  .mobile-catalog__back-link:hover &,
+  .mobile-catalog__back-link:focus & {
+    stroke: $color-accent;
   }
 }
 

@@ -3267,15 +3267,16 @@ template {
   color: inherit;
   transition: all 0.2s ease;
   font-size: calc( 18px + 0 * ( (100vw - 375px) / 1545 ));
-  line-height: 18px;
+  line-height: 20px;
   font-weight: 400;
   font-family: "Gilroy", sans-serif;
+  display: flex;
+  align-items: center;
   width: 100%;
   margin-bottom: 17px;
-  padding: 19px 0 19px 30px;
+  padding: 19px 0 19px 7px;
   border-bottom: 1px solid #525252;
-  color: #a4a4a4;
-  background: url("../img/icons/icon-arrow-breadcrumbs.svg") 6px 50%/10px auto no-repeat; }
+  color: #a4a4a4; }
   @media screen and (max-width: 375px) {
     .mobile-catalog__back-link {
       font-size: 18px; } }
@@ -3283,8 +3284,15 @@ template {
     .mobile-catalog__back-link {
       font-size: 18px; } }
   .mobile-catalog__back-link:hover, .mobile-catalog__back-link:focus {
-    color: #ff0a0a;
-    background: url("../img/icons/icon-arrow-breadcrumbs-active.svg") 6px 50%/10px auto no-repeat; }
+    color: #ff0a0a; }
+
+.mobile-catalog__link-icon {
+  margin-right: 3px;
+  fill: transparent;
+  stroke: #a4a4a4; }
+  .mobile-catalog__back-link:hover .mobile-catalog__link-icon,
+  .mobile-catalog__back-link:focus .mobile-catalog__link-icon {
+    stroke: #ff0a0a; }
 
 .mobile-catalog__list {
   margin: 0;
