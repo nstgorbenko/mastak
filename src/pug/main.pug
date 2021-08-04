@@ -492,6 +492,17 @@ html(lang="ru")
           use(xlink:href="img/sprite.svg#icon-cross")
       .popup__content
         .popup__image-wrap
+          img.popup__image(src="img/feature-popup-2.jpg")
+        .popup__text
+          p.popup__feature-name Срочный ремонт за час
+          p.popup__feature-text При наличии всех необходимых запчастей на локальном складе.
+
+    section#feature-2.popup.popup--feature
+      button.popup__button-close(type="button" aria-label='Закрыть окно')
+        svg.popup__button-close-icon(width="24", height="24")
+          use(xlink:href="img/sprite.svg#icon-cross")
+      .popup__content
+        .popup__image-wrap
           img.popup__image(src="img/feature-popup-1.jpg")
         .popup__text
           p.popup__feature-name Гарантия на все услуги
@@ -501,17 +512,6 @@ html(lang="ru")
             li.popup__feature-item 6 месяцев
               span  на детали Bosch
           p.popup__feature-caption *гарантия не распространяется на детали, относящиеся к быстроизнашиваемым или расходным
-
-    section#feature-2.popup.popup--feature
-      button.popup__button-close(type="button" aria-label='Закрыть окно')
-        svg.popup__button-close-icon(width="24", height="24")
-          use(xlink:href="img/sprite.svg#icon-cross")
-      .popup__content
-        .popup__image-wrap
-          img.popup__image(src="img/feature-popup-2.jpg")
-        .popup__text
-          p.popup__feature-name Срочный ремонт за час
-          p.popup__feature-text При наличии всех необходимых запчастей на локальном складе.
 
     script(src="js/swiper-bundle.min.js")
     script(src="js/fslightbox.js")
