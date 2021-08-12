@@ -231,6 +231,18 @@
   color: #131516;
 }
 
+.popup__feature-subname {
+  @include reset();
+  @include main-font(24px, 18px, 1.4, 400);
+  margin-top: 20px;
+  margin-bottom: 12px;
+  color: #131516;
+
+  .popup__feature-name + & {
+    margin-top: 28px;
+  }
+}
+
 .popup__feature-list {
   @include list-reset();
   margin: 24px 0 34px;
@@ -279,4 +291,9 @@
   @include main-font(18px, 16px, 1.4, 400);
   width: 80%;
   color: #6e6e6e;
+
+  &--small {
+    @include main-font(16px, 16px, 1.4, 400);
+    width: 90%;
+  }
 }

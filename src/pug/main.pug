@@ -513,6 +513,21 @@ html(lang="ru")
               span  на детали Bosch
           p.popup__feature-caption *гарантия не распространяется на детали, относящиеся к быстроизнашиваемым или расходным
 
+    section#feature-3.popup.popup--feature
+      button.popup__button-close(type="button" aria-label='Закрыть окно')
+        svg.popup__button-close-icon(width="24", height="24")
+          use(xlink:href="img/sprite.svg#icon-cross")
+      .popup__content
+        .popup__image-wrap
+          img.popup__image(src="img/feature-popup-3.jpg")
+        .popup__text
+          p.popup__feature-name Бесплатная доставка
+          p.popup__feature-subname Для юридических лиц
+          p.popup__feature-text.popup__feature-text--small Условия: от 5 единиц инструмента, по Москве бесплатно. До 5 единиц: 500 рублей. Индивидуальные договоренности при работе на постоянной основе.
+          p.popup__feature-subname Для физических лиц
+          p.popup__feature-text.popup__feature-text--small Условия: Доставка 500 рублей.
+
+
     script(src="js/swiper-bundle.min.js")
     script(src="js/fslightbox.js")
     script(src="js/index.js")

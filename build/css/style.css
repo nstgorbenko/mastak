@@ -4206,6 +4206,25 @@ template {
     .popup__feature-name {
       font-size: 30px; } }
 
+.popup__feature-subname {
+  margin: 0;
+  padding: 0;
+  font-size: calc( 18px + 6 * ( (100vw - 375px) / 1545 ));
+  line-height: 1.4;
+  font-weight: 400;
+  font-family: "Gilroy", sans-serif;
+  margin-top: 20px;
+  margin-bottom: 12px;
+  color: #131516; }
+  @media screen and (max-width: 375px) {
+    .popup__feature-subname {
+      font-size: 18px; } }
+  @media screen and (min-width: 1920px) {
+    .popup__feature-subname {
+      font-size: 24px; } }
+  .popup__feature-name + .popup__feature-subname {
+    margin-top: 28px; }
+
 .popup__feature-list {
   margin: 0;
   padding: 0;
@@ -4283,6 +4302,18 @@ template {
   @media screen and (min-width: 1920px) {
     .popup__feature-text {
       font-size: 18px; } }
+  .popup__feature-text--small {
+    font-size: calc( 16px + 0 * ( (100vw - 375px) / 1545 ));
+    line-height: 1.4;
+    font-weight: 400;
+    font-family: "Gilroy", sans-serif;
+    width: 90%; }
+    @media screen and (max-width: 375px) {
+      .popup__feature-text--small {
+        font-size: 16px; } }
+    @media screen and (min-width: 1920px) {
+      .popup__feature-text--small {
+        font-size: 16px; } }
 
 .price {
   margin-bottom: 150px; }
